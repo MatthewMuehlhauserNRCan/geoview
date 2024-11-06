@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GeoView Time Slider Config Schema",
+  "type": "object",
+  "version": 1.0,
+  "comments": "Configuration for GeoView time slider package.",
+  "additionalProperties": false,
+  "properties": {
+    "sliders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": "Time slider title",
+            "description": "The title to display"
+          },
+          "description": {
+            "type": "string",
+            "default": "Time slider description",
+            "description": "The description to use."
+          },
+          "locked": {
+            "type": "boolean",
+            "default": false,
+            "description": "Lock handle"
+          },
+          "reversed": {
+            "type": "boolean",
+            "default": false,
+            "description": "Reverse direction of the slider animation"
+          },
+          "defaultValue": {
+            "type": "string",
+            "default": false,
+            "description": "Initial value on slider"
+          }
+        }
+      }
+    }
+  },
+  "required": ["sliders"]
+}

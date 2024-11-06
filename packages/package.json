@@ -1,0 +1,41 @@
+{
+  "name": "eslint-and-prettier-config",
+  "version": "1.0.0",
+  "description": "Eslint and prettier configuration file for the geoview project",
+  "keywords": [
+    "geoview",
+    "eslint",
+    "prettier",
+    "config"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "format": "prettier --write \"geoview-**/src/**/*.{ts,tsx,js}\"",
+    "lint": "eslint \"geoview-**/src/**/*.{ts,tsx,js}\"",
+    "fix": "eslint \"geoview-**/src/**/*.{ts,tsx,js}\" --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/eslint-parser": "^7.25.8",
+    "@typescript-eslint/eslint-plugin": "~8.9.0",
+    "@typescript-eslint/parser": "~8.13.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "typescript": "^5.6.3",
+    "prettier": "^3.3.3"
+  },
+  "resolutions": {
+    "@types/react": "^18.2.0"
+  }
+}
