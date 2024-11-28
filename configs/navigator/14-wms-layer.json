@@ -11,6 +11,26 @@
     },
     "listOfGeoviewLayerConfig": [
       {
+        "geoviewLayerId": "Hydro",
+        "geoviewLayerName": "Hydro - Scale" ,
+        "metadataAccessPath": "https://maps.geogratis.gc.ca/wms/hydro_network_en",
+        "geoviewLayerType": "ogcWms",
+        "listOfLayerEntryConfig": [
+          {
+            "layerId": "nhn:nhn",
+            "layerName": "National Hydro Network (NHN)"
+          },
+          {
+            "layerId": "nhn:nhnda",
+            "layerName": "Drainage Areas"
+          },
+          {
+            "layerId": "nhn:toponyms",
+            "layerName": "Toponyms"
+          }
+        ]
+      },
+      {
         "geoviewLayerId": "wmsLYR1-Root",
         "geoviewLayerName": "Weather Group",
         "metadataAccessPath": "https://geo.weather.gc.ca/geomet",
@@ -43,7 +63,7 @@
                 "layerFilter": "time = date'2023-04-18T07:00:00-04:00'",
                 "layerName": "Ice Cover",
                 "source": {
-                  "style": "SEA_ICECONC"
+                  "wmsStyle": "SEA_ICECONC"
                 }
               }
             ]
@@ -60,7 +80,7 @@
             "layerId": "msi-94-or-more",
             "layerName": "Permanent Snow",
             "source": {
-              "style": "msi-binary",
+              "wmsStyle": "msi-binary",
               "featureInfo": {
                 "queryable": true,
                 "nameField": "band-0-pixel-value",
@@ -87,8 +107,19 @@
             "layerId": "RADAR_1KM_RSNO",
             "layerName": "Test Spatiotemporel",
             "source": {
-              "style": "Radar-Snow_14colors"
+              "wmsStyle": "Radar-Snow_14colors"
             }
+          }
+        ]
+      },
+      {
+        "geoviewLayerId": "LYR1",
+        "geoviewLayerName": "Canada Energy Regulator",
+        "metadataAccessPath": "https://maps-cartes.services.geo.ca/server_serveur/services/NRCan/CER_Assessments_EN/MapServer/WMSServer",
+        "geoviewLayerType": "ogcWms",
+        "listOfLayerEntryConfig": [
+          {
+            "layerId": "0"
           }
         ]
       }
