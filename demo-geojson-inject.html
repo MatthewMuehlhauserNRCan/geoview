@@ -44,7 +44,7 @@
         },
         'corePackages': [],
         'theme': 'geo.ca'
-        }"></div><hr/><div><h3>API Functions:</h3><ul><li><button id="Add-points1">Place points set 1</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points1)</li><li><button id="Add-points2">Place points set 2</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points2)</li><li><button id="Add-points3">Place points set 3</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points3)</li></ul></div><script>// initialize cgpv and api events, a callback is optional, used if calling api's after the rendering is ready
+        }"></div><hr/><div><h3>API Functions:</h3><ul><li><button id="Add-points1">Place points set 1</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points1)</li><li><button id="Add-points2">Place points set 2</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points2)</li><li><button id="Add-points3">Place points set 3</button><br/>cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points3)</li></ul></div><script>// initialize cgpv and api events, a callback is optional, used if calling api's after the rendering is ready
       cgpv.init((mapId) => {});
 
       // Add points 1 button ====================================================================================
@@ -105,7 +105,7 @@
       };
       // add an event listener when a button is clicked
       addPoints1Button.addEventListener('click', () => {
-        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points1);
+        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points1);
       });
 
       // Add points 2 button ====================================================================================
@@ -117,7 +117,7 @@
 
       // add an event listener when a button is clicked
       addPoints2Button.addEventListener('click', () => {
-        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points2);
+        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points2);
       });
 
       // Add points 3 button ====================================================================================
@@ -176,5 +176,5 @@
       };
       // add an event listener when a button is clicked
       addPoints3Button.addEventListener('click', () => {
-        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource('geojsonLYR1/blank.json', points3);
+        cgpv.api.maps.LYR1.layer.getGeoviewLayer('geojsonLYR1/blank.json').overrideGeojsonSource(points3);
       });</script></body></html>

@@ -87,7 +87,7 @@
       'corePackages': []
     }" data-lang="en" data-geocore-keys="12acd145-626a-49eb-b850-0a59c9bc7506,ccc75c12-5acc-4a6a-959f-ef6f621147b9" data-geocore-endpoint="https://geocore.api.geo.ca"></div><p>This map loads it's configurations from the div parameters by providing a <strong>data-geocore-keys</strong> and optionally a <strong>data-geocore-endpoint</strong>.</p><hr/><div class="map-title-holder"><h4 id="HLCONF6">6. Load config from file</h4><a class="ref-link" href="#top">Top</a></div><div id="CONF6" class="geoview-map" data-lang="en" data-config-url="./configs/my-config.json"></div><p>This map loads it's configurations from a file by providing <strong>data-config-url</strong>, the map is static!</p><hr/><div class="map-title-holder"><h4 id="HLCONF7">7. Load config from function call</h4><a class="ref-link" href="#top">Top</a></div><div id="CONF7" class="" data-lang="fr"></div><p>This map loads it's configurations from a function call (after 10 seconds). Configuration error with double layer id.</p><hr/><button type="button" class="collapsible">Code Snippet</button><pre id="codeSnippet" class="panel"></pre><script src="codedoc.js"></script><script>cgpv.api.createMapFromConfig(
         'CONF7',
-        `{
+        JSON.stringify({
               'map': {
                 'interaction': 'dynamic',
                 'viewSettings': {
@@ -115,7 +115,7 @@
               'components': ['overview-map'],
               'corePackages': [],
               'theme': 'geo.ca'
-        }`
+        })
       );
 
       // initialize cgpv and api events, a callback is optional, used if calling api's after the rendering is ready
