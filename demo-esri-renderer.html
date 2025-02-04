@@ -6,7 +6,7 @@
     #serviceUrlInput {
       width: 700px;
     }</style><script src="cgpv-main.js"></script></head><body><div class="header-table"><table><tbody><tr><td><img class="header-logo" alt="logo" src="./img/Logo.png"/></td><td class="header-title"><h1><strong>ESRI Renderer Style Configuration Demo</strong></h1></td></tr></tbody></table><table><tbody><tr><td><a href="./index.html">Main</a><br/></td></tr></tbody></table><table><tbody><tr><td><p>This page is used to create a valid GeoView style config from an ESRI Renderer.</p></td></tr><tr><td><span>Input ESRI Renderer examples</span> <select name="renderer" id="renderer"><option value="simple">Simple</option><option value="uniqueValue">Unique Value</option><option value="classBreak">Class Break</option></select></td></tr><tr><td><button id="executeButton">Execute</button></td></tr><tr><td><span>Input ESRI Renderer:</span><div class="editor"><div class="line-numbers" id="inputLineNumbers"><span></span></div><textarea id="inputTextArea" cols="110">
-              </textarea></div><div>&nbsp;</div></td><td><span>Style configuration:</span><div class="editor"><div class="line-numbers" id="outputLineNumbers"><span></span></div><textarea id="outputTextArea" cols="110">
+              </textarea></div></td><td><span>Style configuration:</span><div class="editor"><div class="line-numbers" id="outputLineNumbers"><span></span></div><textarea id="outputTextArea" cols="110">
               </textarea></div></td></tr><tr><td><p>The resulting configuration can be used to set a layer's "layerStyle" property.<br><i>Example:</i><pre>
                 <code>
 'listOfGeoviewLayerConfig': [{
