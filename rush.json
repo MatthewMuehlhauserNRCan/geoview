@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.113.4",
+  "pnpmVersion": "8.15.2",
+  "nodeSupportedVersionRange": ">=20.11.0 <21.8.0",
+  "pnpmOptions": {
+    "strictPeerDependencies": false,
+    "useWorkspaces": true
+  },
+  "ensureConsistentVersions": true,
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "telemetryEnabled": false,
+  "repository": {
+    "url": "https://github.com/Canadian-Geospatial-Platform/geoview"
+  },
+  "projects": [
+    {
+      "packageName": "geoview-aoi-panel",
+      "projectFolder": "packages/geoview-aoi-panel"
+    },
+    {
+      "packageName": "geoview-basemap-panel",
+      "projectFolder": "packages/geoview-basemap-panel"
+    },
+    {
+      "packageName": "geoview-core",
+      "projectFolder": "packages/geoview-core"
+    },
+    {
+      "packageName": "geoview-geochart",
+      "projectFolder": "packages/geoview-geochart"
+    },
+    {
+      "packageName": "geoview-swiper",
+      "projectFolder": "packages/geoview-swiper"
+    },
+    {
+      "packageName": "geoview-time-slider",
+      "projectFolder": "packages/geoview-time-slider"
+    },
+    {
+      "packageName": "eslint-and-prettier-config",
+      "projectFolder": "packages"
+    }
+  ]
+}

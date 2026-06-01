@@ -1,0 +1,29 @@
+{
+  "name": "geoview-swiper",
+  "version": "1.0.0",
+  "description": "A Swiper control for the geoview project",
+  "main": "src/index.tsx",
+  "keywords": [
+    "react",
+    "swiper"
+  ],
+  "author": "Saleh Yassin",
+  "license": "MIT",
+  "dependencies": {
+    "geoview-core": "workspace:~1.0.0",
+    "lodash": "^4.17.21",
+    "ol": "^10.2.1",
+    "react-draggable": "^4.4.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/runtime": "^7.25.7",
+    "@types/lodash": "^4.17.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  },
+  "resolutions": {
+    "@types/react": "^18.2.0"
+  }
+}

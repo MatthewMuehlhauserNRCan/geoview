@@ -1,0 +1,35 @@
+{
+  "map": {
+    "interaction": "dynamic",
+    "controls": {
+      "boxZoom": true,
+      "selectBox": true
+    },
+    "projection": 3978,
+    "viewSettings": {
+      "zoom": 12,
+      "center": [-106, 60]
+    },
+    "basemapOptions": {
+      "id": "transport",
+      "shaded": true,
+      "labeled": true
+    },
+    "listOfGeoviewLayerConfig": []
+  },
+  "theme": "geo.ca",
+  "appBar": {
+    "tabs": {
+      "core": ["geolocator"]
+    }
+  },
+  "navBar": ["zoom", "fullscreen", "home"],
+  "components": [],
+  "corePackages": [],
+  "externalPackages": [],
+  "serviceUrls": {
+    "geocoreUrl": "https://geocore.api.geo.ca",
+    "geolocator": "https://geolocator.api.geo.ca?keys=geonames,nominatim,locate"
+  },
+  "version": "1.0"
+}
