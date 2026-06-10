@@ -10,7 +10,7 @@
             'labeled': true
           },
           'listOfGeoviewLayerConfig': [
-          {
+            {
               'geoviewLayerId': 'b0079f0f-7448-dca1-8141-a6aad90294f4',
               'geoviewLayerType': 'geoCore'
             },
@@ -22,12 +22,7 @@
               'listOfLayerEntryConfig': [
                 {
                   'layerId': '0',
-                  'layerName': 'MPMO - Major Project',
-                  'initialSettings': {
-                    'states': {
-                      'visible': true
-                    }
-                  }
+                  'layerName': 'MPMO - Major Project'
                 }
               ]
             },
@@ -68,18 +63,93 @@
                   'layerId': '33'
                 }
               ]
+            },
+            {
+              'geoviewLayerId': 'nonna',
+              'geoviewLayerName': 'Nonna w/ space in id',
+              'metadataAccessPath': 'https://nonna-geoserver.data.chs-shc.ca/geoserver/wms',
+              'geoviewLayerType': 'ogcWms',
+              'listOfLayerEntryConfig': [
+                { 'layerId': 'nonna:NONNA 10' }
+              ]
+            },
+            {
+              'geoviewLayerId': 'nonna-missing-layerid',
+              'geoviewLayerName': 'Nonna w/o layerid',
+              'metadataAccessPath': 'https://nonna-geoserver.data.chs-shc.ca/geoserver/wms',
+              'geoviewLayerType': 'ogcWms',
+              'listOfLayerEntryConfig': []
+            },
+            {
+              'geoviewLayerId': 'u2-with-nameField-date',
+              'metadataAccessPath': 'https://services.arcgis.com/V6ZHFr6zdgNZuVG0/ArcGIS/rest/services/U2/FeatureServer/',
+              'geoviewLayerType': 'esriFeature',
+              'listOfLayerEntryConfig': [
+                {
+                  'layerId': '0',
+                  'layerName': 'U2 with date nameField',
+                  'source': {
+                    'featureInfo': {
+                      'queryableeeeee': true,
+                      'nameField': 'Date',
+                      'outfields': [
+                        { 'name': 'Venue', 'alias': 'Venue Set', 'type': 'string'},
+                        { 'name': 'Event', 'alias': 'Event Set', 'type': 'string'},
+                        { 'name': 'Tour', 'alias': 'Tour Set', 'type': 'string'},
+                        { 'name': 'City', 'alias': 'City Set', 'type': 'string'},
+                        { 'name': 'Date', 'alias': 'Date Set', 'type': 'date'}
+                      ]
+                    }
+                  }
+                },
+                {
+                  'geoviewLayerId': 'nfi-group-with-slash',
+                  'geoviewLayerName': 'Nfi Plot Test Slash',
+                  'metadataAccessPath': 'https://nfi.nfis.org/mapserver/cgi-bin/nfi_plot_summaries_en.cgi?service=WMS',
+                  'geoviewLayerType': 'ogcWms',
+                  'listOfLayerEntryConfig': [
+                    {
+                      'layerId': 'photo/plot/with/slash',
+                      'layerName': 'Photo/Plot/Group',
+                      'entryType': 'group',
+                      'listOfLayerEntryConfig': [
+                        {
+                          'layerId': 'ca_nfiphotoplot_lc_a_en'
+                        },
+                        {
+                          'layerId': 'ca_nfiphotoplot_lu_a_en'
+                        },
+                        {
+                          'layerId': 'ca_nfiphotoplot_ow_a_en'
+                        },
+                        {
+                          'layerId': 'ca_nfiphotoplot_ps_a_en'
+                        }
+                      ]
+                    },
+                    {
+                      'layerId': 'ca_nfigroundplot_cartographic_a'
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         'components': ['overview-map'],
+        'appBar': {
+          'tabs': {
+            'core': ['legend', 'details', 'export']
+          }
+        },
         'footerBar': {
           'tabs': {
-            'core': ['legend', 'layers', 'details', 'data-table']
+            'core': ['layers', 'data-table']
           }
         },
         'corePackages': [],
         'theme': 'geo.ca'
-      }"></div><hr/><div class="demo-section"><h4>Outlier Layers:</h4><ul class="demo-list"><li><strong>Permafrost</strong> - Metadata has no geometry field - Issue #2212</li><li><strong>Major Project</strong> - esri feature layer does not load because of null field value - Issue #2208</li><li><strong>Floods in Canada</strong> - layers are missing time extent - Issue #2251</li><li><strong>Boundaries</strong> - layers projection and extent projection from metadata are different for three layers (Block Land Transfer, Municipal Boundary, and Watershed Boundaries)</li></ul></div><hr/><div class="map-title-holder"></div><h4 id="Hmap2">2. ESRI Service Issue Layers</h4><a class="ref-link" href="#top">Top</a><button class="collapsible">Layers Status</button><pre id="Hmap2-state" class="panel map-title-holder"></pre><hr/><div id="map2" class="geoview-map" data-lang="en" data-config="{
+      }"></div><hr/><div class="demo-section"><h4>Outlier Layers:</h4><ul class="demo-list"><li><strong>Permafrost</strong> - Metadata has no geometry field - Issue #2212</li><li><strong>Major Project</strong> - esri feature layer does not load because of null field value - Issue #2208</li><li><strong>Floods in Canada</strong> - layers are missing time extent - Issue #2251</li><li><strong>Boundaries</strong> - layers projection and extent projection from metadata are different for three layers (Block Land Transfer, Municipal Boundary, and Watershed Boundaries)</li><li><strong>Nfi Plot Test Slash</strong> - WMS layer with slashes in layerId path, testing group entries with slash-separated IDs</li></ul></div><hr/><div class="map-title-holder"></div><h4 id="Hmap2">2. ESRI Service Issue Layers</h4><a class="ref-link" href="#top">Top</a><button class="collapsible">Layers Status</button><pre id="Hmap2-state" class="panel map-title-holder"></pre><hr/><div id="map2" class="geoview-map" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
           'viewSettings': {
@@ -98,9 +168,14 @@
           ]
         },
         'components': ['overview-map'],
+        'appBar': {
+          'tabs': {
+            'core': ['legend', 'details', 'export']
+          }
+        },
         'footerBar': {
           'tabs': {
-            'core': ['legend', 'layers', 'details', 'data-table']
+            'core': ['layers', 'data-table']
           }
         },
         'corePackages': [],
@@ -148,12 +223,12 @@
         'navBar': ['zoom', 'fullscreen', 'home', 'location', 'basemap-select'],
         'appBar': {
           'tabs': {
-            'core': ['geolocator', 'export']
+            'core': ['legend', 'details', 'export']
           }
         },
         'footerBar': {
           'tabs': {
-            'core': ['legend', 'layers', 'details', 'data-table']
+            'core': ['layers', 'data-table']
           }
         },
         'corePackages': [],

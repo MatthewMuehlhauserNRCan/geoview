@@ -106,13 +106,6 @@
             }
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-core'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -121,7 +114,14 @@
                 'details'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-core'] }
+            }
+          ]
         }"></div></div><div id="map1-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT1">1. Tests on map 1</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map1"></div><br/><div id="map1" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -135,13 +135,6 @@
             }
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-config'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -150,7 +143,14 @@
                 'details'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-config'] }
+            }
+          ]
         }"></div></div><div id="map2-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT2">2. Tests on map 2 (EPSG: 3978)</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map2"></div><br/><div id="map2" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -165,13 +165,6 @@
             'listOfGeoviewLayerConfig': []
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-layer'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -181,7 +174,14 @@
                 'data-table'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-layer'] }
+            }
+          ]
         }"></div></div><div id="map3-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT3">3. Tests on map 3 (EPSG: 3857)</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map3"></div><br/><div id="map3" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -196,13 +196,6 @@
             'listOfGeoviewLayerConfig': []
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-layer'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -212,7 +205,14 @@
                 'data-table'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-layer'] }
+            }
+          ]
         }"></div></div><div id="map4-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT4">4. Tests on map functions</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map4"></div><br/><div id="map4" style="width: 1000px; margin: auto" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -252,13 +252,6 @@
             ]
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-map'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -266,7 +259,14 @@
                 'data-table'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-map'] }
+            }
+          ]
         }"></div></div><div id="map5-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT5">5. Tests on map 5</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map5"></div><br/><div id="map5" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -295,7 +295,18 @@
             ]
           },
           'components': [],
+          'footerBar': {
+            'tabs': {
+              'core': [
+                'legend',
+                'layers',
+                'details',
+                'geochart'
+              ]
+            }
+          },
           'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
           'corePackagesConfig': [
             {
               'geochart': {
@@ -365,18 +376,7 @@
               },
               'test-suite': { 'suites': ['suite-geochart'] }
             }
-          ],
-          'theme': 'geo.ca',
-          'footerBar': {
-            'tabs': {
-              'core': [
-                'legend',
-                'layers',
-                'details',
-                'geochart'
-              ]
-            }
-          }
+          ]
         }"></div></div><div id="map6-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT6">6. Tests on map config</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map6"></div><br/><div id="map6" class="geoview-map" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
@@ -391,18 +391,18 @@
           'listOfGeoviewLayerConfig': []
         },
         'components': [],
-        'corePackages': ['test-suite'],
-        'corePackagesConfig': [
-          {
-            'test-suite': { 'suites': ['suite-map-config'] }
-          }
-        ],
-        'theme': 'geo.ca',
         'footerBar': {
           'tabs': {
             'core': []
           }
-        }
+        },
+        'corePackages': ['test-suite'],
+        'theme': 'geo.ca',
+        'corePackagesConfig': [
+          {
+            'test-suite': { 'suites': ['suite-map-config'] }
+          }
+        ]
       }"></div></div><div id="map7-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT7">7. Tests on map 7</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map7"></div><br/><div id="map7" class="geoview-map" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
@@ -417,13 +417,6 @@
           'listOfGeoviewLayerConfig': []
         },
         'components': [],
-        'corePackages': ['test-suite'],
-        'corePackagesConfig': [
-          {
-            'test-suite': { 'suites': ['suite-ui'] }
-          }
-        ],
-        'theme': 'geo.ca',
         'footerBar': {
           'tabs': {
             'core': [
@@ -432,7 +425,14 @@
               'details'
             ]
           }
-        }
+        },
+        'corePackages': ['test-suite'],
+        'theme': 'geo.ca',
+        'corePackagesConfig': [
+          {
+            'test-suite': { 'suites': ['suite-ui'] }
+          }
+        ]
       }"></div></div><div id="map8-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT8">8. Tests on map 8</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map8"></div><br/><div id="map8" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -461,13 +461,6 @@
             ]
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-details'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -476,7 +469,14 @@
                 'details'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-details'] }
+            }
+          ]
         }"></div></div><div id="map9-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT9">9. Tests on map 9 (Utilities)</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map9"></div><br/><div id="map9" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -490,13 +490,6 @@
             }
           },
           'components': [],
-          'corePackages': ['test-suite'],
-          'corePackagesConfig': [
-            {
-              'test-suite': { 'suites': ['suite-utilities'] }
-            }
-          ],
-          'theme': 'geo.ca',
           'footerBar': {
             'tabs': {
               'core': [
@@ -505,7 +498,14 @@
                 'details'
               ]
             }
-          }
+          },
+          'corePackages': ['test-suite'],
+          'theme': 'geo.ca',
+          'corePackagesConfig': [
+            {
+              'test-suite': { 'suites': ['suite-utilities'] }
+            }
+          ]
         }"></div></div><div id="map10-test" class="tab-content"><div class="map-title-holder"><h4 id="HEVNT10">10. Tests on map 10 (Swiper)</h4><a class="ref-link" href="#top">Top</a></div><div id="testSuiteTable-map10"></div><br/><div id="map10" class="geoview-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
@@ -554,7 +554,16 @@
             ]
           },
           'components': [],
+          'footerBar': {
+            'tabs': {
+              'core': [
+                'legend',
+                'layers'
+              ]
+            }
+          },
           'corePackages': ['swiper', 'test-suite'],
+          'theme': 'geo.ca',
           'corePackagesConfig': [
             {
               'swiper': {
@@ -563,16 +572,7 @@
               },
               'test-suite': { 'suites': ['suite-swiper'] }
             }
-          ],
-          'theme': 'geo.ca',
-          'footerBar': {
-            'tabs': {
-              'core': [
-                'legend',
-                'layers'
-              ]
-            }
-          }
+          ]
         }"></div></div><script>insertPageHeader();
 
       let mapsInitialized = false;

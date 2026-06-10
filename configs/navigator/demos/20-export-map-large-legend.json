@@ -1,4 +1,7 @@
 {
+  "configMeta": {
+    "description": "Map export with large legend and many layers on imagery basemap."
+  },
   "map": {
     "interaction": "dynamic",
     "viewSettings": {
@@ -106,15 +109,14 @@
                       {
                         "name": "plain_text",
                         "alias": "Forcast",
-                        "type": "string",
-                        "domain": null
+                        "type": "string"
                       }
                     ]
                   }
                 }
               },
               {
-                "layerId": "GDPS.ETA_ICEC",
+                "layerId": "RADAR_1KM_RSNO",
                 "layerName": "Ice Cover",
                 "source": {
                   "wmsStyle": "SEA_ICECONC"
@@ -142,8 +144,7 @@
                   {
                     "name": "band-0-pixel-value",
                     "alias": "Pixel value",
-                    "type": "number",
-                    "domain": null
+                    "type": "number"
                   }
                 ]
               }
@@ -206,10 +207,27 @@
       }
     ]
   },
-  "theme": "geo.ca",
+  "components": [
+    "north-arrow",
+    "overview-map"
+  ],
+  "navBar": [
+    "zoom",
+    "fullscreen",
+    "home",
+    "location"
+  ],
   "appBar": {
     "tabs": {
-      "core": ["geolocator", "export", "guide", "details", "legend", "data-table", "layers"]
+      "core": [
+        "geolocator",
+        "export",
+        "guide",
+        "details",
+        "legend",
+        "data-table",
+        "layers"
+      ]
     }
   },
   "footerBar": {
@@ -217,8 +235,6 @@
       "core": []
     }
   },
-  "navBar": ["zoom", "fullscreen", "home", "location"],
-  "components": ["north-arrow", "overview-map"],
   "corePackages": [],
-  "externalPackages": []
+  "theme": "geo.ca"
 }

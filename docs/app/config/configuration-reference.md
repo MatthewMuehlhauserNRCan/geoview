@@ -39,7 +39,7 @@ GeoView uses JSON Schema validation to ensure configuration objects are valid be
 When a validation error occurs, you'll see a message in the console with the following information:
 
 ```
-======================================================================
+SCHEMA VALIDATION 
 SchemaPath: https://cgpv/schema#/definitions/TypeMapFeaturesInstance
 Schema error: {
   instancePath: '/map/viewSettings/projection',
@@ -96,24 +96,62 @@ The root configuration object for initializing a GeoView map.
 
 ```typescript
 interface TypeMapFeaturesInstance {
+  // Optional
+  configMeta?: TypeConfigMeta;
+
   // Required
   map: TypeMapConfig;
 
   // Optional
-  theme?: TypeDisplayTheme;
-  navBar?: TypeNavBarProps;
-  footerBar?: TypeFooterBarProps;
-  appBar?: TypeAppBarProps;
-  overviewMap?: TypeOverviewMapProps;
   components?: TypeMapComponents;
+  overviewMap?: TypeOverviewMapProps;
+  navBar?: TypeNavBarProps;
+  appBar?: TypeAppBarProps;
+  footerBar?: TypeFooterBarProps;
   corePackages?: TypeMapCorePackages;
+  globalSettings?: TypeGlobalSettings;
+  serviceUrls?: TypeServiceUrls;
+  theme?: TypeDisplayTheme;
   corePackagesConfig?: TypeCorePackagesConfig;
   externalPackages?: TypeExternalPackages;
-  serviceUrls?: TypeServiceUrls;
-  globalSettings?: TypeGlobalSettings;
-  schemaVersionUsed?: TypeValidVersions;
 }
 ```
+
+### Canonical Property Order
+
+When writing or editing map configuration JSON files, properties **must** follow the canonical order defined in [`schema-default-config.json`](../../../packages/geoview-core/schema-default-config.json). This order groups related properties logically — metadata first, then the map definition, then UI elements, then services and extensions — making configs easier to read, review, and diff.
+
+**Root-level property order:**
+
+| Order | Property             | Required | Purpose                                    |
+| ----- | -------------------- | -------- | ------------------------------------------ |
+| 1     | `configMeta`         | No       | Config metadata (schema version)           |
+| 2     | `map`                | **Yes**  | Map definition (view, basemap, layers)     |
+| 3     | `components`         | No       | Map components (overview-map, north-arrow) |
+| 4     | `overviewMap`        | No       | Overview map settings                      |
+| 5     | `navBar`             | No       | Navigation bar controls                    |
+| 6     | `appBar`             | No       | Application bar tabs                       |
+| 7     | `footerBar`          | No       | Footer bar tabs                            |
+| 8     | `corePackages`       | No       | Core plugin packages to load               |
+| 9     | `globalSettings`     | No       | Universal map settings                     |
+| 10    | `serviceUrls`        | No       | Override service endpoints                 |
+| 11    | `theme`              | No       | Display theme (`geo.ca`, `dark`, `light`)  |
+| 12    | `corePackagesConfig` | No       | Configuration for core packages            |
+| 13    | `externalPackages`   | No       | External plugin packages                   |
+
+**`map` sub-property order:**
+
+| Order | Property                   | Required | Purpose                              |
+| ----- | -------------------------- | -------- | ------------------------------------ |
+| 1     | `interaction`              | **Yes**  | Map interaction mode                 |
+| 2     | `viewSettings`             | **Yes**  | Projection, zoom, center, rotation   |
+| 3     | `basemapOptions`           | **Yes**  | Basemap type and options             |
+| 4     | `highlightColor`           | No       | Feature highlight color overrides    |
+| 5     | `overlayObjects`           | No       | Non-interactive markers and overlays |
+| 6     | `listOfGeoviewLayerConfig` | No       | Layer definitions                    |
+| 7     | `extraOptions`             | No       | Pass-through OpenLayers map options  |
+
+> **Rationale:** The order mirrors the logical sequence of map configuration: _what kind of map_ → _what it shows_ → _how the UI wraps it_ → _what services back it_ → _what extends it_.
 
 ### TypeMapConfig
 
@@ -122,60 +160,19 @@ Main map configuration object.
 ```typescript
 interface TypeMapConfig {
   // Required
-  basemapOptions: TypeBasemapOptions;
   interaction: TypeInteraction;
   viewSettings: TypeViewSettings;
+  basemapOptions: TypeBasemapOptions;
 
   // Optional
-  listOfGeoviewLayerConfig?: TypeListOfGeoviewLayerConfig;
   highlightColor?: TypeHighlightColors;
   overlayObjects?: TypeOverlayObjects;
+  listOfGeoviewLayerConfig?: TypeListOfGeoviewLayerConfig;
   extraOptions?: object; // OpenLayers map options
 }
 ```
 
 ### Map Properties
-
-#### basemapOptions (Required)
-
-Configuration for the basemap.
-
-```typescript
-basemapOptions: {
-  basemapId: TypeBasemapId;
-  shaded: boolean;
-  labeled: boolean;
-  labelZIndex: number;
-}
-```
-
-**Properties:**
-
-- **basemapId** (Required): Basemap identifier
-  - `"transport"` - Transportation basemap
-  - `"simple"` - Simple basemap
-  - `"shaded"` - Shaded relief basemap
-  - `"osm"` - OpenStreetMap basemap
-  - `"nogeom"` - No geometry/blank basemap
-  - `"imagery"` - Imagery/satellite basemap
-  - `"labeled"` - Labeled basemap
-
-- **shaded** (Required): Enable or disable shaded basemap (if basemap id is set to shaded then this should be false)
-- **labeled** (Required): Enable or disable basemap labels
-- **labelZIndex** (Optional): Used to set the zIndex of the basemap's label layer. A value of 10 will put it under the very first layer, so if you have two layers, you will need to set it to 12 or higher for it to be above all layers. Setting it to an arbitrarily large number, like 999, will work to ensure that it ends up above all the layers in the map.
-
-**Examples:**
-
-```json
-"basemapOptions": {
-  "basemapId": "transport",
-  "shaded": true,
-  "labeled": true,
-  "labelZIndex": 20
-}
-```
-
----
 
 #### interaction (Required)
 
@@ -210,6 +207,7 @@ viewSettings: {
   homeView?: TypeMapViewSettings;
   enableRotation?: boolean;
   rotation?: number;
+  initialClickCoordinate? : Coordinate;
   maxExtent?: Extent;
   minZoom?: number;
   maxZoom?: number;
@@ -239,6 +237,8 @@ TypeMapViewSettings: {
 - **enableRotation** (Optional): Enable rotation. If false, a rotation constraint that always sets the rotation to zero is used (default: true)
 
 - **rotation** (Optional): The initial rotation for the view in **degrees** (positive rotation clockwise, 0 means North). Will be converted to radians by the viewer. Domain = [0..360] (default: 0)
+
+- **initialClickCoordinate** (Optional): The initial coordinate for the map click interaction. Called with [longitude, latitude] coordinates.
 
 - **maxExtent** (Optional): The extent that constrains the view. Called with [minX, minY, maxX, maxY] extent coordinates (default: [-135, 25, -50, 89])
 
@@ -296,26 +296,43 @@ Using layerIds to focus on specific layers:
 
 ---
 
-#### listOfGeoviewLayerConfig (Optional)
+#### basemapOptions (Required)
 
-Array of layer configurations to add to the map.
+Configuration for the basemap.
 
 ```typescript
-listOfGeoviewLayerConfig?: Array<TypeGeoviewLayerConfig>;
+basemapOptions: {
+  basemapId: TypeBasemapId;
+  shaded: boolean;
+  labeled: boolean;
+  labelZIndex: number;
+}
 ```
 
-See [GeoView Layer Configuration](#geoview-layer-configuration) section for details.
+**Properties:**
 
-**Example:**
+- **basemapId** (Required): Basemap identifier
+  - `"transport"` - Transportation basemap
+  - `"simple"` - Simple basemap
+  - `"shaded"` - Shaded relief basemap
+  - `"osm"` - OpenStreetMap basemap
+  - `"nogeom"` - No geometry/blank basemap
+  - `"imagery"` - Imagery/satellite basemap
+  - `"labeled"` - Labeled basemap
+
+- **shaded** (Required): Enable or disable shaded basemap (if basemap id is set to shaded then this should be false)
+- **labeled** (Required): Enable or disable basemap labels
+- **labelZIndex** (Optional): Used to set the zIndex of the basemap's label layer. A value of 10 will put it under the very first layer, so if you have two layers, you will need to set it to 12 or higher for it to be above all layers. Setting it to an arbitrarily large number, like 999, will work to ensure that it ends up above all the layers in the map.
+
+**Examples:**
 
 ```json
-"listOfGeoviewLayerConfig": [
-  {
-    "geoviewLayerId": "wms-layer",
-    "geoviewLayerType": "ogcWms",
-    "metadataAccessPath": "https://example.com/wms"
-  }
-]
+"basemapOptions": {
+  "basemapId": "transport",
+  "shaded": true,
+  "labeled": true,
+  "labelZIndex": 20
+}
 ```
 
 ---
@@ -360,6 +377,30 @@ overlayObjects?: Array<object>;
 
 ---
 
+#### listOfGeoviewLayerConfig (Optional)
+
+Array of layer configurations to add to the map.
+
+```typescript
+listOfGeoviewLayerConfig?: Array<TypeGeoviewLayerConfig>;
+```
+
+See [GeoView Layer Configuration](#geoview-layer-configuration) section for details.
+
+**Example:**
+
+```json
+"listOfGeoviewLayerConfig": [
+  {
+    "geoviewLayerId": "wms-layer",
+    "geoviewLayerType": "ogcWms",
+    "metadataAccessPath": "https://example.com/wms"
+  }
+]
+```
+
+---
+
 #### extraOptions (Optional)
 
 Additional OpenLayers map options.
@@ -380,11 +421,6 @@ extraOptions?: object;
 
 ```json
 "map": {
-  "basemapOptions": {
-    "basemapId": "transport",
-    "shaded": true,
-    "labeled": true
-  },
   "interaction": "dynamic",
   "viewSettings": {
     "projection": 3978,
@@ -394,6 +430,11 @@ extraOptions?: object;
     "minZoom": 4,
     "maxZoom": 18,
     "enableRotation": false
+  },
+  "basemapOptions": {
+    "basemapId": "transport",
+    "shaded": true,
+    "labeled": true
   },
   "listOfGeoviewLayerConfig": [
     {
@@ -407,26 +448,57 @@ extraOptions?: object;
 
 ---
 
-#### theme (Optional)
+#### components (Optional)
 
-Visual theme for the map interface.
+Core UI components to initialize on viewer load.
 
 ```typescript
-theme?: "dark" | "light" | "geo.ca";
+components?: Array<"overview-map" | "north-arrow">;
 ```
 
-**Valid Values:**
+**Available Components:**
 
-- `"dark"` - Dark theme
-- `"light"` - Light theme
-- `"geo.ca"` - Default Geo.ca theme
+- `"overview-map"` - Small overview map showing the current view extent
+- `"north-arrow"` - North arrow indicator on the map
 
-**Default:** `"geo.ca"`
+**Default:** `["overview-map", "north-arrow"]`
 
 **Example:**
 
 ```json
-"theme": "dark"
+"components": ["north-arrow"]
+```
+
+```json
+"components": ["overview-map", "north-arrow"]
+```
+
+```json
+"components": []
+```
+
+---
+
+#### overviewMap (Optional)
+
+Configuration for the overview map.
+
+```typescript
+overviewMap?: {
+  hideOnZoom?: number;
+};
+```
+
+**Properties:**
+
+- `hideOnZoom` - Minimum zoom level at which the overview map is displayed (range: 0-10, default: 0)
+
+**Example:**
+
+```json
+"overviewMap": {
+  "hideOnZoom": 5
+}
 ```
 
 ---
@@ -460,6 +532,70 @@ navBar?: Array<"zoom" | "rotation" | "fullscreen" | "home" | "location" | "basem
 ```
 
 > **Note:** The `"drawer"` option requires the **drawer package** to be configured. See [Drawer Package](#drawer-package) configuration.
+
+---
+
+#### appBar (Optional)
+
+Configuration for app bar tabs.
+
+```typescript
+appBar?: {
+  tabs: {
+    core: TypeValidAppBarCoreProps[];
+  };
+  collapsed: boolean;
+  selectedTab: TypeValidAppBarCoreProps;
+  selectedLayersLayerPath: string;
+  selectedDetailsLayerPath: string;
+  selectedDataTableLayerPath: string;
+  selectedTimeSliderLayerPath: string;
+};
+
+TypeValidAppBarCoreProps = "about-panel" | "geolocator" | "export" | "aoi-panel" | "custom-legend" | "guide" | "legend" | "details" | "data-table" | "layers" | "stac-browser";
+```
+
+**Properties:**
+
+- **tabs** (Required): Tab configuration
+  - **core** (Required): Array of core tab identifiers
+    - `"about-panel"` - **About Panel package** - Package for adding a panel with information about the map
+    - `"geolocator"` - Location search and navigation
+    - `"export"` - Map export functionality
+    - `"aoi-panel"` - **AOI Panel package** - Area of interest selection
+    - `"custom-legend"` - **Custom Legend package** - Custom legend display
+    - `"stac-browser"` - **Custom Stac Browser package** - Browse Stac
+    - `"guide"` - User guide tab
+    - `"legend"` - Layer legend display
+    - `"details"` - Feature details viewer
+    - `"data-table"` - Tabular data view
+    - `"layers"` - Layer list and management
+
+- **selectedTab**: The initially selected tab
+
+- **selectedLayersLayerPath**: Layer path for layers tab selection
+
+- **selectedDetailsLayerPath**:  Layer path for details tab selection
+
+- **selectedDataTableLayerPath**: Layer path for data table tab selection
+
+- **selectedTimeSliderLayerPath**: Layer path for time slider tab selection
+
+**Default:** `{ tabs: { core: ["geolocator", "legend", "details", "export"] } }`
+
+**Example:**
+
+```json
+"appBar": {
+  "tabs": {
+    "core": ["about-panel", "geolocator", "export", "aoi-panel", "custom-legend"]
+  },
+  "collapsed": false,
+  "selectedTab": "geolocator"
+}
+```
+
+> **Note:** The `"aoi-panel"` tab requires the **aoi-panel package** to be configured. See [Area of Interest Panel Package](#area-of-interest-aoi-panel-package) configuration.
 
 ---
 
@@ -505,11 +641,15 @@ TypeFooterBarTabsCustomProps = {
 
 - **selectedLayersLayerPath**: Layer path for layers tab selection
 
+- **selectedDetailsLayerPath**:  Layer path for details tab selection
+
 - **selectedDataTableLayerPath**: Layer path for data table tab selection
 
 - **selectedTimeSliderLayerPath**: Layer path for time slider tab selection
 
-**Default:** `{ tabs: { core: ["legend", "layers", "details", "data-table"], custom: [] }, collapsed: false }`
+- **selectedGeochartLayerPath**:  Layer path for geochart tab selection
+
+**Default:** `{ tabs: { core: ["layers", "data-table"] } }`
 
 **Example:**
 
@@ -527,123 +667,6 @@ TypeFooterBarTabsCustomProps = {
 
 ---
 
-#### appBar (Optional)
-
-Configuration for app bar tabs.
-
-```typescript
-appBar?: {
-  tabs: {
-    core: TypeValidAppBarCoreProps[];
-  };
-  collapsed: boolean;
-  selectedTab: TypeValidAppBarCoreProps;
-  selectedLayersLayerPath: string;
-  selectedDataTableLayerPath: string;
-  selectedTimeSliderLayerPath: string;
-};
-
-TypeValidAppBarCoreProps = "about-panel" | "geolocator" | "export" | "aoi-panel" | "custom-legend" | "guide" | "legend" | "details" | "data-table" | "layers";
-```
-
-**Properties:**
-
-- **tabs** (Required): Tab configuration
-  - **core** (Required): Array of core tab identifiers
-    - `"about-panel"` - **About Panel package** - Package for adding a panel with information about the map
-    - `"geolocator"` - Location search and navigation
-    - `"export"` - Map export functionality
-    - `"aoi-panel"` - **AOI Panel package** - Area of interest selection
-    - `"custom-legend"` - **Custom Legend package** - Custom legend display
-    - `"guide"` - User guide tab
-    - `"legend"` - Layer legend display
-    - `"details"` - Feature details viewer
-    - `"data-table"` - Tabular data view
-    - `"layers"` - Layer list and management
-
-- **collapsed**: Whether the app bar is initially collapsed
-
-- **selectedTab**: The initially selected tab
-
-- **selectedLayersLayerPath**: Layer path for layers tab selection
-
-- **selectedDataTableLayerPath**: Layer path for data table tab selection
-
-- **selectedTimeSliderLayerPath**: Layer path for time slider tab selection
-
-**Default:** `{ tabs: { core: ["geolocator"] }, collapsed: false }`
-
-**Example:**
-
-```json
-"appBar": {
-  "tabs": {
-    "core": ["about-panel", "geolocator", "export", "aoi-panel", "custom-legend"]
-  },
-  "collapsed": false,
-  "selectedTab": "geolocator"
-}
-```
-
-> **Note:** The `"aoi-panel"` tab requires the **aoi-panel package** to be configured. See [Area of Interest Panel Package](#area-of-interest-aoi-panel-package) configuration.
-
----
-
-#### overviewMap (Optional)
-
-Configuration for the overview map.
-
-```typescript
-overviewMap?: {
-  hideOnZoom?: number;
-};
-```
-
-**Properties:**
-
-- `hideOnZoom` - Minimum zoom level at which the overview map is displayed (range: 0-10, default: 0)
-
-**Example:**
-
-```json
-"overviewMap": {
-  "hideOnZoom": 5
-}
-```
-
----
-
-#### components (Optional)
-
-Core UI components to initialize on viewer load.
-
-```typescript
-components?: Array<"overview-map" | "north-arrow">;
-```
-
-**Available Components:**
-
-- `"overview-map"` - Small overview map showing the current view extent
-- `"north-arrow"` - North arrow indicator on the map
-
-**Default:** `["overview-map", "north-arrow"]`
-
-**Example:**
-
-```json
-"components": ["north-arrow"]
-```
-
-```json
-"components": ["overview-map", "north-arrow"]
-```
-
-```json
-"components": []
-```
-
----
-
 #### corePackages (Optional)
 
 List of core packages to load.
@@ -654,7 +677,7 @@ corePackages?: Array<"swiper" | "test-suite">;
 
 **Available Packages:**
 
-- `"swiper"` - Layer swipe comparison tool
+- `"swiper"` - **Swiper package** - Layer swipe comparison tool
 - `"test-suite"` - GeoView test suite (for development/testing only)
 
 **Example:**
@@ -664,6 +687,117 @@ corePackages?: Array<"swiper" | "test-suite">;
 ```
 
 > **Note:** Other packages (GeoChart, Time Slider, AOI Panel, Drawer) are loaded through their respective tab configurations in `appBar`, `footerBar`, or `navBar`.
+
+---
+
+#### globalSettings (Optional)
+
+Global settings for the map instance.
+
+```typescript
+globalSettings?: TypeGlobalSettings;
+
+TypeGlobalSettings = {
+  displayDateMode?: DisplayDateMode;
+  canRemoveSublayers?: boolean;
+  disabledLayerTypes?: TypeGeoviewLayerType[];
+  showUnsymbolizedFeatures?: boolean;
+  coordinateInfoEnabled?: boolean;
+  hideCoordinateInfoSwitch?: boolean;
+};
+```
+
+**Properties:**
+
+- **canRemoveSublayers** (Optional): Whether or not sublayers can be removed from layer groups
+  - **Type:** `boolean`
+  - **Default:** `true`
+
+- **displayDateMode** (Optional): The display date pattern to use for the application
+  - **Type:** `DisplayDateMode`
+  - **Valid values:** `"iso"`, `"long"`
+
+- **disabledLayerTypes** (Optional): Array of layer types that should be disabled
+  - **Type:** `TypeGeoviewLayerType[]`
+  - **Valid values:** `"esriDynamic"`, `"esriFeature"`, `"esriImage"`, `"imageStatic"`, `"GeoJSON"`, `"GeoTIFF"`, `"xyzTiles"`, `"vectorTiles"`, `"ogcFeature"`, `"ogcWms"`, `"ogcWfs"`, `"ogcWmts"`, `"CSV"`, `"KML"`, `"WKB"`
+
+- **showUnsymbolizedFeatures** (Optional): Whether to display unsymbolized features in the datatable and other components
+  - **Type:** `boolean`
+
+- **showLayerHighlightLayerBbox** (Optional): Whether to display bbox when layer is highlighted
+  - **Type** `boolean`
+
+- **coordinateInfoEnabled** (Optional): Whether the initial state of the coordinate info tool should be enabled
+  - **Type:** `boolean`
+
+- **hideCoordinateInfoSwitch** (Optional): Whether the coordinate info tool should be removed from the UI
+  - **Type:** `boolean`
+
+**Example:**
+
+```json
+"globalSettings": {
+  "canRemoveSublayers": true,
+  "disabledLayerTypes": ["ogcWfs", "CSV"],
+  "showUnsymbolizedFeatures": false,
+  "showLayerHighlightLayerBbox": true,
+  "coordinateInfoEnabled": true,
+  "hideCoordinateInfoSwitch": false,
+  "displayDateMode": "iso"
+}
+```
+
+---
+
+#### serviceUrls (Optional)
+
+URLs for external services.
+
+```typescript
+serviceUrls?: {
+  geocoreUrl?: string;
+  rcsUrl?: string;
+  proxyUrl?: string;
+  geolocatorUrl?: string;
+  metadataUrl?: string;
+  utmZoneUrl?: string;
+  ntsSheetUrl?: string;
+  altitudeUrl?: string;
+};
+```
+
+**Example:**
+
+```json
+"serviceUrls": {
+  "geolocatorUrl": "https://geolocator.api.geo.ca?keys=geonames,nominatim",
+  "geocoreUrl": "https://geocore.api.geo.ca"
+}
+```
+
+---
+
+#### theme (Optional)
+
+Visual theme for the map interface.
+
+```typescript
+theme?: "dark" | "light" | "geo.ca";
+```
+
+**Valid Values:**
+
+- `"dark"` - Dark theme
+- `"light"` - Light theme
+- `"geo.ca"` - Default Geo.ca theme
+
+**Default:** `"geo.ca"`
+
+**Example:**
+
+```json
+"theme": "dark"
+```
 
 ---
 
@@ -728,91 +862,6 @@ See package-specific sections ([Swiper](#swiper-package), [GeoChart](#geochart-p
     }
   }
 ]
-```
-
----
-
-#### serviceUrls (Optional)
-
-URLs for external services.
-
-```typescript
-serviceUrls?: {
-  geocoreUrl?: string;
-  rcsUrl?: string;
-  proxyUrl?: string;
-  geolocatorUrl?: string;
-  metadataUrl?: string;
-  utmZoneUrl?: string;
-  ntsSheetUrl?: string;
-  altitudeUrl?: string;
-};
-```
-
-**Example:**
-
-```json
-"serviceUrls": {
-  "geolocatorUrl": "https://geolocator.api.geo.ca?keys=geonames,nominatim",
-  "geocoreUrl": "https://geocore.api.geo.ca"
-}
-```
-
----
-
-#### globalSettings (Optional)
-
-Global settings for the map instance.
-
-```typescript
-globalSettings?: TypeGlobalSettings;
-
-TypeGlobalSettings = {
-  displayDateMode?: DisplayDateMode;
-  canRemoveSublayers?: boolean;
-  disabledLayerTypes?: TypeGeoviewLayerType[];
-  showUnsymbolizedFeatures?: boolean;
-  coordinateInfoEnabled?: boolean;
-  hideCoordinateInfoSwitch?: boolean;
-};
-```
-
-**Properties:**
-
-- **canRemoveSublayers** (Optional): Whether or not sublayers can be removed from layer groups
-  - **Type:** `boolean`
-  - **Default:** `true`
-
-- **displayDateMode** (Optional): The display date pattern to use for the application
-  - **Type:** `DisplayDateMode`
-
-- **disabledLayerTypes** (Optional): Array of layer types that should be disabled
-  - **Type:** `TypeGeoviewLayerType[]`
-  - **Valid values:** `"esriDynamic"`, `"esriFeature"`, `"esriImage"`, `"imageStatic"`, `"GeoJSON"`, `"GeoTIFF"`, `"xyzTiles"`, `"vectorTiles"`, `"ogcFeature"`, `"ogcWms"`, `"ogcWfs"`, `"ogcWmts"`, `"CSV"`, `"KML"`, `"WKB"`
-
-- **showUnsymbolizedFeatures** (Optional): Whether to display unsymbolized features in the datatable and other components
-  - **Type:** `boolean`
-
-- **showLayerHighlightLayerBbox** (Optional): Whether to display bbox when layer is highlighted
-  - **Type** `boolean`
-
-- **coordinateInfoEnabled** (Optional): Whether the initial state of the coordinate info tool should be enabled
-  - **Type:** `boolean`
-
-- **hideCoordinateInfoSwitch** (Optional): Whether the coordinate info tool should be removed from the UI
-  - **Type:** `boolean`
-
-**Example:**
-
-```json
-"globalSettings": {
-  "canRemoveSublayers": true,
-  "disabledLayerTypes": ["ogcWfs", "CSV"],
-  "showUnsymbolizedFeatures": false,
-  "showLayerHighlightLayerBbox": true,
-  "coordinateInfoEnabled": true,
-  "hideCoordinateInfoSwitch": false
-}
 ```
 
 ---
@@ -3072,7 +3121,7 @@ When using `mdPath` or `mdContent`, the About Panel supports standard Markdown s
       }
     ]
   },
-  "theme": "geo.ca",
+
   "navBar": ["zoom", "fullscreen", "home", "drawer"],
   "appBar": {
     "tabs": {
@@ -3085,6 +3134,7 @@ When using `mdPath` or `mdContent`, the About Panel supports standard Markdown s
     }
   },
   "corePackages": ["swiper"],
+  "theme": "geo.ca",
   "corePackagesConfig": [
     {
       "swiper": {

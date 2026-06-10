@@ -5,7 +5,8 @@
             'initialView': {
               'zoomAndCenter': [3, [-110, 80]]
             },
-            'projection': 3573
+            'projection': 3573,
+            'minZoom': 3
           },
           'basemapOptions': {
             'basemapId': 'nogeom',
@@ -38,19 +39,19 @@
           ]
         },
         'components': ['north-arrow'],
-        'navBar': ['zoom'],
+        'navBar': ['zoom', 'home'],
+        'appBar': {
+          'tabs': {
+            'core': ['geolocator', 'legend', 'details', 'export']
+          }
+        },
         'footerBar': {
           'tabs': {
             'core': ['layers', 'data-table']
           }
         },
         'corePackages': [],
-        'theme': 'geo.ca',
-        'appBar': {
-          'tabs': {
-            'core': ['geolocator', 'legend', 'details', 'export']
-          }
-        }
+        'theme': 'geo.ca'
       }"></div><button type="button" class="collapsible">Configuration Snippet</button><pre id="map1CS" class="panel"></pre><div class="demo-section"><h4 id="HLYR2">2. Sea Ice Extent (1979-2016)</h4><a class="ref-link" href="#top">Top</a></div><div id="map2" class="geoview-map" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
@@ -58,7 +59,8 @@
             'initialView': {
               'zoomAndCenter': [3, [-110, 80]]
             },
-            'projection': 3573
+            'projection': 3573,
+            'minZoom': 3
           },
           'basemapOptions': {
             'basemapId': 'nogeom',
@@ -109,7 +111,13 @@
           ]
         },
         'components': ['north-arrow'],
-        'navBar': ['zoom'],
+        'navBar': ['zoom', 'home'],
+        'appBar': {
+          'tabs': {
+            'core': ['geolocator', 'custom-legend', 'details', 'export']
+          },
+          'selectedTab': 'custom-legend'
+        },
         'footerBar': {
           'tabs': {
             'core': ['layers', 'data-table']
@@ -117,12 +125,6 @@
         },
         'corePackages': ['swiper'],
         'theme': 'geo.ca',
-        'appBar': {
-          'tabs': {
-            'core': ['geolocator', 'custom-legend', 'details', 'export']
-          },
-          'selectedTab': 'custom-legend'
-        },
         'corePackagesConfig': [
           {
             'swiper': {

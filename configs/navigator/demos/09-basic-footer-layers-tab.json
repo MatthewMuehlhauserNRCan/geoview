@@ -1,4 +1,7 @@
 {
+  "configMeta": {
+    "description": "FooterBar with layers tab, overlay point markers, intentional bad URL layer, and canRemoveSublayers disabled."
+  },
   "map": {
     "interaction": "dynamic",
     "viewSettings": {
@@ -120,7 +123,9 @@
                 "layerId": "points_1.json",
                 "layerName": "Points 1",
                 "initialSettings": {
-                  "controls": { "remove": true }
+                  "controls": {
+                    "remove": true
+                  }
                 }
               },
               {
@@ -137,8 +142,12 @@
       }
     ]
   },
-  "theme": "geo.ca",
   "components": ["north-arrow", "overview-map"],
+  "appBar": {
+    "tabs": {
+      "core": ["geolocator", "export"]
+    }
+  },
   "footerBar": {
     "tabs": {
       "core": ["legend", "details", "layers", "data-table"]
@@ -147,13 +156,8 @@
     "selectedLayersLayerPath": "airborne_radioactivity/1"
   },
   "corePackages": [],
-  "externalPackages": [],
-  "appBar": {
-    "tabs": {
-      "core": ["geolocator", "export"]
-    }
-  },
   "globalSettings": {
     "canRemoveSublayers": false
-  }
+  },
+  "theme": "geo.ca"
 }

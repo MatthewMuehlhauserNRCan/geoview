@@ -11,20 +11,19 @@
           },
           'listOfGeoviewLayerConfig': []
         },
-        'theme': 'geo.ca',
         'components': [],
+        'appBar': {
+          'tabs': {
+            'core': []
+          }
+        },
         'footerBar': {
           'tabs': {
             'core': ['legend', 'layers', 'details', 'data-table', 'geochart', 'time-slider']
           }
         },
         'corePackages': [],
-        'externalPackages': [],
-        'appBar': {
-          'tabs': {
-            'core': []
-          }
-        }
+        'theme': 'geo.ca'
       }"></div><div class="demo-section"><h4 id="HUC1">Drop-down Selectors</h4><div class="navigator-selector-wrap"><div class="demo-important-selector"><label class="navigator-label">Group Selector</label> <select id="selectGroup" class="navigator-select"><option value="dataTeam">Data Team</option><option value="OSDP">OSDP</option></select></div><div class="demo-important-selector"><label class="navigator-label">Sub Group Selector</label> <select id="selectSubGroup" class="navigator-select"></select></div><div class="demo-important-selector"><label class="navigator-label">Service Selector</label> <select id="selectService" class="navigator-select"></select></div><div class="demo-important-selector"><label class="navigator-label">&nbsp;</label> <button type="button" class="btn btn-success" onclick="addLayer()">Add layer</button></div></div><div><table class="display-fields"><tr><td class="display-fields">Type</td><td class="display-fields" id="type-field"></td></tr><tr><td class="display-fields">Access Path</td><td class="display-fields" id="access-path-field"></td></tr><tr><td class="display-fields">Layer Id</td><td class="display-fields" id="layer-id-field"></td></tr></table></div></div><hr/><script src="codedoc.js"></script><script>insertPageHeader();
 
       async function addGeocore(uuid) {

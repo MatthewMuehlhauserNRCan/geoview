@@ -1,4 +1,8 @@
 {
+  "configMeta": {
+    "version": "1.0",
+    "description": "Used in demo-custom-footer-height.html to demo the custom footer bar height."
+  },
   "map": {
     "interaction": "dynamic",
     "viewSettings": {
@@ -23,13 +27,17 @@
       }
     ]
   },
-  "theme": "geo.ca",
   "components": ["north-arrow", "overview-map"],
+  "appBar": {
+    "tabs": {
+      "core": ["details", "geolocator"]
+    }
+  },
   "footerBar": {
     "tabs": {
       "core": ["legend", "layers"]
     }
   },
   "corePackages": [],
-  "externalPackages": []
+  "theme": "geo.ca"
 }

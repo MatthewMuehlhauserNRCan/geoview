@@ -47,6 +47,22 @@
             },
             'theme': 'geo.ca',
             'components': ['north-arrow', 'overview-map'],
+            'navBar': [
+              'basemap-select',
+              'projection',
+              'fullscreen',
+              'drawer'
+            ],
+            'appBar': {
+              'tabs': {
+                'core': []
+              }
+            },
+            'footerBar': {
+              'tabs': {
+                'core': []
+              }
+            },
             'corePackages': [],
             'corePackagesConfig': [
               {
@@ -69,22 +85,6 @@
                   'hideMeasurements': false
                 }
               }
-            ],
-            'footerBar': {
-              'tabs': {
-                'core': []
-              }
-            },
-            'appBar': {
-              'tabs': {
-                'core': []
-              }
-            },
-            'navBar': [
-              'basemap-select',
-              'projection',
-              'fullscreen',
-              'drawer'
             ]
           }"></div></div><div class="map-wrapper"><h5>Map 2 (Simple Basemap)</h5><div id="map2" class="geoview-map" data-lang="en" data-config="{
             'map': {
@@ -101,9 +101,25 @@
                 'labeled': true
               }
             },
-            'theme': 'dark',
             'components': ['north-arrow', 'overview-map'],
+            'navBar': [
+                'basemap-select',
+                'projection',
+                'fullscreen',
+                'drawer'
+            ],
+            'appBar': {
+              'tabs': {
+                'core': []
+              }
+            },
+            'footerBar': {
+              'tabs': {
+                'core': []
+              }
+            },
             'corePackages': [],
+            'theme': 'dark',
             'corePackagesConfig': [
               {
                 'drawer': {
@@ -125,22 +141,6 @@
                   'hideMeasurements': false
                 }
               }
-            ],
-            'footerBar': {
-              'tabs': {
-                'core': []
-              }
-            },
-            'appBar': {
-              'tabs': {
-                'core': []
-              }
-            },
-            'navBar': [
-                'basemap-select',
-                'projection',
-                'fullscreen',
-                'drawer'
             ]
           }"></div></div></div><hr/><div class="keyboard-shortcuts"><h4>Keyboard Shortcuts Reference</h4><p><strong>Enable Shortcuts:</strong> Press <code>`</code> (backtick) when a GeoView element is focused to toggle keyboard shortcuts on/off</p><p><strong>When shortcuts are enabled:</strong></p><ul><li><code>D</code> - Toggle Drawing mode</li><li><code>E</code> - Toggle Editing mode</li><li><code>G</code> - Cycle geometry type forward</li><li><code>Shift+G</code> - Cycle geometry type backward</li><li><code>S</code> - Open style menu</li><li><code>M</code> - Toggle measurements</li><li><code>N</code> - Toggle snapping</li><li><code>Shift+C</code> - Clear all drawings</li><li><code>Shift+S</code> - Save / Download drawings</li><li><code>Shift+O</code> - Open / Upload drawings</li></ul><p><strong>Always available within GeoView Element:</strong></p><ul><li><code>Ctrl+Z</code> - Undo</li><li><code>Ctrl+Y</code> or <code>Ctrl+Shift+Z</code> - Redo</li><li><code>Escape</code> - Clear selection/exit editing</li></ul><p><strong>Crosshair mode (Ctrl+Alt+M):</strong></p><ul><li><code>Enter</code> or <code>Space</code> - Add drawing vertex / Select feature for editing</li><li><code>Shift+Enter</code> or <code>Shift+Space</code> - Finish drawing (While Drawing) or Delete vertex / Open text editor (While Editing)</li><li><code>Escape</code> - Cancel grabbed handle</li><li><code>Ctrl+↑</code> - Zoom in</li><li><code>Ctrl+↓</code> - Zoom out</li><li><code>Shift+↑</code> - Increase pan delta</li><li><code>Shift+↓</code> - Decrease pan delta</li></ul></div><hr/><button type="button" class="collapsible">Code Snippet</button><pre id="codeSnippet" class="panel"></pre><script>insertPageHeader();
 
