@@ -40,6 +40,7 @@
   },
   "map": {
     "container": "Carte interactive {{mapId}}",
+    "info": "Informations sur la carte",
     "status": {
       "loadingMap": "Chargement de la carte",
       "mapLoaded": "Carte chargée",
@@ -48,7 +49,7 @@
     }
   },
   "mapnav": {
-    "arianavbar": "Groupe de buttons vertical pour navigation sur la carte",
+    "ariarole": "Navigation sur la carte",
     "basemap": "Changer la carte de base",
     "fullscreen": "Plein écran",
     "home": "Zoom à la vue initiale",
@@ -65,6 +66,13 @@
       "title": "Rotation de la carte",
       "degrees": "Degrés",
       "reset": "Réinitialiser"
+    },
+    "groups": {
+      "generic": "Groupe vertical de boutons pour la navigation sur la carte",
+      "zoom": "Contrôles de zoom et de rotation",
+      "display": "Contrôles d'affichage",
+      "drawer": "Outils de dessin",
+      "default": "Contrôles supplémentaires de la carte"
     }
   },
   "measurement": {
@@ -226,6 +234,8 @@
     "errorNoBounds": "Impossible de trouver les limites pour la couche '{{layerPath}}'.",
     "errorNoExtent": "Aucune étendue définie pour la couche '{{layerPath}}'.",
     "errorInvalidExtent": "Étendue invalide '{{extent}}'.",
+    "errorNonreloadableLayer": "Cette couche ne peut être rechargée. Assurez-vous qu'elle a déjà été chargée au moins une fois.",
+    "layerReloaded": "La couche '{{layerName}}' a été rechargée avec succès.",
     "fetchProgress": "Téléchargement des données... Téléchargé {{processed}} de {{total}} enregistrements.",
     "fetchDone": "Données téléchargées - {{total}} enregistrements.",
     "fetchStart": "Téléchargement des données...",
@@ -319,6 +329,7 @@
     },
     "status": {
       "layerLoadingDescriptive": "Chargement de la couche, {{layerName}}",
+      "layerProcessingDescriptive": "Traitement de la couche, {{layerName}}",
       "layerLoadedDescriptive": "La couche, {{layerName}}, a été chargée avec succès",
       "layerErrorDescriptive": "Erreur lors du chargement de la couche, {{layerName}}"
     }
@@ -543,7 +554,7 @@
       "basemapTakingLongTime": "La couche de base prend plus de temps que prévu à répondre...",
       "metadataTakingLongTime": "Les métadonnées pour la couche '{{layerName}}' prennent plus de temps que prévu à récupérer...",
       "metadatasTakingLongTime": "Le téléchargement des métadonnées de certaines couches prend plus de temps que...",
-      "vectorTileRemoved": "La tuile vectorielle '{{layerName}}' a dû être retirée en raison d'un conflit de projection.",
+      "vectorTileUnsupportedProjection": "La tuile vectorielle '{{layerName}}' ne supporte pas la projection de la carte, envisagez de désactiver sa visibilité.",
       "basemapLayerCreationError": "Erreur lors de la création de la couche de base {{basemapType}}.",
       "kmlLayerWarning": "Les couches KML n'afficheront pas les symboles appropriés dans les panneaux et ne comporteront pas d'entrées dans le tableau de données.",
       "layerCRSNotSupported": "La référence spatiale de la carte '{{mapProj}}' n'est pas officiellement supportée par la couche '{{layerName}}'. GeoView va tout de même tenté d'afficher la couche, mais celle-ci risque d'être désalignée..",
@@ -597,9 +608,5 @@
     "geolocator": {
       "noService": "Service de géolocalisation non disponible"
     }
-  },
-  "templates": {
-    "firstSnackbar": "Ceci est ma première notification !",
-    "canApplyFunction": "Je peux même appliquer une fonction"
   }
 }

@@ -38,7 +38,17 @@
       const config = urlParams.get('config');
       const mapId = 'map1';
 
+      /** SessionStorage key for preserving the textarea config across page reloads. */
+      const STORAGE_KEY_CONFIG = 'release-navigator-config';
+
       let currentScript = null;
+
+      // Restore textarea config from sessionStorage if the page was reloaded for a version switch
+      const savedConfig = sessionStorage.getItem(STORAGE_KEY_CONFIG);
+      if (savedConfig) {
+        mapConfigTextarea.value = savedConfig;
+        sessionStorage.removeItem(STORAGE_KEY_CONFIG);
+      }
 
       // Initialize config editor utilities (line numbers + validation)
       const configUtils = initializeConfigEditor({
@@ -64,19 +74,29 @@
 
       //#region ------------------ BUILD SELECTOR SECTION START -----------------------------------------
       /**
-       * IMPORTANT: HOW TO ADD NEW RELEASE BUILDS
+       * IMPORTANT: HOW TO ADD NEW RELEASE VERSIONS
        *
-       * 1. Copy the compiled cgpv-main.js file to public/builds/
-       * 2. Rename it to cgpv-main-{VERSION}.js (e.g., cgpv-main-2.2.0.js)
-       * 3. Add the version number to the 'versions' array below
-       * 4. Rebuild with 'rush build' to copy builds to dist folder
+       * Starting with 2.1.0, releases are hosted on the CDN at:
+       *   https://viewer-visualiseur.services.geo.ca/apps/GeoView/{VERSION}/cgpv-main.js
        *
-       * The versions array is manually maintained and lists all available
-       * release versions in the public/builds/ folder.
+       * To add a new version, simply append it to the 'hostedVersions' array below.
+       * No local build file is needed — the script is loaded directly from the CDN.
+       *
+       * Legacy versions (1.0.0, 2.0.0) pre-date the hosted infrastructure and are
+       * served from local build files in public/builds/cgpv-main-{VERSION}.js.
        */
 
-      // Define available versions from public/builds folder (update when adding new builds)
-      const versions = ['1.0.0', '2.0.0', '2.1.0', '2.2.0'];
+      /** Base URL for hosted release builds on the CDN. */
+      const HOSTED_BASE_URL = 'https://viewer-visualiseur.services.geo.ca/apps/GeoView';
+
+      /** Legacy versions served from local build files in public/builds/. */
+      const localVersions = ['1.0.0', '2.0.0'];
+
+      /** Versions hosted on the CDN (2.1.0+). Add new releases here. */
+      const hostedVersions = ['2.1.0', '2.2.0'];
+
+      /** All available versions for the dropdown. */
+      const versions = [...localVersions, ...hostedVersions];
 
       // Populate dropdown with available release versions
       function populateReleaseOptions() {
@@ -86,12 +106,6 @@
           option.textContent = version;
           configLoader.appendChild(option);
         });
-
-        // Add local/host development option
-        const localOption = document.createElement('option');
-        localOption.value = 'local';
-        localOption.textContent = 'Local/ Host Build (current)';
-        configLoader.appendChild(localOption);
       }
 
       // Populate options on page load
@@ -99,36 +113,30 @@
       //#endregion ------------------ BUILD SELECTOR SECTION END -----------------------------------------
 
       //#region ------------------ LOAD CGPV SCRIPT SECTION START -----------------------------------------
-      // Function to dynamically load cgpv-main.js from selected release
-      function loadCgpvScript(versionOrLocal) {
+      /**
+       * Resolves the script URL for a given version.
+       * Hosted versions (2.1.0+) load from the CDN; legacy versions from local builds.
+       */
+      function getScriptUrl(version) {
+        if (hostedVersions.includes(version)) {
+          return `${HOSTED_BASE_URL}/${version}/cgpv-main.js`;
+        }
+        if (localVersions.includes(version)) {
+          return `./builds/cgpv-main-${version}.js`;
+        }
+        return null;
+      }
+
+      /**
+       * Dynamically loads a cgpv-main.js script and resolves when it is ready.
+       */
+      function loadCgpvScript(version) {
+        const scriptUrl = getScriptUrl(version);
+        if (!scriptUrl) {
+          return Promise.reject(new Error(`Invalid version: ${version}`));
+        }
+
         return new Promise((resolve, reject) => {
-          // Build script URL from whitelist - never use user input directly
-          let scriptUrl;
-          if (versionOrLocal === 'local') {
-            scriptUrl = './cgpv-main.js';
-          } else if (versions.includes(versionOrLocal)) {
-            scriptUrl = `./builds/cgpv-main-${versionOrLocal}.js`;
-          } else {
-            reject(new Error(`Invalid version: ${versionOrLocal}`));
-            return;
-          }
-
-          // Remove previous cgpv script if exists
-          if (currentScript) {
-            currentScript.remove();
-            // Clean up cgpv global if it exists
-            if (window.cgpv) {
-              delete window.cgpv;
-            }
-          }
-
-          // Clear map container
-          const mapContainer = document.getElementById(mapId);
-          if (mapContainer) {
-            mapContainer.innerHTML = '';
-          }
-
-          // Create and load new script
           const script = document.createElement('script');
           script.src = scriptUrl;
           script.onload = () => {
@@ -142,33 +150,41 @@
         });
       }
 
-      configLoader.addEventListener('change', async (e) => {
+      // When switching versions, reload the page. A full reload is the only reliable
+      // way to discard the old cgpv webpack bundle — its module-scoped closures keep
+      // references to the old store/React roots that cannot be cleaned up externally.
+      // The textarea config is preserved via sessionStorage across the reload.
+      configLoader.addEventListener('change', (e) => {
         const selectedVersion = e.target.value;
         if (!selectedVersion) return;
 
-        try {
-          // Load the selected cgpv version
-          await loadCgpvScript(selectedVersion);
+        // Save current textarea config so it survives the reload
+        sessionStorage.setItem(STORAGE_KEY_CONFIG, mapConfigTextarea.value);
 
-          // Wait for cgpv to be available, then initialize
-          setTimeout(async () => {
-            if (window.cgpv) {
-              await initializeMap();
-            }
-          }, 100);
-        } catch (error) {
-          console.error('Error loading cgpv script:', error);
-          alert('Failed to load the selected release. Please try again.');
-        }
+        // Reload with the version as a query parameter
+        const url = new URL(window.location.href);
+        url.searchParams.set('config', selectedVersion);
+        window.location.href = url.toString();
       });
       //#endregion ------------------ LOAD CGPV SCRIPT SECTION END -----------------------------------------
 
       // Function to initialize/reinitialize the map with current config
       async function initializeMap() {
-        try {
-          // Parse config from textarea using centralized parser
-          const configJson = parseConfigJSON(mapConfigTextarea.value);
+        // Replace single quotes with double quotes without parse/stringify round-trip.
+        // A round-trip would decode unicode escapes (e.g. \u0027 → ') in the object,
+        // then stringify would output the literal character, corrupting the config.
+        const configText = mapConfigTextarea.value.replace(getSingleQuoteRegex(), '"');
 
+        // Validate JSON separately so parse errors get a clear message
+        try {
+          JSON.parse(configText);
+        } catch (parseError) {
+          console.error('Invalid JSON configuration:', parseError);
+          alert(`Invalid JSON configuration: ${parseError.message}`);
+          return;
+        }
+
+        try {
           // Delete previous map if existing (compatible with different API versions)
           if (window.cgpv) {
             // Check for map existence - different methods for different versions
@@ -201,20 +217,20 @@
           // Set up map container attributes
           mapContainer.className = 'geoview-map';
           mapContainer.setAttribute('data-lang', switchLang.value);
-          mapContainer.setAttribute('data-config', JSON.stringify(configJson));
+          mapContainer.setAttribute('data-config', configText);
 
           // Initialize cgpv
           if (window.cgpv) {
             cgpv.init();
           }
         } catch (error) {
-          console.error('Invalid JSON configuration:', error);
-          alert('Invalid JSON configuration. Please check your syntax and try again.');
+          console.error('Map initialization error:', error);
+          alert(`Map initialization error: ${error.message}`);
         }
       }
 
       //#region ------------------ CONFIGURATION SECTION START -----------------------------------------
-      // Apply config button handler
+      // Apply config button handler — reloads map within the same cgpv version
       applyConfigBtn.addEventListener('click', async () => {
         if (window.cgpv && configLoader.value) {
           await initializeMap();
@@ -223,10 +239,19 @@
         }
       });
 
-      // If there's a config
-      if (config) {
+      // On page load: if a version is specified in the URL, load its script and init the map
+      if (config && versions.includes(config)) {
         configLoader.value = config;
-        configLoader.dispatchEvent(new Event('change'));
+        loadCgpvScript(config)
+          .then(() => {
+            if (window.cgpv) {
+              return initializeMap();
+            }
+          })
+          .catch((error) => {
+            console.error('Error loading cgpv script:', error);
+            alert(`Failed to load release ${config}. Please try another version.`);
+          });
       }
       //#endregion ------------------ CONFIGURATION SECTION END -----------------------------------------
 

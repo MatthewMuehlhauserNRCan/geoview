@@ -40,6 +40,7 @@
   },
   "map": {
     "container": "Interactive map {{mapId}}",
+    "info": "Map information",
     "status": {
       "loadingMap": "Loading map",
       "mapLoaded": "Map loaded",
@@ -48,7 +49,7 @@
     }
   },
   "mapnav": {
-    "arianavbar": "Vertical button group for map navigation",
+    "ariarole": "Map navigation",
     "basemap": "Change basemap",
     "fullscreen": "Full screen",
     "home": "Zoom to initial view",
@@ -65,6 +66,13 @@
       "title": "Map Rotation",
       "degrees": "Degrees",
       "reset": "Reset"
+    },
+    "groups": {
+      "generic": "Vertical button group for map navigation",
+      "zoom": "Zoom and rotation controls",
+      "display": "Display controls",
+      "drawer": "Drawing tools",
+      "default": "Additional map controls"
     }
   },
   "measurement": {
@@ -226,6 +234,8 @@
     "errorNoBounds": "Couldn't find bounds for layer '{{layerPath}}'.",
     "errorNoExtent": "No extent for layer '{{layerPath}}'.",
     "errorInvalidExtent": "Invalid extent '{{extent}}'.",
+    "errorNonreloadableLayer": "This layer cannot be reloaded. Make sure it was loaded at least once before.",
+    "layerReloaded": "Layer '{{layerName}}' reloaded successfully.",
     "fetchProgress": "Fetching data... Retrieved {{processed}} of {{total}} records.",
     "fetchDone": "Data fetched - {{total}} records.",
     "fetchStart": "Fetching data...",
@@ -319,6 +329,7 @@
     },
     "status": {
       "layerLoadingDescriptive": "Loading layer, {{layerName}}",
+      "layerProcessingDescriptive": "Processing layer, {{layerName}}",
       "layerLoadedDescriptive": "Layer, {{layerName}}, loaded successfully",
       "layerErrorDescriptive": "Error loading layer, {{layerName}}"
     }
@@ -543,7 +554,7 @@
       "basemapTakingLongTime": "The basemap is taking a long time to respond...",
       "metadataTakingLongTime": "The metadata for the layer '{{layerName}}' is taking longer than expected to fetch...",
       "metadatasTakingLongTime": "The metadata for some layers is taking longer than expected to fetch...",
-      "vectorTileRemoved": "The vector tile {{layerName}} had to be removed due to a projection conflict.",
+      "vectorTileUnsupportedProjection": "The vector tile {{layerName}} doesn't support the map projection, consider turning its visibility off.",
       "basemapLayerCreationError": "Error creating {{basemapType}} basemap.",
       "kmlLayerWarning": "KML layers will not have proper symbols in the panels or have entries in the data table.",
       "layerCRSNotSupported": "The spatial reference of the map '{{mapProj}}' is not officially supported by the layer '{{layerName}}'. GeoView will still attempt to load the layer on the map, but it might be misaligned.",
