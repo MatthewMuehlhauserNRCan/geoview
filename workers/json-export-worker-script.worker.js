@@ -1,4 +1,4 @@
-/*! Package:json-export-worker-script: 2.2.0 - "2fb4205581cc93a44c33c90142f8933e04d13b6b" - 2026-06-17T12:41:24.320Z */(()=>{"use strict";var t={dn:t=>{(Object.getOwnPropertyDescriptor(t,"name")||{}).writable||Object.defineProperty(t,"name",{value:"default",configurable:!0})}};
+/*! Package:json-export-worker-script: 2.2.0 - "067446e3b16762a1ddc876585873463656ff01bf" - 2026-06-18T14:12:50.149Z */(()=>{"use strict";var t={dn:t=>{(Object.getOwnPropertyDescriptor(t,"name")||{}).writable||Object.defineProperty(t,"name",{value:"default",configurable:!0})}};
 /**
  * @license
  * Copyright 2019 Google LLC
