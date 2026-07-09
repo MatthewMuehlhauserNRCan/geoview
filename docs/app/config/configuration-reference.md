@@ -3101,65 +3101,78 @@ Layer attribute filtering panel with support for multiple filter types.
 
 #### Schema
 
+The schema uses a discriminated union based on `filterType`. Each filter type has specific properties:
+
 ```typescript
 interface FilterPanelConfig {
-  enabled?: boolean;
   isOpen?: boolean;
   version?: string;
+  title?: string;
   layers?: Array<{
     layerPath: string;
     layerName?: string;
     enabled?: boolean;
-    attributes?: Array<{
-      fieldName: string;
-      displayLabel: string;
-      filterType: 'select' | 'multiselect' | 'range' | 'date';
-      enabled?: boolean;
-      defaultValues?: any;
-    }>;
-  }>;
-  settings?: {
-    title?: string;
     collapsible?: boolean;
     defaultCollapsed?: boolean;
-    showResetButton?: boolean;
-    autoApply?: boolean;
-  };
+    attributes?: Array<
+      | SelectFilterAttribute
+      | MultiselectFilterAttribute
+      | RangeFilterAttribute
+      | DateFilterAttribute
+    >;
+  }>;
 }
+
+// Each filter type has its own specific properties
+type DateFilterAttribute = {
+  fieldName: string;
+  displayLabel: string;
+  filterType: 'date';
+  enabled?: boolean;
+  dateStep?: 'second' | 'minute' | 'hour' | 'day' | 'week' | 'month' | 'year';
+  defaultValues?: { start: string | null; end: string | null } | null;
+};
+// ... (similar types for select, multiselect, range)
 ```
 
 #### Properties
 
-- **enabled**: Whether the filter panel is enabled (default: true)
 - **isOpen**: Initial panel state (default: false)
 - **version**: Schema version (default: "1.0")
+- **title**: Panel header title (default: "Filter Layers")
 - **layers**: Array of layer configurations for filtering
   - **layerPath** (required): Unique layer path identifier
   - **layerName** (optional): Display name for the layer (if not provided, layer path is used)
   - **enabled**: Whether filtering is enabled for this layer (default: true)
-  - **attributes**: Array of filterable attributes
-    - **fieldName** (required): Field name from the layer schema
-    - **displayLabel** (required): Label displayed in the UI
-    - **filterType** (required): One of: `"select"`, `"multiselect"`, `"range"`, `"date"`
-    - **enabled**: Whether this filter is enabled (default: true)
-    - **defaultValues**: Initial filter values (varies by filter type)
-    - **domain** (optional): Domain mapping for value labels. Only applies to `"select"` and `"multiselect"`. Array of objects with:
-      - **value** (required): The raw value from the layer (string or number)
-      - **label** (required): The display label for this value
-    - **filterMissingDomainValues** (optional): If true, filter out values not in domain. If false, show them with raw value. Only applies when domain is defined (default: false)
-- **settings**: Panel display and behavior settings
-  - **title**: Panel header title (default: "Filter Layers")
-  - **collapsible**: Allow collapsing layer sections (default: true)
-  - **defaultCollapsed**: Initial collapsed state (default: false)
-  - **showResetButton**: Show reset all button (default: true)
-  - **autoApply**: Apply filters automatically on change (default: true)
+  - **collapsible**: Allow collapsing/expanding this layer section (default: true)
+  - **defaultCollapsed**: Default collapsed state for this layer section. If `collapsible` is false, this is ignored and the section is forced open (default: false)
+  - **attributes**: Array of filterable attributes (each attribute must specify one of the four filter types)
+
+**Common attribute properties:**
+- **fieldName** (required): Field name from the layer schema
+- **displayLabel** (required): Label displayed in the UI
+- **filterType** (required): One of: `"select"`, `"multiselect"`, `"range"`, `"date"`
+- **enabled**: Whether this filter is enabled (default: true)
+
+**Date filter-specific properties:**
+- **dateStep** (optional): Keyboard arrow key increment. Uses calendar-aware stepping. One of: `"second"`, `"minute"`, `"hour"`, `"day"` (default), `"week"`, `"month"`, `"year"`
+- **defaultValues** (optional): Object with `start` and `end` date strings (YYYY-MM-DD format)
+
+**Select/Multiselect filter-specific properties:**
+- **domain** (optional): Array of objects with:
+  - **value** (required): The raw value from the layer (string or number)
+  - **label** (required): The display label for this value
+- **filterMissingDomainValues** (optional): If true, filter out values not in domain (default: false)
+
+**Range filter-specific properties:**
+- **defaultValues** (optional): Object with `min` and `max` numeric properties
 
 #### Filter Types
 
 1. **Select** - Single-value dropdown
 2. **Multiselect** - Multiple-value checkbox list with "All" option
 3. **Range** - Numeric min/max range with slider
-4. **Date** - Date range picker with start/end dates
+4. **Date** - Date range picker with start/end dates and calendar-aware keyboard stepping
 
 #### Examples
 
@@ -3169,12 +3182,15 @@ interface FilterPanelConfig {
 "corePackagesConfig": [
   {
     "filter-panel": {
-      "enabled": true,
       "isOpen": false,
+      "title": "Filter Layers",
       "layers": [
         {
           "layerPath": "cities-layer",
           "layerName": "Canadian Cities",
+          "enabled": true,
+          "collapsible": true,
+          "defaultCollapsed": false,
           "attributes": [
             {
               "fieldName": "province",
@@ -3195,11 +3211,15 @@ interface FilterPanelConfig {
 "corePackagesConfig": [
   {
     "filter-panel": {
-      "enabled": true,
+      "isOpen": false,
+      "title": "Population Filters",
       "layers": [
         {
           "layerPath": "population-data",
           "layerName": "Population Data",
+          "enabled": true,
+          "collapsible": true,
+          "defaultCollapsed": false,
           "attributes": [
             {
               "fieldName": "city_name",
@@ -3234,6 +3254,8 @@ interface FilterPanelConfig {
         {
           "layerPath": "environmental-data",
           "layerName": "Environmental Monitoring",
+          "enabled": true,
+          "collapsible": false,
           "attributes": [
             {
               "fieldName": "pollutant_type",
@@ -3247,7 +3269,7 @@ interface FilterPanelConfig {
             }
           ]
         }
-      ],
+      ]
       "settings": {
         "title": "Environmental Filters",
         "collapsible": false,
