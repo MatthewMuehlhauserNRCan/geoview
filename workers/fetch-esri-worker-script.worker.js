@@ -1,4 +1,4 @@
-/*! Package:fetch-esri-worker-script: 2.3.0 - "53d26eaad6314ccebd26105f40a305c550dcfb60" - 2026-07-09T18:12:52.408Z */(()=>{"use strict";
+/*! Package:fetch-esri-worker-script: 2.3.0 - "2295e8ce83700c9b3490868c4a90d8cf21e73f68" - 2026-07-09T18:28:00.235Z */(()=>{"use strict";
 /**
  * @license
  * Copyright 2019 Google LLC
