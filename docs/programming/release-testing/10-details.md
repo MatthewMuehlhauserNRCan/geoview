@@ -2,9 +2,9 @@
 
 > **Progress tracking**: Use the [Release Testing Issue Template](../../.github/ISSUE_TEMPLATE/release-testing.md) to track pass/fail status per release.
 >
-> **Test page**: [rt-10-details.html](../../packages/geoview-core/public/templates/release-testing/rt-10-details.html) — Map 1 (multiple queryable layers, details in app bar, clear highlights button), Map 2 (summary/outfields config).
+> **Test page**: [rt-10-details.html](https://canadian-geospatial-platform.github.io/geoview/public/rt-10-details.html) — Map 1 (multiple queryable layers, details in app bar, clear highlights button), Map 2 (summary/outfields config).
 >
-> **Navigator configs** (for edge-case tests): `layers/all-layers.json`, `demos/23b-initial-settings-states-controls.json`, `demos/29-summary-outfields.json`
+> **Navigator configs** (for edge-case tests): `layers/all-layers.json`, `demos/23b-initial-settings-states-controls.json`, `demos/29-summary-outfields.json`, `layers/esri-dynamic-projections.json`
 
 Details panel queries, feature highlighting, lightbox, coordinate info, and hover tooltips. The Details panel shows query results when the user clicks on the map, with feature navigation, highlighting, and coordinate display (lat/lon, UTM, NTS, elevation).
 
@@ -25,11 +25,13 @@ Details panel queries, feature highlighting, lightbox, coordinate info, and hove
 
 ## Highlighting
 
-| Test                       | Description                     | Steps                                                                                        | Expected Result                                 | Auto |
-| -------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------- | ---- |
-| Selected feature highlight | Feature highlighted on map      | 1. On Map 1, click on a feature<br>2. Check the feature in the details panel                 | Selected feature is highlighted on the map      | M    |
-| Check multiple features    | Additional features highlighted | 1. On Map 1, query an area with multiple features<br>2. Check additional features in results | Checked features are highlighted on the map     | M    |
-| Clear highlights           | All highlights removed          | 1. On Map 1, click the Clear Highlight button                                                | All feature highlights are removed from the map | C    |
+| Test                             | Description                                  | Steps                                                                                                                                        | Expected Result                                                                                                                                      | Auto |
+| -------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Selected feature highlight       | Feature highlighted on map                   | 1. On Map 1, click on a feature<br>2. Check the feature in the details panel                                                                 | Selected feature is highlighted on the map                                                                                                           | M    |
+| Check multiple features          | Additional features highlighted              | 1. On Map 1, query an area with multiple features<br>2. Check additional features in results                                                 | Checked features are highlighted on the map                                                                                                          | M    |
+| Clear highlights                 | All highlights removed                       | 1. On Map 1, click the Clear Highlight button                                                                                                | All feature highlights are removed from the map                                                                                                      | A    |
+| Close panel removes highlights   | Closing details clears highlights and marker | 1. On Map 1, click on a feature (highlight appears)<br>2. Close the details panel (switch to another tab or collapse)                        | Feature highlights and click marker are removed from the map                                                                                         | A    |
+| Complex geometry not highlighted | Too-complex feature skipped with warning     | 1. In navigator, load `layers/esri-dynamic-projections.json`<br>2. Query the purple hatched "(Server) Canada Nat." polygon near the Labrador Sea | No freeze; a warning notification appears; the feature is not highlighted and the keep-highlight button is disabled, but zoom-to-feature still works | M    |
 
 ## Active Layer Selection
 
@@ -68,15 +70,16 @@ Details panel queries, feature highlighting, lightbox, coordinate info, and hove
 | ------------------------- | ---------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---- |
 | Prev/Next arrows          | Navigation arrows appear     | 1. On Map 1, query an area with multiple features on the same layer        | Prev/Next arrows appear to navigate between features                         | M    |
 | Navigate between features | Highlight and details change | 1. On Map 1, click next/prev arrows                                        | Highlighted feature changes on the map and details update to the new feature | M    |
-| Zoom to feature           | Map zooms to feature extent  | 1. On Map 1, click the zoom-to-feature button on a specific feature result | Map zooms to that feature's extent                                           | C    |
+| Zoom to feature           | Map zooms to feature extent  | 1. On Map 1, click the zoom-to-feature button on a specific feature result | Map zooms to that feature's extent                                           | A    |
 
 ## Summary & Out Fields
 
-| Test                      | Description                     | Steps                                                                        | Expected Result                                                                                    | Auto |
-| ------------------------- | ------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---- |
-| Summary flag hides fields | Fields hidden from summary      | 1. On Map 2, click on a feature<br>2. Check the details summary view         | Fields with `summary: false` are hidden from the summary view (but available on expand/drill-down) | M    |
-| OutFields limit           | Only configured fields returned | 1. On Map 2, check the query results for a layer with `outfields` configured | Only the configured outfields are returned in the query results                                    | M    |
-| nameField as label        | Correct display label           | 1. On Map 2, check the feature display label in the results list             | The configured `nameField` is used as the feature display label                                    | C    |
+| Test                      | Description                     | Steps                                                                                                 | Expected Result                                                                                    | Auto |
+| ------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---- |
+| Summary flag hides fields | Fields hidden from summary      | 1. On Map 2, click on a feature<br>2. Check the details summary view                                  | Fields with `summary: false` are hidden from the summary view (but available on expand/drill-down) | A    |
+| Field alias renaming      | Alias renames field in details  | 1. On Map 2, click on a feature with `outfields` alias configured<br>2. Check field labels in details | Field labels display the configured `alias` value instead of the raw field name                    | A    |
+| OutFields limit           | Only configured fields returned | 1. On Map 2, check the query results for a layer with `outfields` configured                          | Only the configured outfields are returned in the query results                                    | M    |
+| nameField as label        | Correct display label           | 1. On Map 2, check the feature display label in the results list                                      | The configured `nameField` is used as the feature display label                                    | A    |
 
 ## Details with Swiper
 

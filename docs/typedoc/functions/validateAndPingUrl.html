@@ -13,19 +13,19 @@
 <section class="tsd-panel">
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="validateandpingurl"><span class="tsd-kind-call-signature">validateAndPingUrl</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">targetUrl</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">proxyBase</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">timeoutMs</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/PingResult.html" class="tsd-signature-type tsd-kind-type-alias">PingResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#validateandpingurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="validateandpingurl"><span class="tsd-kind-call-signature">validateAndPingUrl</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">targetUrl</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">timeoutMs</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/PingResult.html" class="tsd-signature-type tsd-kind-type-alias">PingResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#validateandpingurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Validates a URL's syntax and tests whether the server is reachable.</p>
+<div class="tsd-comment tsd-typography"><p>Validates a URL's syntax and tests whether the server is reachable using a simple HEAD request
+with file extension probe fallback.</p>
 <p>Strategy:</p>
 <ol>
 <li><strong>HEAD → 2xx/3xx</strong> → reachable, no proxy needed.</li>
-<li><strong>HEAD → 4xx/5xx</strong> → server is alive but the bare path fails. Try OGC GetCapabilities
-directly (CORS was fine since HEAD got a response). If valid → reachable. Otherwise → not reachable.</li>
-<li><strong>HEAD → CORS</strong> → server is alive but blocks cross-origin. Try OGC GetCapabilities
-through the proxy. If valid → reachable + needsProxy. Otherwise → not reachable.</li>
+<li><strong>HEAD → 4xx/5xx</strong> → try file extension probe. If valid → reachable. Otherwise → not reachable.</li>
+<li><strong>HEAD → CORS</strong> → try file extension probe through proxy. If valid → reachable + needsProxy. Otherwise → not reachable.</li>
 <li><strong>HEAD → network/timeout</strong> → server unreachable.</li>
 </ol>
-<p>The function never throws — all failures are returned as part of the result object.</p>
+<p>This function has no OGC/GetCapabilities knowledge. For OGC-aware validation, use <code>validateAndPingUrl</code>.
+The function never throws — all failures are returned as part of the result object.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -33,8 +33,8 @@ through the proxy. If valid → reachable + needsProxy. Otherwise → not reacha
 <li><span><span class="tsd-kind-parameter">targetUrl</span>: <span class="tsd-signature-type">string</span></span>
 <div class="tsd-comment tsd-typography"><p>The URL to validate and ping</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">proxyBase</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional proxy server base URL (defaults to CONFIG_PROXY_URL)</p>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
 </div></li>
 <li><span><span class="tsd-kind-parameter">timeoutMs</span>: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> = undefined</span></span>
 <div class="tsd-comment tsd-typography"><p>Optional request timeout in milliseconds (defaults to none)</p>
@@ -42,7 +42,7 @@ through the proxy. If valid → reachable + needsProxy. Otherwise → not reacha
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/PingResult.html" class="tsd-signature-type tsd-kind-type-alias">PingResult</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with a result object containing isValid, isReachable, needsProxy, status, and optional error</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/core/utils/utilities.ts#L480">packages/geoview-core/src/core/utils/utilities.ts:480</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/core/utils/utilities.ts#L517">packages/geoview-core/src/core/utils/utilities.ts:517</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

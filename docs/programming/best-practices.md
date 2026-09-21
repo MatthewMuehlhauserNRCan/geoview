@@ -213,7 +213,7 @@ Tags Worth Using
 - @returns
 - @throws (@throws {TheErrorType} (description)  e.g. @throws {LayerNotGeoJsonError} When...)
 - @example
-- @deprecated
+- @deprecated (must include a reason, e.g. `@deprecated Use \`newMethod()\` instead`)
 - @see
 
 Tags Usually Overkill in TS
@@ -247,6 +247,32 @@ Advanced Best Practice
  */
 ```
 
+### Propagating `@throws` from called functions
+
+When a function calls another function that throws and does **not** catch the error, the caller must list each specific `@throws` from the callee — not a generic `@throws {Error}`. Copy the exact error types and descriptions, appending `(propagated from \`calledFunction()\`)` to each.
+
+```ts
+// ❌ Bad: generic @throws hides the actual error types callers need to handle
+/**
+ * @throws {Error} When the guide file cannot be fetched (propagated from `Fetch.fetchText()`)
+ */
+
+// ✅ Good: each specific error type from the callee is listed individually
+/**
+ * @throws {RequestTimeoutError} When the request exceeds the timeout duration (propagated from `Fetch.fetchText()`)
+ * @throws {RequestAbortedError} When the request was aborted by the caller's signal (propagated from `Fetch.fetchText()`)
+ * @throws {ResponseError} When the response is not OK / non-2xx (propagated from `Fetch.fetchText()`)
+ * @throws {ResponseEmptyError} When the text response is empty (propagated from `Fetch.fetchText()`)
+ * @throws {NetworkError} When a network issue happened (propagated from `Fetch.fetchText()`)
+ */
+```
+
+**Rules:**
+
+- If the caller catches and handles the error (e.g., logs it, returns a fallback), do **not** add `@throws`
+- If the caller wraps the error into a new error type, document the new type only
+- If the callee has no `@throws` documentation, check its implementation and document what it actually throws
+
 ## 10- How we order functions in component
 
 In components, functions should be ordered in the following way:
@@ -277,57 +303,80 @@ export class MyController extends AbstractMapViewerController {
   // properties …
 
   // #region OVERRIDES
-  override onHook(): void { /* … */ }
+  override onHook(): void {
+    /* … */
+  }
   // #endregion OVERRIDES
 
   // #region PUBLIC METHODS
-  doSomething(): void { /* … */ }
+  doSomething(): void {
+    /* … */
+  }
   // #endregion PUBLIC METHODS
 
   // #region PROTECTED METHODS
-  protected helperMethod(): void { /* … */ }
+  protected helperMethod(): void {
+    /* … */
+  }
   // #endregion PROTECTED METHODS
 
   // #region PRIVATE METHODS
-  #internalWork(): void { /* … */ }
+  #internalWork(): void {
+    /* … */
+  }
   // #endregion PRIVATE METHODS
 
   // #region DOMAIN HANDLERS
-  #handleLayerLoaded(sender: unknown, event: LayerLoadedEvent): void { /* … */ }
+  #handleLayerLoaded(sender: unknown, event: LayerLoadedEvent): void {
+    /* … */
+  }
   // #endregion DOMAIN HANDLERS
 
   // #region EVENTS
-  #emitMyEvent(event: MyEvent): void { /* … */ }
-  onceMyEvent(): Promise<MyEvent> { /* … */ }
-  onMyEvent(callback: MyDelegate): void { /* … */ }
-  offMyEvent(callback: MyDelegate): void { /* … */ }
+  #emitMyEvent(event: MyEvent): void {
+    /* … */
+  }
+  onceMyEvent(): Promise<MyEvent> {
+    /* … */
+  }
+  onMyEvent(callback: MyDelegate): void {
+    /* … */
+  }
+  offMyEvent(callback: MyDelegate): void {
+    /* … */
+  }
   // #endregion EVENTS
 
   // #region STATIC METHODS
-  static createConfig(): MyConfig { /* … */ }
+  static createConfig(): MyConfig {
+    /* … */
+  }
   // #endregion STATIC METHODS
 }
 
 // #region EVENT TYPES
 type MyDelegate = EventDelegateBase<MyController, MyEvent, void>;
-export type MyEvent = { /* … */ };
+export type MyEvent = {
+  /* … */
+};
 // #endregion EVENT TYPES
 ```
 
 **Common region labels used in the codebase:**
 
-| Region label | Contents |
-|---|---|
-| `OVERRIDES` | Abstract / override methods |
-| `PUBLIC METHODS` | Public instance methods (may have sub-regions like `PUBLIC METHODS - DOMAIN SIMPLE GETTERS`) |
-| `PROTECTED METHODS` | Protected instance methods |
-| `PRIVATE METHODS` | Private instance methods |
-| `DOMAIN HANDLERS` | Private handlers subscribed to domain events |
-| `EVENTS` | Event emit/once/on/off methods (order: `#emit`, `once`, `on`, `off` per event) |
-| `STATIC METHODS` | Static public and private methods |
-| `EVENT TYPES` or `EVENTS & DELEGATES` | Delegate types and event interfaces (outside the class body) |
+| Region label                          | Contents                                                                                     |
+| ------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `OVERRIDES`                           | Abstract / override methods                                                                  |
+| `PUBLIC METHODS`                      | Public instance methods (may have sub-regions like `PUBLIC METHODS - DOMAIN SIMPLE GETTERS`) |
+| `PROTECTED METHODS`                   | Protected instance methods                                                                   |
+| `PRIVATE METHODS`                     | Private instance methods                                                                     |
+| `DOMAIN HANDLERS`                     | Private handlers subscribed to domain events                                                 |
+| `EVENTS`                              | Event emit/once/on/off methods (order: `#emit`, `once`, `on`, `off` per event)               |
+| `STATIC METHODS`                      | Static public and private methods                                                            |
+| `EVENT TYPES` or `EVENTS & DELEGATES` | Delegate types and event interfaces (outside the class body)                                 |
 
 **Rules:**
+
 - A region is only needed when the group has at least one member
 - Sub-regions are allowed for large classes (e.g., `PUBLIC METHODS - UI RELATED`)
 - The `// #endregion` comment should repeat the label for readability
@@ -342,7 +391,7 @@ This naming is required for consistency and readability across the codebase. The
 ```ts
 // ✅ Good: EventHelper delegate naming convention
 this.getMapViewer().onMapMoveEnd((sender, event): void => {
-  logger.logDebug('Map moved', event.lonlat);
+  logger.logDebug("Map moved", event.lonlat);
 });
 
 // ✅ Also good when one parameter is intentionally unused
@@ -444,17 +493,17 @@ waitForMapReady(): Promise<MapBaseEvent> {
 
 **Existing examples:**
 
-| Method | Class | Resolves when... |
-|---|---|---|
-| `waitForMapReady()` | `MapViewer` | The map is fully initialized |
-| `waitForMoveEnd()` | `MapViewer` | The current animation/interaction completes |
-| `waitForRender()` | `MapViewer` | The next `rendercomplete` event fires |
-| `waitForBounds()` | `AbstractBaseGVLayer` | The layer's bounds become available |
-| `waitForLoadedOnce()` | `AbstractGVLayer` | The layer reaches its first `loaded` state |
-| `waitForLayerToGetRegistered()` | `AbstractLayerSet` | A layer path is registered in the set |
-| `waitForAllLayersStatus()` | `LayerController` | All layers reach a given status |
-| `waitForLayersLoaded()` | `LayerController` | Map is ready + all layers are loaded |
-| `waitForOverviewMapVisibility()` | `MapController` | Overview map reaches expected visibility |
+| Method                           | Class                 | Resolves when...                            |
+| -------------------------------- | --------------------- | ------------------------------------------- |
+| `waitForMapReady()`              | `MapViewer`           | The map is fully initialized                |
+| `waitForMoveEnd()`               | `MapViewer`           | The current animation/interaction completes |
+| `waitForRender()`                | `MapViewer`           | The next `rendercomplete` event fires       |
+| `waitForBounds()`                | `AbstractBaseGVLayer` | The layer's bounds become available         |
+| `waitForLoadedOnce()`            | `AbstractGVLayer`     | The layer reaches its first `loaded` state  |
+| `waitForLayerToGetRegistered()`  | `AbstractLayerSet`    | A layer path is registered in the set       |
+| `waitForAllLayersStatus()`       | `LayerController`     | All layers reach a given status             |
+| `waitForLayersLoaded()`          | `LayerController`     | Map is ready + all layers are loaded        |
+| `waitForOverviewMapVisibility()` | `MapController`       | Overview map reaches expected visibility    |
 
 **Why prefer `waitFor*` over `whenThisThen` polling:**
 
@@ -491,3 +540,128 @@ onceLayerQueried(filter?: (event: LayerQueriedEvent) => boolean): Promise<LayerQ
 ```
 
 **Checklist when adding a new event:** After writing the `#emit*`, `once*`, `on*`, `off*` group, verify that `once*` has `filter?: (event: EventType) => boolean` in its signature and passes it to `onceEventPromise`.
+
+## <a id="accessibility"></a>17- Accessibility (WCAG 2.1 Level AA)
+
+**For detailed patterns with code examples, see [accessibility.md Section 008](app/accessibility.md#code-review-checklist).**
+
+**Note:** `IconButton` `aria-label` is TypeScript-enforced — the compiler prevents missing labels, no manual check needed.
+
+**Quick reference — Common issues to check during code review:**
+
+- `onClick` on `<div>`, `<span>`, `<Box>` without `role="button"` + `tabIndex={0}` + keyboard handler for Enter/Space
+- Ternary operator in `aria-label` on toggle buttons (use stable label + `aria-pressed` instead)
+- `disabled={state}` on buttons that toggle between enabled/disabled (use `aria-disabled` to prevent focus loss)
+- Modal/Dialog/Drawer without `onKeyDown` handler calling `handleEscapeKey(event.key, onClose)` from `@/core/utils/utilities`
+- Images without `alt` attribute (use `alt=""` for decorative, descriptive text for informative)
+- `<Tooltip>` wrapping non-interactive elements like `ListItem`, `Box`, `Typography` (use `ListItemButton` or other interactive wrapper)
+- Duplicate IDs in loops (add unique suffixes like `${mapId}-layer-${id}` or use `generateId(8)`)
+
+**See [accessibility.md Section 008](app/accessibility.md#code-review-checklist) for:**
+
+- Complete ❌ VIOLATION / ✅ CORRECT code examples
+- Search patterns for each check
+- "Why this matters" explanations
+- TypeScript enforcement details
+- Priority levels (HIGH/MEDIUM/ENHANCEMENT)
+
+**For comprehensive WCAG 2.1 Level AA guidance, see [accessibility.md](app/accessibility.md).**
+
+## <a id="dom-access"></a>18- Map-scoped DOM access (no direct `document.*`)
+
+Multiple GeoView maps can live on the same HTML page. Every DOM id must therefore be **map-scoped**, and every DOM lookup must be **restricted to a single map's subtree** so it never resolves an element that belongs to a different map. To enforce this, direct `document.getElementById` / `document.querySelector` / `document.querySelectorAll` calls are **banned** in `geoview-core` and flagged by an ESLint `no-restricted-syntax` rule. Use the helpers below instead.
+
+### The `${mapId}-suffix` id convention
+
+DOM ids follow the **generic → specific** format `` `${mapId}-${suffix}` `` (e.g. `map1-shell`, `map1-appBar`, `map1-footerbar-header`). Never use the reversed `` `${suffix}-${mapId}` `` form, and never create an id without a `mapId` prefix. Build ids through the helper so the convention lives in one place:
+
+```ts
+import { buildGVElementId } from "@/core/utils/dom-helper";
+
+const id = buildGVElementId(mapId, "shell"); // → "map1-shell"
+```
+
+### The wrappers (`@/core/utils/dom-helper`)
+
+All wrappers scope the lookup to the map's root element. When the root is not mounted yet, they fall back to a global lookup **and log a warning** (a global lookup is not map-scoped and can hit another map).
+
+| Helper                             | Use for                                                    | Returns                    |
+| ---------------------------------- | ---------------------------------------------------------- | -------------------------- |
+| `buildGVElementId(mapId, suffix)`  | Creating a canonical `${mapId}-suffix` id                  | `string`                   |
+| `getGVElementById(mapId, suffix)`  | Finding a descendant by its map-relative **suffix**        | `HTMLElement \| undefined` |
+| `getGVElementByFullId(mapId, id)`  | Finding a descendant when you already hold the **full** id | `HTMLElement \| undefined` |
+| `getGVRootElement(mapId)`          | Getting the map's **root** element (live DOM)              | `HTMLElement \| undefined` |
+| `queryGVSelector(mapId, selector)` | A CSS selector scoped inside the map                       | `Element \| undefined`     |
+| `queryGVSelectorAll(mapId, sel)`   | A CSS selector (all matches) scoped inside the map         | `Element[]`                |
+
+```ts
+// ❌ Bad: global, collides across maps, banned by ESLint
+const el = document.getElementById(`${mapId}-appBar`);
+const tab = document.querySelector('[role="tab"][aria-selected="true"]');
+
+// ✅ Good: map-scoped wrappers
+import {
+  getGVElementById,
+  getGVElementByFullId,
+  queryGVSelector,
+} from "@/core/utils/dom-helper";
+
+const el = getGVElementById(mapId, "appBar"); // suffix → builds "map1-appBar", scoped
+const btn = getGVElementByFullId(mapId, closeButtonId); // caller already has the full id
+const tab = queryGVSelector(mapId, '[role="tab"][aria-selected="true"]');
+```
+
+### TSX: the `useGVElementById` hook
+
+In React components, prefer the reactive hook, which is backed by the store's root element (`useStoreAppGeoviewHTMLElement`). It returns a stable `(suffix) => HTMLElement | undefined` function:
+
+```tsx
+import { useGVElementById } from "@/core/stores/states/app-state";
+
+const getElementById = useGVElementById();
+// ...later, in an effect/handler:
+getElementById("footerbar-header")?.focus();
+```
+
+### Root element vs. specific descendant — which API?
+
+This is the key decision:
+
+| You need…                                                                                               | Use                                                                                                |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **The root element itself** (attach a listener to the whole map, measure it, use as a portal container) | `useStoreAppGeoviewHTMLElement()` (TSX hook) or `getStoreAppGeoviewHTMLElement(mapId)` (TS getter) |
+| The root element in a non-React one-shot, from the **live DOM**                                         | `getGVRootElement(mapId)`                                                                          |
+| A **specific descendant by id**, imperatively (effects, handlers, controllers, utils, plugins)          | `getGVElementById(mapId, suffix)` / `getGVElementByFullId(mapId, fullId)`                          |
+| A **specific descendant by id**, reactively in TSX                                                      | `useGVElementById()`                                                                               |
+| A **CSS selector** scoped to one map                                                                    | `queryGVSelector(mapId, selector)` / `queryGVSelectorAll(mapId, selector)`                         |
+
+**Why the store getter/hook is fine for the root but not for descendant lookups:** the store getter/hook returns the map's root element (a legitimate store value, not a raw DOM query, so it is not banned). For a **descendant**, hand-rolling `useStoreAppGeoviewHTMLElement().querySelector('#' + CSS.escape(...))` re-implements the id-building, escaping, scoping, and fallback at every call site — exactly the duplication the wrappers remove.
+
+**`getGVRootElement` vs `getStoreAppGeoviewHTMLElement`:** the wrapper reads the **live DOM** (`document.getElementById(mapId)`) each call — robust during init/teardown; the store getter returns a **cached** reference (which is the placeholder `<div>` until config is applied). Use the store getter/hook when you want the React-tracked root (and no null handling); use `getGVRootElement` for imperative one-shots that must reflect the current DOM.
+
+### Store hook vs. dom-helper: reactive vs. imperative
+
+A common question is "now that the dom-helper does the same map-scoped lookup, why keep the root cached in the store at all?" The answer: **the store does not cache a faster lookup — it caches a _reactive anchor_.** Only the **root** element is stored (`appState.geoviewHTMLElement`); the descendant hooks (`useGVElementById`, `useStoreAppShellContainer`) still do a live scoped query — they just anchor it on that reactive root. The store provides two things the dom-helper does not:
+
+1. **Reactivity (the main reason).** The stored root starts as a throwaway placeholder `<div>` and is assigned the real element **once** at startup. That `set()` **re-renders every subscriber**, which is exactly what makes a descendant hook re-run and finally resolve (e.g. `#map1-shell`). A `getGVRootElement(mapId)` called in a render body returns `undefined` on the early renders and **never triggers a re-render** when the element later mounts — there is no subscription.
+2. **Render-safety / purity.** Reading the store in render is pure and concurrent-safe. Calling `document.getElementById` (or `getGVRootElement`) **in the render body** is a DOM read during render — impure and unsafe under concurrent React. It is perfectly fine inside an event handler, `useEffect`, controller, or util, but not in render.
+
+So they are **layered, not competing** — the store even populates itself _using_ the dom-helper (`getGVRootElement`). Pick by moment of use:
+
+| Moment of use                                                                                                                                      | Use                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **During render** — portal `container`, focus-trap container, a prop, or the component must **re-render** when the element appears                 | **store hook** (`useStoreAppGeoviewHTMLElement`, `useStoreAppShellContainer`, `useGVElementById`) |
+| **At the moment of an action** — click/keydown handler, `useEffect` body, controller method, scroll-into-view (element is guaranteed present then) | **dom-helper** (`getGVElementById`, `queryGVSelector`, `getGVRootElement`)                        |
+| **Non-React `.ts`** — controllers, layer code (no hooks available)                                                                                 | **dom-helper**                                                                                    |
+
+### Legitimate exceptions (keep `document.*`, add a disable)
+
+A few lookups are genuinely **not** a single map's descendant. Keep the raw `document.*` call and add a one-line `// eslint-disable-next-line no-restricted-syntax` with a short justification:
+
+- **`<script>` tags** in `<head>` (plugin loading) — not inside any map.
+- **The lightbox singleton overlay** (`.yarl__root`) — only one is open page-wide at a time.
+- **Caller-provided external divs** (e.g. `createMapFromConfig(divId, …)`) — not necessarily a GeoView root.
+- **Generic `@/ui` components** (`slider`, `popover`) that receive a `containerId` prop and have **no** `mapId`.
+- **The fullscreen-portaled guide**, which is map-scoped via `[data-map-id="${mapId}"]` but must be queried globally because the portal moves it out of the map root.
+
+> Note: `document.getElementsByClassName` / `getElementsByTagName` are **not** flagged by the rule, but still scope them to a map's root (e.g. `getGVRootElement(mapId)?.getElementsByClassName(...)`) whenever the result should be map-specific.

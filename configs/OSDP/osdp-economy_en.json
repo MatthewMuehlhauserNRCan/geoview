@@ -1,6 +1,5 @@
 {
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "projection": 3978
     },
@@ -77,7 +76,8 @@
     "fullscreen",
     "home",
     "location",
-    "basemap-select"
+    "basemap-select",
+    "measure"
   ],
   "appBar": {
     "tabs": {
@@ -98,5 +98,8 @@
     }
   },
   "corePackages": [],
+  "globalSettings": {
+    "canRemoveSublayers": false
+  },
   "theme": "geo.ca"
 }

@@ -1,6 +1,5 @@
 {
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "projection": 3857
     },
@@ -219,7 +218,7 @@
       },
       {
         "geoviewLayerId": "LYR16-nonna",
-        "geoviewLayerName": "Nonna w/ space in id",
+        "geoviewLayerName": "Nonna w/ space in id (CORS)",
         "metadataAccessPath": "https://nonna-geoserver.data.chs-shc.ca/geoserver/wms",
         "geoviewLayerType": "ogcWms",
         "listOfLayerEntryConfig": [
@@ -265,5 +264,8 @@
     }
   },
   "corePackages": [],
-  "theme": "geo.ca"
+  "theme": "geo.ca",
+  "serviceUrls": {
+    "proxyUrl": "https://proxy.app-dev.geo.ca"
+  }
 }

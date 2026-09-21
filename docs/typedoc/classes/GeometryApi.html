@@ -14,7 +14,7 @@
 <div class="tsd-comment tsd-typography"><p>Class used to manage vector geometries (Polyline, Polygon, Circle, Marker...).</p>
 </div></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L36">packages/geoview-core/src/geo/layer/geometry/geometry.ts:36</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L36">packages/geoview-core/src/geo/layer/geometry/geometry.ts:36</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -28,6 +28,7 @@
 <h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-index-list"><a href="#defaultgeometrygroupid" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>default<wbr/>Geometry<wbr/>Group<wbr/>Id</span></a>
 <a href="#geometries" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>geometries</span></a>
+<a href="#max_renderable_coordinates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>MAX_<wbr/>RENDERABLE_<wbr/>COORDINATES</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
@@ -57,7 +58,9 @@
 <a href="#setgeometrygroupasinvisible" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Invisible</span></a>
 <a href="#setgeometrygroupasvisible" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Visible</span></a>
 <a href="#setgeometrygroupzindex" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span></a>
+<a href="#canrendergeometry" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>can<wbr/>Render<wbr/>Geometry</span></a>
 <a href="#creategeometryfromtype" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Geometry<wbr/>From<wbr/>Type</span></a>
+<a href="#getcoordinatecount" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Coordinate<wbr/>Count</span></a>
 <a href="#isarrayofarrayofarrayofcoordinates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a>
 <a href="#isarrayofarrayofcoordinates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a>
 <a href="#isarrayofcoordinates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a>
@@ -82,7 +85,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">GeometryApi</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L60">packages/geoview-core/src/geo/layer/geometry/geometry.ts:60</a></li></ul></aside></div></li></ul></section></section></details>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L63">packages/geoview-core/src/geo/layer/geometry/geometry.ts:63</a></li></ul></aside></div></li></ul></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -92,14 +95,21 @@
 <div class="tsd-comment tsd-typography"><p>The default geometry group name</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L47">packages/geoview-core/src/geo/layer/geometry/geometry.ts:47</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L50">packages/geoview-core/src/geo/layer/geometry/geometry.ts:50</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="geometries"><span>geometries</span><a href="#geometries" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">geometries</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 <div class="tsd-comment tsd-typography"><p>All added geometries</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L44">packages/geoview-core/src/geo/layer/geometry/geometry.ts:44</a></li></ul></aside></section></section></details>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L47">packages/geoview-core/src/geo/layer/geometry/geometry.ts:47</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="max_renderable_coordinates"><code class="tsd-tag">Static</code> <code class="tsd-tag">Readonly</code><span>MAX_<wbr/>RENDERABLE_<wbr/>COORDINATES</span><a href="#max_renderable_coordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MAX_RENDERABLE_COORDINATES</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">50000</span></div>
+<div class="tsd-comment tsd-typography"><p>Maximum number of coordinates a geometry may contain before it is considered too complex to render every frame.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L38">packages/geoview-core/src/geo/layer/geometry/geometry.ts:38</a></li></ul></aside></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -129,7 +139,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span></h4><p>The created circle feature</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L249">packages/geoview-core/src/geo/layer/geometry/geometry.ts:249</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L252">packages/geoview-core/src/geo/layer/geometry/geometry.ts:252</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addmarkericon"><span>add<wbr/>Marker<wbr/>Icon</span><a href="#addmarkericon" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -156,7 +166,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span></h4><p>The created marker feature</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L326">packages/geoview-core/src/geo/layer/geometry/geometry.ts:326</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L329">packages/geoview-core/src/geo/layer/geometry/geometry.ts:329</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addpolygon"><span>add<wbr/>Polygon</span><a href="#addpolygon" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -183,7 +193,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span></h4><p>The created polygon feature</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L176">packages/geoview-core/src/geo/layer/geometry/geometry.ts:176</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L179">packages/geoview-core/src/geo/layer/geometry/geometry.ts:179</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addpolyline"><span>add<wbr/>Polyline</span><a href="#addpolyline" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -210,7 +220,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span></h4><p>The created polyline feature</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L103">packages/geoview-core/src/geo/layer/geometry/geometry.ts:103</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L106">packages/geoview-core/src/geo/layer/geometry/geometry.ts:106</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addtogeometrygroup"><span>add<wbr/>To<wbr/>Geometry<wbr/>Group</span><a href="#addtogeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -232,7 +242,7 @@ geometry group doesn't exist, creates it.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L604">packages/geoview-core/src/geo/layer/geometry/geometry.ts:604</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L607">packages/geoview-core/src/geo/layer/geometry/geometry.ts:607</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="creategeometrygroup"><span>create<wbr/>Geometry<wbr/>Group</span><a href="#creategeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -254,7 +264,7 @@ geometry group doesn't exist, creates it.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FeatureCollection</span></h4><p>The created or existing geometry group</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L420">packages/geoview-core/src/geo/layer/geometry/geometry.ts:420</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L423">packages/geoview-core/src/geo/layer/geometry/geometry.ts:423</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="deletegeometriesfromgroup"><span>delete<wbr/>Geometries<wbr/>From<wbr/>Group</span><a href="#deletegeometriesfromgroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -276,7 +286,7 @@ geometry group doesn't exist, creates it.</p>
 <h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L671">packages/geoview-core/src/geo/layer/geometry/geometry.ts:671</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L674">packages/geoview-core/src/geo/layer/geometry/geometry.ts:674</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="deletegeometry"><span>delete<wbr/>Geometry</span><a href="#deletegeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -293,7 +303,7 @@ geometry group doesn't exist, creates it.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L397">packages/geoview-core/src/geo/layer/geometry/geometry.ts:397</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L400">packages/geoview-core/src/geo/layer/geometry/geometry.ts:400</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="deletegeometryfromgroup"><span>delete<wbr/>Geometry<wbr/>From<wbr/>Group</span><a href="#deletegeometryfromgroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -317,7 +327,7 @@ geometry group doesn't exist, creates it.</p>
 <h4 class="tsd-anchor-link" id="throws-1">Throws<a href="#throws-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L650">packages/geoview-core/src/geo/layer/geometry/geometry.ts:650</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L653">packages/geoview-core/src/geo/layer/geometry/geometry.ts:653</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="deletegeometryfromgroups"><span>delete<wbr/>Geometry<wbr/>From<wbr/>Groups</span><a href="#deletegeometryfromgroups" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -334,7 +344,7 @@ geometry group doesn't exist, creates it.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L626">packages/geoview-core/src/geo/layer/geometry/geometry.ts:626</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L629">packages/geoview-core/src/geo/layer/geometry/geometry.ts:629</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="deletegeometrygroup"><span>delete<wbr/>Geometry<wbr/>Group</span><a href="#deletegeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -352,7 +362,7 @@ geometry group doesn't exist, creates it.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L691">packages/geoview-core/src/geo/layer/geometry/geometry.ts:691</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L694">packages/geoview-core/src/geo/layer/geometry/geometry.ts:694</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getactivegeometrygroup"><span>get<wbr/>Active<wbr/>Geometry<wbr/>Group</span><a href="#getactivegeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -364,7 +374,7 @@ geometry group doesn't exist, creates it.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FeatureCollection</span></h4><p>The active geometry group</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L481">packages/geoview-core/src/geo/layer/geometry/geometry.ts:481</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L484">packages/geoview-core/src/geo/layer/geometry/geometry.ts:484</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getfeaturecoords"><span>get<wbr/>Feature<wbr/>Coords</span><a href="#getfeaturecoords" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -386,7 +396,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The coordinates of the feature, or undefined if not found or if the geometry type is not currently supported (e.g., GeometryCollection)</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L712">packages/geoview-core/src/geo/layer/geometry/geometry.ts:712</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L715">packages/geoview-core/src/geo/layer/geometry/geometry.ts:715</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgeometry"><span>get<wbr/>Geometry</span><a href="#getgeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -404,7 +414,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span></h4><p>The feature having the specified id</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L388">packages/geoview-core/src/geo/layer/geometry/geometry.ts:388</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L391">packages/geoview-core/src/geo/layer/geometry/geometry.ts:391</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgeometrygroup"><span>get<wbr/>Geometry<wbr/>Group</span><a href="#getgeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -426,7 +436,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-2">Throws<a href="#throws-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L503">packages/geoview-core/src/geo/layer/geometry/geometry.ts:503</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L506">packages/geoview-core/src/geo/layer/geometry/geometry.ts:506</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgeometrygroups"><span>get<wbr/>Geometry<wbr/>Groups</span><a href="#getgeometrygroups" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -438,7 +448,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FeatureCollection</span><span class="tsd-signature-symbol">[]</span></h4><p>Array of all geometry groups</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L517">packages/geoview-core/src/geo/layer/geometry/geometry.ts:517</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L520">packages/geoview-core/src/geo/layer/geometry/geometry.ts:520</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgeometrygroupsbyfeatureid"><span>get<wbr/>Geometry<wbr/>Groups<wbr/>By<wbr/>Feature<wbr/>Id</span><a href="#getgeometrygroupsbyfeatureid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -456,7 +466,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FeatureCollection</span><span class="tsd-signature-symbol">[]</span></h4><p>Groups that contain the geometry</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L527">packages/geoview-core/src/geo/layer/geometry/geometry.ts:527</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L530">packages/geoview-core/src/geo/layer/geometry/geometry.ts:530</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgeometrygroupzindex"><span>get<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span><a href="#getgeometrygroupzindex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -478,7 +488,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-3">Throws<a href="#throws-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L576">packages/geoview-core/src/geo/layer/geometry/geometry.ts:576</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L579">packages/geoview-core/src/geo/layer/geometry/geometry.ts:579</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="hasgeometrygroup"><span>has<wbr/>Geometry<wbr/>Group</span><a href="#hasgeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -496,7 +506,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True if the group exists, false otherwise</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L491">packages/geoview-core/src/geo/layer/geometry/geometry.ts:491</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L494">packages/geoview-core/src/geo/layer/geometry/geometry.ts:494</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="offgeometryadded"><span>off<wbr/>Geometry<wbr/>Added</span><a href="#offgeometryadded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -513,7 +523,7 @@ Otherwise, uses the map's projection by default</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L89">packages/geoview-core/src/geo/layer/geometry/geometry.ts:89</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L92">packages/geoview-core/src/geo/layer/geometry/geometry.ts:92</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ongeometryadded"><span>on<wbr/>Geometry<wbr/>Added</span><a href="#ongeometryadded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -530,7 +540,7 @@ Otherwise, uses the map's projection by default</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L79">packages/geoview-core/src/geo/layer/geometry/geometry.ts:79</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L82">packages/geoview-core/src/geo/layer/geometry/geometry.ts:82</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setactivegeometrygroup"><span>set<wbr/>Active<wbr/>Geometry<wbr/>Group</span><a href="#setactivegeometrygroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -548,7 +558,7 @@ Otherwise, uses the map's projection by default</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L464">packages/geoview-core/src/geo/layer/geometry/geometry.ts:464</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L467">packages/geoview-core/src/geo/layer/geometry/geometry.ts:467</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setfeaturecoords"><span>set<wbr/>Feature<wbr/>Coords</span><a href="#setfeaturecoords" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -571,7 +581,7 @@ Otherwise, uses the map's projection by default</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L750">packages/geoview-core/src/geo/layer/geometry/geometry.ts:750</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L753">packages/geoview-core/src/geo/layer/geometry/geometry.ts:753</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setgeometrygroupasinvisible"><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Invisible</span><a href="#setgeometrygroupasinvisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -592,7 +602,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-4">Throws<a href="#throws-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L562">packages/geoview-core/src/geo/layer/geometry/geometry.ts:562</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L565">packages/geoview-core/src/geo/layer/geometry/geometry.ts:565</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setgeometrygroupasvisible"><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Visible</span><a href="#setgeometrygroupasvisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -613,7 +623,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-5">Throws<a href="#throws-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L549">packages/geoview-core/src/geo/layer/geometry/geometry.ts:549</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L552">packages/geoview-core/src/geo/layer/geometry/geometry.ts:552</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setgeometrygroupzindex"><span>set<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span><a href="#setgeometrygroupzindex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -637,7 +647,28 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-6">Throws<a href="#throws-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the provided geometry group id does not exist</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L589">packages/geoview-core/src/geo/layer/geometry/geometry.ts:589</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L592">packages/geoview-core/src/geo/layer/geometry/geometry.ts:592</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="canrendergeometry"><code class="tsd-tag">Static</code><span>can<wbr/>Render<wbr/>Geometry</span><a href="#canrendergeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="canrendergeometry-1"><span class="tsd-kind-call-signature">canRenderGeometry</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">geometry</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Geometry</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#canrendergeometry-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Determines whether a geometry is simple enough to render or highlight on every animation frame without freezing
+the UI.</p>
+<p>Geometries above <code>GeometryApi.MAX_RENDERABLE_COORDINATES</code> coordinates (e.g. a polygon with thousands of
+holes) are considered too complex.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type">Geometry</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
+<div class="tsd-comment tsd-typography"><p>The geometry to check</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True when the geometry can be rendered, false when it is too complex or undefined</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L960">packages/geoview-core/src/geo/layer/geometry/geometry.ts:960</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="creategeometryfromtype"><code class="tsd-tag">Static</code><span>create<wbr/>Geometry<wbr/>From<wbr/>Type</span><a href="#creategeometryfromtype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -662,7 +693,25 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-anchor-link" id="throws-7">Throws<a href="#throws-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the geometry type is not supported</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L808">packages/geoview-core/src/geo/layer/geometry/geometry.ts:808</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L811">packages/geoview-core/src/geo/layer/geometry/geometry.ts:811</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="getcoordinatecount"><code class="tsd-tag">Static</code><span>get<wbr/>Coordinate<wbr/>Count</span><a href="#getcoordinatecount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="getcoordinatecount-1"><span class="tsd-kind-call-signature">getCoordinateCount</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">geometry</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><a href="#getcoordinatecount-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Counts the number of coordinates (vertices) in a geometry, recursing into geometry collections.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type">Geometry</span></span>
+<div class="tsd-comment tsd-typography"><p>The geometry to measure</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>The number of coordinates the geometry contains</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L936">packages/geoview-core/src/geo/layer/geometry/geometry.ts:936</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isarrayofarrayofarrayofcoordinates"><code class="tsd-tag">Static</code><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span><a href="#isarrayofarrayofarrayofcoordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -680,7 +729,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-kind-parameter">coordinates</span> <span class="tsd-signature-keyword">is</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>True when the coordinates represent a MultiPolygon</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L913">packages/geoview-core/src/geo/layer/geometry/geometry.ts:913</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L916">packages/geoview-core/src/geo/layer/geometry/geometry.ts:916</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isarrayofarrayofcoordinates"><code class="tsd-tag">Static</code><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span><a href="#isarrayofarrayofcoordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -698,7 +747,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-kind-parameter">coordinates</span> <span class="tsd-signature-keyword">is</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>True when the coordinates represent a MultiLineString or Polygon</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L895">packages/geoview-core/src/geo/layer/geometry/geometry.ts:895</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L898">packages/geoview-core/src/geo/layer/geometry/geometry.ts:898</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isarrayofcoordinates"><code class="tsd-tag">Static</code><span>is<wbr/>Array<wbr/>Of<wbr/>Coordinates</span><a href="#isarrayofcoordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -716,7 +765,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-kind-parameter">coordinates</span> <span class="tsd-signature-keyword">is</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span></h4><p>True when the coordinates represent a LineString</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L879">packages/geoview-core/src/geo/layer/geometry/geometry.ts:879</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L882">packages/geoview-core/src/geo/layer/geometry/geometry.ts:882</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="iscoordinates"><code class="tsd-tag">Static</code><span>is<wbr/>Coordinates</span><a href="#iscoordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -734,7 +783,7 @@ Otherwise, uses the map's projection by default</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-kind-parameter">coordinates</span> <span class="tsd-signature-keyword">is</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a></h4><p>True when the coordinates represent a Point</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L869">packages/geoview-core/src/geo/layer/geometry/geometry.ts:869</a></li></ul></aside></div></li></ul></section></section></details></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/geometry/geometry.ts#L872">packages/geoview-core/src/geo/layer/geometry/geometry.ts:872</a></li></ul></aside></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -753,9 +802,9 @@ Otherwise, uses the map's projection by default</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
 <div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
-<div><a href="#defaultgeometrygroupid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>default<wbr/>Geometry<wbr/>Group<wbr/>Id</span></a><a href="#geometries"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>geometries</span></a></div></details>
+<div><a href="#defaultgeometrygroupid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>default<wbr/>Geometry<wbr/>Group<wbr/>Id</span></a><a href="#geometries"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>geometries</span></a><a href="#max_renderable_coordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>MAX_<wbr/>RENDERABLE_<wbr/>COORDINATES</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#addcircle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Circle</span></a><a href="#addmarkericon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Marker<wbr/>Icon</span></a><a href="#addpolygon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Polygon</span></a><a href="#addpolyline"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Polyline</span></a><a href="#addtogeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>To<wbr/>Geometry<wbr/>Group</span></a><a href="#creategeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Geometry<wbr/>Group</span></a><a href="#deletegeometriesfromgroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometries<wbr/>From<wbr/>Group</span></a><a href="#deletegeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry</span></a><a href="#deletegeometryfromgroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>From<wbr/>Group</span></a><a href="#deletegeometryfromgroups"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>From<wbr/>Groups</span></a><a href="#deletegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>Group</span></a><a href="#getactivegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Active<wbr/>Geometry<wbr/>Group</span></a><a href="#getfeaturecoords"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Feature<wbr/>Coords</span></a><a href="#getgeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry</span></a><a href="#getgeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Group</span></a><a href="#getgeometrygroups"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Groups</span></a><a href="#getgeometrygroupsbyfeatureid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Groups<wbr/>By<wbr/>Feature<wbr/>Id</span></a><a href="#getgeometrygroupzindex"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span></a><a href="#hasgeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>has<wbr/>Geometry<wbr/>Group</span></a><a href="#offgeometryadded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Geometry<wbr/>Added</span></a><a href="#ongeometryadded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Geometry<wbr/>Added</span></a><a href="#setactivegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Active<wbr/>Geometry<wbr/>Group</span></a><a href="#setfeaturecoords"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Feature<wbr/>Coords</span></a><a href="#setgeometrygroupasinvisible"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Invisible</span></a><a href="#setgeometrygroupasvisible"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Visible</span></a><a href="#setgeometrygroupzindex"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span></a><a href="#creategeometryfromtype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Geometry<wbr/>From<wbr/>Type</span></a><a href="#isarrayofarrayofarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#isarrayofarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#isarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#iscoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Coordinates</span></a></div></details></div></details></div>
+<div><a href="#addcircle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Circle</span></a><a href="#addmarkericon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Marker<wbr/>Icon</span></a><a href="#addpolygon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Polygon</span></a><a href="#addpolyline"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Polyline</span></a><a href="#addtogeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>To<wbr/>Geometry<wbr/>Group</span></a><a href="#creategeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Geometry<wbr/>Group</span></a><a href="#deletegeometriesfromgroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometries<wbr/>From<wbr/>Group</span></a><a href="#deletegeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry</span></a><a href="#deletegeometryfromgroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>From<wbr/>Group</span></a><a href="#deletegeometryfromgroups"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>From<wbr/>Groups</span></a><a href="#deletegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Geometry<wbr/>Group</span></a><a href="#getactivegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Active<wbr/>Geometry<wbr/>Group</span></a><a href="#getfeaturecoords"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Feature<wbr/>Coords</span></a><a href="#getgeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry</span></a><a href="#getgeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Group</span></a><a href="#getgeometrygroups"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Groups</span></a><a href="#getgeometrygroupsbyfeatureid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Groups<wbr/>By<wbr/>Feature<wbr/>Id</span></a><a href="#getgeometrygroupzindex"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span></a><a href="#hasgeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>has<wbr/>Geometry<wbr/>Group</span></a><a href="#offgeometryadded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Geometry<wbr/>Added</span></a><a href="#ongeometryadded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Geometry<wbr/>Added</span></a><a href="#setactivegeometrygroup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Active<wbr/>Geometry<wbr/>Group</span></a><a href="#setfeaturecoords"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Feature<wbr/>Coords</span></a><a href="#setgeometrygroupasinvisible"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Invisible</span></a><a href="#setgeometrygroupasvisible"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>As<wbr/>Visible</span></a><a href="#setgeometrygroupzindex"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Geometry<wbr/>Group<wbr/>Z<wbr/>Index</span></a><a href="#canrendergeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>can<wbr/>Render<wbr/>Geometry</span></a><a href="#creategeometryfromtype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Geometry<wbr/>From<wbr/>Type</span></a><a href="#getcoordinatecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Coordinate<wbr/>Count</span></a><a href="#isarrayofarrayofarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#isarrayofarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#isarrayofcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Array<wbr/>Of<wbr/>Coordinates</span></a><a href="#iscoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Coordinates</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">geoview-core - v2.3.0</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

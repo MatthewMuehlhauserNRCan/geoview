@@ -13,14 +13,14 @@
 <section class="tsd-panel tsd-comment">
 <div class="tsd-comment tsd-typography"><p>Manages a Group Layer.</p>
 </div></section>
-<section class="tsd-panel tsd-hierarchy" data-refl="11232">
+<section class="tsd-panel tsd-hierarchy" data-refl="11837">
 <h4>Hierarchy (<a href="../hierarchy.html#GVGroupLayer">View Summary</a>)</h4>
 <ul class="tsd-hierarchy">
 <li class="tsd-hierarchy-item"><a href="AbstractBaseGVLayer.html" class="tsd-signature-type tsd-kind-class">AbstractBaseGVLayer</a>
 <ul class="tsd-hierarchy">
 <li class="tsd-hierarchy-item"><span class="tsd-hierarchy-target">GVGroupLayer</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L17">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:17</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L16">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:16</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -59,6 +59,7 @@
 <a href="#getparent" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a>
 <a href="#getparentroot" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent<wbr/>Root</span></a>
 <a href="#getparents" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parents</span></a>
+<a href="#getrenderercontainer" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Renderer<wbr/>Container</span></a>
 <a href="#getvisible" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible</span></a>
 <a href="#getvisibleincludingparents" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible<wbr/>Including<wbr/>Parents</span></a>
 <a href="#initbounds" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>init<wbr/>Bounds</span></a>
@@ -97,6 +98,7 @@
 <a href="#setopacity" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Opacity</span></a>
 <a href="#setparent" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Parent</span></a>
 <a href="#setvisible" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Visible</span></a>
+<a href="#setvisibleincludingparents" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Visible<wbr/>Including<wbr/>Parents</span></a>
 <a href="#setzindex" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Z<wbr/>Index</span></a>
 <a href="#waitforbounds" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wait<wbr/>For<wbr/>Bounds</span></a>
 <a href="#getparent-2" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a>
@@ -124,7 +126,7 @@
 <h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">GVGroupLayer</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L33">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:33</a></li></ul></aside></div></li></ul></section></section></details>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L32">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:32</a></li></ul></aside></div></li></ul></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -135,7 +137,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#loadedonce">loadedOnce</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L17">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:17</a></li></ul></aside></section></section></details>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L18">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:18</a></li></ul></aside></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -155,7 +157,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L234">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:234</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L227">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:227</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getattributions"><span>get<wbr/>Attributions</span><a href="#getattributions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -170,7 +172,7 @@ When the layer is a GVGroup, all layers attributions in the group are returned.<
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getattributions">getAttributions</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L208">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:208</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L185">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:185</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getbounds"><span>get<wbr/>Bounds</span><a href="#getbounds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -183,7 +185,7 @@ When the layer is a GVGroup, all layers attributions in the group are returned.<
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getbounds">getBounds</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L266">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:266</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L243">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:243</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getboundslonlat"><span>get<wbr/>Bounds<wbr/>Lon<wbr/>Lat</span><a href="#getboundslonlat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -196,7 +198,7 @@ When the layer is a GVGroup, all layers attributions in the group are returned.<
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getboundslonlat">getBoundsLonLat</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L275">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:275</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L252">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:252</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getboundsprojection"><span>get<wbr/>Bounds<wbr/>Projection</span><a href="#getboundsprojection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -209,7 +211,7 @@ When the layer is a GVGroup, all layers attributions in the group are returned.<
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getboundsprojection">getBoundsProjection</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L257">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:257</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L234">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:234</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getclassname"><span>get<wbr/>Class<wbr/>Name</span><a href="#getclassname" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -222,7 +224,7 @@ When the layer is a GVGroup, all layers attributions in the group are returned.<
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getclassname">getClassName</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L297">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:297</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L274">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:274</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getextent"><span>get<wbr/>Extent</span><a href="#getextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -237,7 +239,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getextent">getExtent</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L392">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:392</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L369">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:369</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getgeoviewlayerid"><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Id</span><a href="#getgeoviewlayerid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -250,7 +252,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getgeoviewlayerid">getGeoviewLayerId</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L343">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:343</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L320">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:320</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getgeoviewlayername"><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Name</span><a href="#getgeoviewlayername" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -263,7 +265,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getgeoviewlayername">getGeoviewLayerName</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L352">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:352</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L329">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:329</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayerconfig"><span>get<wbr/>Layer<wbr/>Config</span><a href="#getlayerconfig" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -276,7 +278,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getlayerconfig">getLayerConfig</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L55">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:55</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L54">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:54</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getlayername"><span>get<wbr/>Layer<wbr/>Name</span><a href="#getlayername" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -289,7 +291,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getlayername">getLayerName</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L371">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:371</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L348">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:348</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getlayerpath"><span>get<wbr/>Layer<wbr/>Path</span><a href="#getlayerpath" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -302,7 +304,7 @@ The extent is used to clip the data displayed on the map.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getlayerpath">getLayerPath</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L334">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:334</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L311">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:311</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayers"><span>get<wbr/>Layers</span><a href="#getlayers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -314,7 +316,7 @@ The extent is used to clip the data displayed on the map.</p>
 <h4 class="tsd-returns-title">Returns <a href="AbstractBaseGVLayer.html" class="tsd-signature-type tsd-kind-class">AbstractBaseGVLayer</a><span class="tsd-signature-symbol">[]</span></h4><p>The layers in the group</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L170">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:170</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L163">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:163</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayersall"><span>get<wbr/>Layers<wbr/>All</span><a href="#getlayersall" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -338,7 +340,7 @@ depending on the filter criteria.</p>
 optionally filtered</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L204">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:204</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L197">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:197</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayersallleafs"><span>get<wbr/>Layers<wbr/>All<wbr/>Leafs</span><a href="#getlayersallleafs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -356,7 +358,7 @@ The returned collection is flattened and traversed depth-first.</p>
 leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L186">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:186</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L179">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:179</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getlayerstatus"><span>get<wbr/>Layer<wbr/>Status</span><a href="#getlayerstatus" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -369,7 +371,7 @@ leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getlayerstatus">getLayerStatus</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L361">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:361</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L338">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:338</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getmaxzoom"><span>get<wbr/>Max<wbr/>Zoom</span><a href="#getmaxzoom" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -382,7 +384,7 @@ leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getmaxzoom">getMaxZoom</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L599">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:599</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L592">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:592</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getminzoom"><span>get<wbr/>Min<wbr/>Zoom</span><a href="#getminzoom" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -395,7 +397,7 @@ leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getminzoom">getMinZoom</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L581">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:581</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L574">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:574</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getollayer"><span>get<wbr/>OL<wbr/>Layer</span><a href="#getollayer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -408,7 +410,7 @@ leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getollayer">getOLLayer</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L64">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:64</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L63">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:63</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getopacity"><span>get<wbr/>Opacity</span><a href="#getopacity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -421,7 +423,7 @@ leaf layers in the group hierarchy</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getopacity">getOpacity</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L482">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:482</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L459">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:459</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getparent"><span>get<wbr/>Parent</span><a href="#getparent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -438,7 +440,7 @@ contained within any group.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getparent">getParent</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L416">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:416</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L393">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:393</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getparentroot"><span>get<wbr/>Parent<wbr/>Root</span><a href="#getparentroot" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -452,7 +454,7 @@ if this layer does not belong to any group.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getparentroot">getParentRoot</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L471">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:471</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L448">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:448</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getparents"><span>get<wbr/>Parents</span><a href="#getparents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -473,7 +475,22 @@ if the layer has no parent.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getparents">getParents</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L444">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:444</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L421">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:421</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited">
+<h3 class="tsd-anchor-link" id="getrenderercontainer"><span>get<wbr/>Renderer<wbr/>Container</span><a href="#getrenderercontainer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-is-inherited">
+<div class="tsd-signature tsd-anchor-link" id="getrenderercontainer-1"><span class="tsd-kind-call-signature">getRendererContainer</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><a href="#getrenderercontainer-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Gets the renderer container element for this layer.</p>
+<p>The container is a protected property on CanvasLayerRenderer, accessed via cast.
+This is useful for CSS-based operations like clip-path (e.g., swiper).</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLElement</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The container HTMLElement, or undefined if the renderer has no container</p>
+<aside class="tsd-sources">
+<p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getrenderercontainer">getRendererContainer</a></p>
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L653">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:653</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getvisible"><span>get<wbr/>Visible</span><a href="#getvisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -486,7 +503,7 @@ if the layer has no parent.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getvisible">getVisible</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L512">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:512</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L489">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:489</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getvisibleincludingparents"><span>get<wbr/>Visible<wbr/>Including<wbr/>Parents</span><a href="#getvisibleincludingparents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -507,7 +524,7 @@ otherwise <code>false</code>.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getvisibleincludingparents">getVisibleIncludingParents</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L527">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:527</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L504">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:504</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="initbounds"><span>init<wbr/>Bounds</span><a href="#initbounds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -531,12 +548,12 @@ When the layer is a GVGroup, an Extent union of all layers bounds in the group i
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#initbounds">initBounds</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L222">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:222</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L199">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:199</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="isinvisiblerange"><span>is<wbr/>In<wbr/>Visible<wbr/>Range</span><a href="#isinvisiblerange" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-is-inherited">
-<div class="tsd-signature tsd-anchor-link" id="isinvisiblerange-1"><span class="tsd-kind-call-signature">isInVisibleRange</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">currentResolution</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">currentScale</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">effectiveScales</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">EffectiveLayerScales</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#isinvisiblerange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="isinvisiblerange-1"><span class="tsd-kind-call-signature">isInVisibleRange</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">currentResolution</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#isinvisiblerange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Gets the in visible range value.</p>
 <p>Compares against the OL layer's minResolution/maxResolution thresholds.
@@ -548,19 +565,13 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">currentResolution</span>: <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional. The current map resolution in map units per pixel</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">currentScale</span>: <span class="tsd-signature-type">number</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional. The current map scale denominator (1:X)</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">effectiveScales</span>: <span class="tsd-signature-type">EffectiveLayerScales</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional. Effective layer scales with buffer thresholds</p>
+<div class="tsd-comment tsd-typography"><p>The current map resolution</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True if the layer is in visible range</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#isinvisiblerange">isInVisibleRange</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L649">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:649</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L640">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:640</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="offboundsinitialized"><span>off<wbr/>Bounds<wbr/>Initialized</span><a href="#offboundsinitialized" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -578,7 +589,7 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#offboundsinitialized">offBoundsInitialized</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L819">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:819</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L825">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:825</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="offlayeradded"><span>off<wbr/>Layer<wbr/>Added</span><a href="#offlayeradded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -595,7 +606,7 @@ is visible at exactly scale 41999.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L327">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:327</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L320">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:320</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="offlayernamechanged"><span>off<wbr/>Layer<wbr/>Name<wbr/>Changed</span><a href="#offlayernamechanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -613,7 +624,7 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#offlayernamechanged">offLayerNameChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L684">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:684</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L690">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:690</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="offlayeropacitychanged"><span>off<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span><a href="#offlayeropacitychanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -631,7 +642,7 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#offlayeropacitychanged">offLayerOpacityChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L746">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:746</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L752">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:752</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="offlayerremoved"><span>off<wbr/>Layer<wbr/>Removed</span><a href="#offlayerremoved" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -648,7 +659,7 @@ is visible at exactly scale 41999.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L357">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:357</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L350">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:350</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="offlayervisiblechanged"><span>off<wbr/>Layer<wbr/>Visible<wbr/>Changed</span><a href="#offlayervisiblechanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -666,7 +677,7 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#offlayervisiblechanged">offLayerVisibleChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L715">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:715</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L721">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:721</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="offlayerzindexchanged"><span>off<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span><a href="#offlayerzindexchanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -684,7 +695,7 @@ is visible at exactly scale 41999.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#offlayerzindexchanged">offLayerZIndexChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L777">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:777</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L783">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:783</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onboundsinitialized"><span>on<wbr/>Bounds<wbr/>Initialized</span><a href="#onboundsinitialized" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -703,7 +714,7 @@ is visible at exactly scale 41999.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onboundsinitialized">onBoundsInitialized</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L809">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:809</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L815">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:815</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onceboundsinitialized"><span>once<wbr/>Bounds<wbr/>Initialized</span><a href="#onceboundsinitialized" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -722,7 +733,7 @@ is visible at exactly scale 41999.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onceboundsinitialized">onceBoundsInitialized</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L798">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:798</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L804">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:804</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ongetattributions"><span>on<wbr/>Get<wbr/>Attributions</span><a href="#ongetattributions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -735,7 +746,7 @@ is visible at exactly scale 41999.</p>
 <aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#ongetattributions">onGetAttributions</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L74">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:74</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L73">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:73</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="oninitbounds"><span>on<wbr/>Init<wbr/>Bounds</span><a href="#oninitbounds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -757,12 +768,12 @@ is visible at exactly scale 41999.</p>
 <aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#oninitbounds">onInitBounds</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L94">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:94</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L93">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:93</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected">
 <h3 class="tsd-anchor-link" id="onisinvisiblerange"><code class="tsd-tag">Protected</code><span>on<wbr/>Is<wbr/>In<wbr/>Visible<wbr/>Range</span><a href="#onisinvisiblerange" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="onisinvisiblerange-1"><span class="tsd-kind-call-signature">onIsInVisibleRange</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">currentResolution</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">currentScale</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">effectiveScales</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">EffectiveLayerScales</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#onisinvisiblerange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="onisinvisiblerange-1"><span class="tsd-kind-call-signature">onIsInVisibleRange</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">currentResolution</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#onisinvisiblerange-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Overrides visible-range evaluation for group layers.</p>
 <p>A group layer is considered in range when at least one descendant leaf layer
@@ -772,19 +783,13 @@ is in visible range for the provided resolution and effective scale context.</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">currentResolution</span>: <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>The current map resolution used for visibility checks</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">currentScale</span>: <span class="tsd-signature-type">number</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional current map scale denominator</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">effectiveScales</span>: <span class="tsd-signature-type">EffectiveLayerScales</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional effective min/max scale constraints</p>
+<div class="tsd-comment tsd-typography"><p>The current map resolution</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True when at least one leaf child layer is in visible range</p>
 <aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onisinvisiblerange">onIsInVisibleRange</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L152">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:152</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L149">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:149</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="onlayeradded"><span>on<wbr/>Layer<wbr/>Added</span><a href="#onlayeradded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -801,7 +806,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L317">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:317</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L310">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:310</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onlayernamechanged"><span>on<wbr/>Layer<wbr/>Name<wbr/>Changed</span><a href="#onlayernamechanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -820,7 +825,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onlayernamechanged">onLayerNameChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L674">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:674</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L680">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:680</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onlayeropacitychanged"><span>on<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span><a href="#onlayeropacitychanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -839,7 +844,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onlayeropacitychanged">onLayerOpacityChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L736">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:736</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L742">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:742</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="onlayerremoved"><span>on<wbr/>Layer<wbr/>Removed</span><a href="#onlayerremoved" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -856,7 +861,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L347">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:347</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L340">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:340</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onlayervisiblechanged"><span>on<wbr/>Layer<wbr/>Visible<wbr/>Changed</span><a href="#onlayervisiblechanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -875,7 +880,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onlayervisiblechanged">onLayerVisibleChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L705">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:705</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L711">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:711</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onlayerzindexchanged"><span>on<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span><a href="#onlayerzindexchanged" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -894,7 +899,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onlayerzindexchanged">onLayerZIndexChanged</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L767">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:767</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L773">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:773</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="onrefresh"><span>on<wbr/>Refresh</span><a href="#onrefresh" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -912,7 +917,7 @@ is in visible range for the provided resolution and effective scale context.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onrefresh">onRefresh</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L117">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:117</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L116">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:116</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected">
 <h3 class="tsd-anchor-link" id="onsetopacity"><code class="tsd-tag">Protected</code><span>on<wbr/>Set<wbr/>Opacity</span><a href="#onsetopacity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected">
@@ -935,7 +940,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onsetopacity">onSetOpacity</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L133">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:133</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L132">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:132</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onsetvisible"><code class="tsd-tag">Protected</code><span>on<wbr/>Set<wbr/>Visible</span><a href="#onsetvisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -953,7 +958,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onsetvisible">onSetVisible</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L129">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:129</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L130">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:130</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="onsetzindex"><code class="tsd-tag">Protected</code><span>on<wbr/>Set<wbr/>Z<wbr/>Index</span><a href="#onsetzindex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -974,7 +979,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#onsetzindex">onSetZIndex</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L146">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:146</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L147">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:147</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="refresh"><span>refresh</span><a href="#refresh" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -994,7 +999,7 @@ When the layer is a GVGroup, all layers in the group are refreshed.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#refresh">refresh</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L287">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:287</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L264">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:264</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removelayer"><span>remove<wbr/>Layer</span><a href="#removelayer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1015,7 +1020,7 @@ When the layer is a GVGroup, all layers in the group are refreshed.</p>
 <h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the layer is not found in the group</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L257">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:257</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts#L250">packages/geoview-core/src/geo/layer/gv-layers/gv-group-layer.ts:250</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setextent"><span>set<wbr/>Extent</span><a href="#setextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1034,7 +1039,7 @@ numbers representing an extent: [minx, miny, maxx, maxy].</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setextent">setExtent</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L402">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:402</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L379">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:379</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setlayername"><span>set<wbr/>Layer<wbr/>Name</span><a href="#setlayername" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1052,7 +1057,7 @@ numbers representing an extent: [minx, miny, maxx, maxy].</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setlayername">setLayerName</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L380">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:380</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L357">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:357</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setmaxresolution"><span>set<wbr/>Max<wbr/>Resolution</span><a href="#setmaxresolution" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1072,7 +1077,7 @@ Set from the effective minScale of the layer configuration.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setmaxresolution">setMaxResolution</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L632">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:632</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L625">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:625</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setmaxzoom"><span>set<wbr/>Max<wbr/>Zoom</span><a href="#setmaxzoom" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1090,7 +1095,7 @@ Set from the effective minScale of the layer configuration.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setmaxzoom">setMaxZoom</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L608">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:608</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L601">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:601</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setminresolution"><span>set<wbr/>Min<wbr/>Resolution</span><a href="#setminresolution" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1110,7 +1115,7 @@ Set from the effective maxScale of the layer configuration.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setminresolution">setMinResolution</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L620">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:620</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L613">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:613</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setminzoom"><span>set<wbr/>Min<wbr/>Zoom</span><a href="#setminzoom" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1128,7 +1133,7 @@ Set from the effective maxScale of the layer configuration.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setminzoom">setMinZoom</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L590">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:590</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L583">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:583</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setollayer"><code class="tsd-tag">Protected</code><span>set<wbr/>OL<wbr/>Layer</span><a href="#setollayer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -1146,7 +1151,7 @@ Set from the effective maxScale of the layer configuration.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setollayer">setOLLayer</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L316">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:316</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L293">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:293</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setopacity"><span>set<wbr/>Opacity</span><a href="#setopacity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1174,7 +1179,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setopacity">setOpacity</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L502">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:502</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L479">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:479</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setparent"><span>set<wbr/>Parent</span><a href="#setparent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1192,7 +1197,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setparent">setParent</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L425">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:425</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L402">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:402</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setvisible"><span>set<wbr/>Visible</span><a href="#setvisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1210,7 +1215,21 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setvisible">setVisible</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L561">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:561</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L538">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:538</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited">
+<h3 class="tsd-anchor-link" id="setvisibleincludingparents"><span>set<wbr/>Visible<wbr/>Including<wbr/>Parents</span><a href="#setvisibleincludingparents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-is-inherited">
+<div class="tsd-signature tsd-anchor-link" id="setvisibleincludingparents-1"><span class="tsd-kind-call-signature">setVisibleIncludingParents</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#setvisibleincludingparents-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Makes the layer visible, enabling any hidden parent groups so it actually renders.</p>
+<p>A layer's own visibility has no visible effect while an ancestor group is hidden, so this walks up
+the parent chain and turns each hidden ancestor group visible before showing this layer itself.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setvisibleincludingparents">setVisibleIncludingParents</a></p>
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L549">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:549</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="setzindex"><span>set<wbr/>Z<wbr/>Index</span><a href="#setzindex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1231,7 +1250,7 @@ updating the opacity. Defaults to true.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#setzindex">setZIndex</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L572">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:572</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L565">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:565</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="waitforbounds"><span>wait<wbr/>For<wbr/>Bounds</span><a href="#waitforbounds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1245,7 +1264,7 @@ available, resolves immediately. Otherwise, waits for the bounds initialized eve
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#waitforbounds">waitForBounds</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L244">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:244</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L221">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:221</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="getparent-2"><code class="tsd-tag">Static</code><span>get<wbr/>Parent</span><a href="#getparent-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -1276,7 +1295,7 @@ otherwise <code>undefined</code> if the layer has no parent.</p>
 <aside class="tsd-sources">
 <p>Inherited from <a href="AbstractBaseGVLayer.html">AbstractBaseGVLayer</a>.<a href="AbstractBaseGVLayer.html#getparent-2">getParent</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L844">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:844</a></li></ul></aside></div></li></ul></section></section></details></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts#L850">packages/geoview-core/src/geo/layer/gv-layers/abstract-base-layer.ts:850</a></li></ul></aside></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -1297,7 +1316,7 @@ otherwise <code>undefined</code> if the layer has no parent.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
 <div><a href="#loadedonce" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>loaded<wbr/>Once</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#addlayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Layer</span></a><a href="#getattributions" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Attributions</span></a><a href="#getbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds</span></a><a href="#getboundslonlat" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds<wbr/>Lon<wbr/>Lat</span></a><a href="#getboundsprojection" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds<wbr/>Projection</span></a><a href="#getclassname" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Class<wbr/>Name</span></a><a href="#getextent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent</span></a><a href="#getgeoviewlayerid" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Id</span></a><a href="#getgeoviewlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Name</span></a><a href="#getlayerconfig"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Config</span></a><a href="#getlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Name</span></a><a href="#getlayerpath" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Path</span></a><a href="#getlayers"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers</span></a><a href="#getlayersall"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers<wbr/>All</span></a><a href="#getlayersallleafs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers<wbr/>All<wbr/>Leafs</span></a><a href="#getlayerstatus" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Status</span></a><a href="#getmaxzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Zoom</span></a><a href="#getminzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Min<wbr/>Zoom</span></a><a href="#getollayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>OL<wbr/>Layer</span></a><a href="#getopacity" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Opacity</span></a><a href="#getparent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a><a href="#getparentroot" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent<wbr/>Root</span></a><a href="#getparents" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parents</span></a><a href="#getvisible" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible</span></a><a href="#getvisibleincludingparents" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible<wbr/>Including<wbr/>Parents</span></a><a href="#initbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>init<wbr/>Bounds</span></a><a href="#isinvisiblerange" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>In<wbr/>Visible<wbr/>Range</span></a><a href="#offboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Bounds<wbr/>Initialized</span></a><a href="#offlayeradded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Added</span></a><a href="#offlayernamechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Name<wbr/>Changed</span></a><a href="#offlayeropacitychanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span></a><a href="#offlayerremoved"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Removed</span></a><a href="#offlayervisiblechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Visible<wbr/>Changed</span></a><a href="#offlayerzindexchanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span></a><a href="#onboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Bounds<wbr/>Initialized</span></a><a href="#onceboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>once<wbr/>Bounds<wbr/>Initialized</span></a><a href="#ongetattributions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Get<wbr/>Attributions</span></a><a href="#oninitbounds"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Init<wbr/>Bounds</span></a><a href="#onisinvisiblerange" class="tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Is<wbr/>In<wbr/>Visible<wbr/>Range</span></a><a href="#onlayeradded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Added</span></a><a href="#onlayernamechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Name<wbr/>Changed</span></a><a href="#onlayeropacitychanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span></a><a href="#onlayerremoved"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Removed</span></a><a href="#onlayervisiblechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Visible<wbr/>Changed</span></a><a href="#onlayerzindexchanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span></a><a href="#onrefresh"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Refresh</span></a><a href="#onsetopacity" class="tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Opacity</span></a><a href="#onsetvisible" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Visible</span></a><a href="#onsetzindex" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Z<wbr/>Index</span></a><a href="#refresh" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>refresh</span></a><a href="#removelayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Layer</span></a><a href="#setextent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Extent</span></a><a href="#setlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Layer<wbr/>Name</span></a><a href="#setmaxresolution" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Resolution</span></a><a href="#setmaxzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Zoom</span></a><a href="#setminresolution" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Min<wbr/>Resolution</span></a><a href="#setminzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Min<wbr/>Zoom</span></a><a href="#setollayer" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>OL<wbr/>Layer</span></a><a href="#setopacity" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Opacity</span></a><a href="#setparent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Parent</span></a><a href="#setvisible" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Visible</span></a><a href="#setzindex" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Z<wbr/>Index</span></a><a href="#waitforbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wait<wbr/>For<wbr/>Bounds</span></a><a href="#getparent-2" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a></div></details></div></details></div>
+<div><a href="#addlayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Layer</span></a><a href="#getattributions" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Attributions</span></a><a href="#getbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds</span></a><a href="#getboundslonlat" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds<wbr/>Lon<wbr/>Lat</span></a><a href="#getboundsprojection" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Bounds<wbr/>Projection</span></a><a href="#getclassname" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Class<wbr/>Name</span></a><a href="#getextent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent</span></a><a href="#getgeoviewlayerid" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Id</span></a><a href="#getgeoviewlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Geoview<wbr/>Layer<wbr/>Name</span></a><a href="#getlayerconfig"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Config</span></a><a href="#getlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Name</span></a><a href="#getlayerpath" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Path</span></a><a href="#getlayers"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers</span></a><a href="#getlayersall"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers<wbr/>All</span></a><a href="#getlayersallleafs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layers<wbr/>All<wbr/>Leafs</span></a><a href="#getlayerstatus" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Status</span></a><a href="#getmaxzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Zoom</span></a><a href="#getminzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Min<wbr/>Zoom</span></a><a href="#getollayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>OL<wbr/>Layer</span></a><a href="#getopacity" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Opacity</span></a><a href="#getparent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a><a href="#getparentroot" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent<wbr/>Root</span></a><a href="#getparents" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parents</span></a><a href="#getrenderercontainer" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Renderer<wbr/>Container</span></a><a href="#getvisible" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible</span></a><a href="#getvisibleincludingparents" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Visible<wbr/>Including<wbr/>Parents</span></a><a href="#initbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>init<wbr/>Bounds</span></a><a href="#isinvisiblerange" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>In<wbr/>Visible<wbr/>Range</span></a><a href="#offboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Bounds<wbr/>Initialized</span></a><a href="#offlayeradded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Added</span></a><a href="#offlayernamechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Name<wbr/>Changed</span></a><a href="#offlayeropacitychanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span></a><a href="#offlayerremoved"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Removed</span></a><a href="#offlayervisiblechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Visible<wbr/>Changed</span></a><a href="#offlayerzindexchanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span></a><a href="#onboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Bounds<wbr/>Initialized</span></a><a href="#onceboundsinitialized" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>once<wbr/>Bounds<wbr/>Initialized</span></a><a href="#ongetattributions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Get<wbr/>Attributions</span></a><a href="#oninitbounds"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Init<wbr/>Bounds</span></a><a href="#onisinvisiblerange" class="tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Is<wbr/>In<wbr/>Visible<wbr/>Range</span></a><a href="#onlayeradded"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Added</span></a><a href="#onlayernamechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Name<wbr/>Changed</span></a><a href="#onlayeropacitychanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Opacity<wbr/>Changed</span></a><a href="#onlayerremoved"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Removed</span></a><a href="#onlayervisiblechanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Visible<wbr/>Changed</span></a><a href="#onlayerzindexchanged" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Layer<wbr/>Z<wbr/>Index<wbr/>Changed</span></a><a href="#onrefresh"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Refresh</span></a><a href="#onsetopacity" class="tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Opacity</span></a><a href="#onsetvisible" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Visible</span></a><a href="#onsetzindex" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on<wbr/>Set<wbr/>Z<wbr/>Index</span></a><a href="#refresh" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>refresh</span></a><a href="#removelayer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Layer</span></a><a href="#setextent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Extent</span></a><a href="#setlayername" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Layer<wbr/>Name</span></a><a href="#setmaxresolution" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Resolution</span></a><a href="#setmaxzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Zoom</span></a><a href="#setminresolution" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Min<wbr/>Resolution</span></a><a href="#setminzoom" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Min<wbr/>Zoom</span></a><a href="#setollayer" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>OL<wbr/>Layer</span></a><a href="#setopacity" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Opacity</span></a><a href="#setparent" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Parent</span></a><a href="#setvisible" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Visible</span></a><a href="#setvisibleincludingparents" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Visible<wbr/>Including<wbr/>Parents</span></a><a href="#setzindex" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Z<wbr/>Index</span></a><a href="#waitforbounds" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wait<wbr/>For<wbr/>Bounds</span></a><a href="#getparent-2" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Parent</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">geoview-core - v2.3.0</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

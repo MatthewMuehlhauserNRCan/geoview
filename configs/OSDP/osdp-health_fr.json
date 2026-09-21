@@ -1,6 +1,5 @@
 {
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "initialView": {
         "zoomAndCenter": [
@@ -76,7 +75,7 @@
               }
             }
           }
-        ]   
+        ]
       },
       {
         "geoviewLayerId": "21b821cf-0f1c-40ee-8925-eab12d357668",
@@ -126,7 +125,8 @@
     "fullscreen",
     "home",
     "location",
-    "basemap-select"
+    "basemap-select",
+    "measure"
   ],
   "appBar": {
     "tabs": {
@@ -148,6 +148,9 @@
     }
   },
   "corePackages": [],
+  "globalSettings": {
+    "canRemoveSublayers": false
+  },
   "theme": "geo.ca",
   "corePackagesConfig": [
     {

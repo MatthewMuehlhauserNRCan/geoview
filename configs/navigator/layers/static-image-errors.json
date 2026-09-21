@@ -1,6 +1,5 @@
 {
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "initialView": {
         "zoomAndCenter": [
@@ -27,7 +26,7 @@
         "listOfLayerEntryConfig": [
           {
             "layerId": "napl-ring-of-fire-1954-08-07-60k-thumbnail.png",
-            "layerName": "Static Image",
+            "layerName": "Static Image 1",
             "source": {
               "extent": [
                 -87.77486341686723,
@@ -48,7 +47,7 @@
         "listOfLayerEntryConfig": [
           {
             "layerId": "ERRORnapl-ring-of-fire-1954-08-07-60k-thumbnail.png",
-            "layerName": "Static Image",
+            "layerName": "Static Image 2",
             "source": {
               "extent": [
                 -87.77486341686723,

@@ -115,6 +115,12 @@ This map is not fully compliant with Web Content Accessibility Guidelines (WCAG)
 - Opening panels triggers focus traps to speed up navigation, with Esc closing panels and returning focus to the triggering element.
 - In full-screen mode, the Esc key will exit full-screen rather than close any panels that have been opened.
 
+Mouse movement or placement can cause unexpected behaviour with keyboard navigation mode. To avoid this:
+
+- Before tabbing into the viewer to enter keyboard navigation (WCAG) mode, move your mouse away from the browser window.
+- Avoid moving your mouse after enabling keyboard navigation mode.
+- Before entering the viewer's fullscreen mode, move your mouse away from where the viewer will appear, so it doesn't overlap with the mouse as the viewer expands to fill the screen. Placing the mouse in one of your display's corners should help avoid any issues.
+
 ### Screen Reader Users
 
 - Semantic landmarks are provided for each major app section to enable quick navigation.
@@ -270,18 +276,18 @@ _The tools displayed may vary depending on how the map is configured._
 
 _Note: Some tools in the Side Bar are also available as tabs in the Footer Bar, such as **Legend**, **Layers**, **Data Table** or **Details**. **Legend** and **Details** opened from the Side Bar are displayed on the map, in a condensed 'mobile' view (single column). The same tool opened from a tab in the Footer Bar is displayed below the map in a fully expanded view._
 
-| Symbol                                                                                                                | Name          | Description                                                                              |
-| --------------------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| <img src="{{assetsURL}}/img/guide/geosearch/geolocator.svg" alt="An icon representing the Geolocator function" />     | Geolocator    | Click the geolocator icon and an input field for search keywords will appear on the map. |
-| <img src="{{assetsURL}}/img/guide/sidebar/legend.svg" alt="An icon representing the Legend function" />               | Legend        | Legend of map icons (_see Footer Bar section for help_).                                 |
-| <img src="{{assetsURL}}/img/guide/footer/layers_30.svg" alt="An icon representing the Layers function" />             | Layers        | Tools to interact with layers (_see Footer Bar section for help_).                       |
-| <img src="{{assetsURL}}/img/guide/sidebar/details.svg" alt="An icon representing the Details function" />             | Details       | Details for selected features (_see Footer Bar section for help_).                       |
-| <img src="{{assetsURL}}/img/guide/footer/data_table.svg" alt="An icon representing the Data function" />              | Data          | Table of all features (_see Footer Bar section for help_).                               |
+| Symbol                                                                                                                | Name          | Description                                                                               |
+| --------------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------- |
+| <img src="{{assetsURL}}/img/guide/geosearch/geolocator.svg" alt="An icon representing the Geolocator function" />     | Geolocator    | Click the geolocator icon and an input field for search keywords will appear on the map.  |
+| <img src="{{assetsURL}}/img/guide/sidebar/legend.svg" alt="An icon representing the Legend function" />               | Legend        | Legend of map icons (_see Footer Bar section for help_).                                  |
+| <img src="{{assetsURL}}/img/guide/footer/layers_30.svg" alt="An icon representing the Layers function" />             | Layers        | Tools to interact with layers (_see Footer Bar section for help_).                        |
+| <img src="{{assetsURL}}/img/guide/sidebar/details.svg" alt="An icon representing the Details function" />             | Details       | Details for selected features (_see Footer Bar section for help_).                        |
+| <img src="{{assetsURL}}/img/guide/footer/data_table.svg" alt="An icon representing the Data function" />              | Data          | Table of all features (_see Footer Bar section for help_).                                |
 | Filter Panel                                                                                                          | Filter Panel  | Filter map layers by attribute values using select, multiselect, range, and date filters. |
-| <img src="{{assetsURL}}/img/guide/sidebar/guide.svg" alt="An icon representing the Guide function" />                 | Guide         | Help guide.                                                                              |
-| <img src="{{assetsURL}}/img/guide/sidebar/export.svg" alt="An icon representing the Download function" />             | Download      | Download the map as PNG, JPEG, or PDF. Disabled while layers are loading.                |
-| <img src="{{assetsURL}}/img/guide/sidebar/notifications.svg" alt="An icon representing the Notifications function" /> | Notifications | Display messages and notifications for the map.                                          |
-| <img src="{{assetsURL}}/img/guide/sidebar/about.svg" alt="An icon representing the About Geoview function" />         | About Geoview | Display information about Geoview viewer.                                                |
+| <img src="{{assetsURL}}/img/guide/sidebar/guide.svg" alt="An icon representing the Guide function" />                 | Guide         | Help guide.                                                                               |
+| <img src="{{assetsURL}}/img/guide/sidebar/export.svg" alt="An icon representing the Download function" />             | Download      | Download the map as PNG, JPEG, or PDF. Disabled while layers are loading.                 |
+| <img src="{{assetsURL}}/img/guide/sidebar/notifications.svg" alt="An icon representing the Notifications function" /> | Notifications | Display messages and notifications for the map.                                           |
+| <img src="{{assetsURL}}/img/guide/sidebar/about.svg" alt="An icon representing the About Geoview function" />         | About Geoview | Display information about Geoview viewer.                                                 |
 
 =2!geolocator=
 
@@ -602,6 +608,8 @@ The **Details** tab has two sections: a layer list on the left and feature detai
 5. If the feature has proper geometry, it will be highlighted on the map
 6. When making a new query, the previously selected layer will remain selected if features are found
 
+_Layers that are hidden on the map stay in the list under a **Hidden layers** heading, shown greyed and in italics. Select the eye icon <img src="{{assetsURL}}/img/guide/footer/eye_not_visible.svg" alt="An icon representing the Eye not visible function" /> next to a hidden layer to make it visible again; it then moves back up to the available list._
+
 ### Clear All Highlights
 
 The clear all higlights button <img src="{{assetsURL}}/img/guide/layers/clear_highlight_30.svg" alt="An icon representing the Clear highlights function" /> is located in the upper right corner above the layer list. Click this button to remove all feature highlights from the map.
@@ -648,6 +656,8 @@ Click on a layer and the number of available features is displayed below the lay
 - If you switch to another tab during the process, you will need to reselect the layer when returning to the tab _Data Table_ to view the results.
 
 The **Data Table** tab has two sections. The layers are listed on the left and the layer data on the right. Click on a layer to show the layer data in the table on the right.
+
+_Layers that are hidden on the map stay in the list under a **Hidden layers** heading, shown greyed and in italics. Select the eye icon <img src="{{assetsURL}}/img/guide/footer/eye_not_visible.svg" alt="An icon representing the Eye not visible function" /> next to a hidden layer to make it visible again; it then moves back up to the available list._
 
 ### Data Table Controls
 
@@ -730,6 +740,8 @@ _**Note: Click on a layer to display its Time Slider information in the right se
 
 The **Time Slider** tab on the Footer Bar has two sections. Layers with a time dimension are listed in the left section.
 
+_Layers that are hidden on the map stay in the list under a **Hidden layers** heading, shown greyed and in italics. Select the eye icon <img src="{{assetsURL}}/img/guide/footer/eye_not_visible.svg" alt="An icon representing the Eye not visible function" /> next to a hidden layer to make it visible again; it then moves back up to the available list._
+
 The Time Slider section displays a slider bar with one or two draggable handles. A point in time layer will show one handle. A time period layer will show two handles, to adjust the start and end time of the period.
 
 The **Time filtering** switch controls whether the time slider filters the data.
@@ -754,6 +766,8 @@ The field being filtered on is displayed in the lower left of the Time Slider se
 _**Note: A feature on the map must be selected to enable the layer in the list. Otherwise layers are disabled (greyed out).**_
 
 The **Chart** tab on the Footer Bar has two sections. Layers with a chart are listed in the left section. Select a feature on the map to display its chart in the right section.
+
+_Layers that are hidden on the map stay in the list under a **Hidden layers** heading, shown greyed and in italics. Select the eye icon <img src="{{assetsURL}}/img/guide/footer/eye_not_visible.svg" alt="An icon representing the Eye not visible function" /> next to a hidden layer to make it visible again; it then moves back up to the available list._
 
 The **Feature** dropdown (upper left of the chart section), can be used to select a feature. This is useful when features are close together on the map, making it difficult to click on the desired one.
 

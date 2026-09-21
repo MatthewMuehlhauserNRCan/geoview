@@ -29,20 +29,22 @@ rush serve
 
 ## Suite Checklist
 
-| #   | Suite                           | Tests    | Status   |
-| --- | ------------------------------- | -------- | -------- |
-| 1   | `suite-core`                    | 5        | [ ] Pass |
-| 2   | `suite-config`                  | 33       | [ ] Pass |
-| 3   | `suite-utilities`               | 52       | [ ] Pass |
-| 4   | `suite-layer` (LCC — EPSG:3978) | 34       | [ ] Pass |
-| 5   | `suite-layer` (WM — EPSG:3857)  | 34       | [ ] Pass |
-| 6   | `suite-map-varia`               | 15       | [ ] Pass |
-| 7   | `suite-map-config`              | 25       | [ ] Pass |
-| 8   | `suite-ui`                      | 1        | [ ] Pass |
-| 9   | `suite-details`                 | 1        | [ ] Pass |
-| 10  | `suite-geochart`                | 3        | [ ] Pass |
-| 11  | `suite-swiper`                  | 1        | [ ] Pass |
-|     | **Total**                       | **~170** |          |
+| #   | Suite                           | Tests   | Status   |
+| --- | ------------------------------- | ------- | -------- |
+| 1   | `suite-core`                    | 14      | [ ] Pass |
+| 2   | `suite-config`                  | 39      | [ ] Pass |
+| 3   | `suite-utilities`               | 53      | [ ] Pass |
+| 4   | `suite-layer` (LCC — EPSG:3978) | 43      | [ ] Pass |
+| 5   | `suite-layer` (WM — EPSG:3857)  | 43      | [ ] Pass |
+| 6   | `suite-map`                     | 16      | [ ] Pass |
+| 7   | `suite-map-config`              | 39      | [ ] Pass |
+| 8   | `suite-ui`                      | 2       | [ ] Pass |
+| 9   | `suite-details`                 | 6       | [ ] Pass |
+| 10  | `suite-data-table`              | 13      | [ ] Pass |
+| 11  | `suite-geochart`                | 2       | [ ] Pass |
+| 12  | `suite-swiper`                  | 2       | [ ] Pass |
+| 13  | `suite-time-slider`             | 2       | [ ] Pass |
+|     | **Total**                       | **274** |          |
 
 ## What to Do if a Suite Fails
 

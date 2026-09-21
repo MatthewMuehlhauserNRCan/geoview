@@ -11,7 +11,7 @@
 <li><a href="" aria-current="page">GeoUtilities</a></li></ul>
 <h1>Class GeoUtilities<code class="tsd-tag">Abstract</code></h1></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L65">packages/geoview-core/src/geo/utils/utilities.ts:65</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L74">packages/geoview-core/src/geo/utils/utilities.ts:74</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -20,10 +20,6 @@
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading tsd-anchor-link" id="constructors">Constructors<a href="#constructors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-index-list"><a href="#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
-</div></section>
-<section class="tsd-index-section">
-<h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<div class="tsd-index-list"><a href="#double_encoding_layers_when_behind_proxy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>DOUBLE_<wbr/>ENCODING_<wbr/>LAYERS_<wbr/>WHEN_<wbr/>BEHIND_<wbr/>PROXY</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
@@ -41,13 +37,15 @@
 <a href="#ensureurlforopenlayerssource" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>URL<wbr/>For<wbr/>Open<wbr/>Layers<wbr/>Source</span></a>
 <a href="#esriconvertesrigeometrytypetoolgeometrytype" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>esri<wbr/>Convert<wbr/>Esri<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a>
 <a href="#extenttopolygon" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>extent<wbr/>To<wbr/>Polygon</span></a>
+<a href="#fetchjsonwithproxyfallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Json<wbr/>With<wbr/>Proxy<wbr/>Fallback</span></a>
+<a href="#fetchtextwithproxyfallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Text<wbr/>With<wbr/>Proxy<wbr/>Fallback</span></a>
 <a href="#geojsontogeometry" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geojson<wbr/>To<wbr/>Geometry</span></a>
 <a href="#geometriesareequal" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometries<wbr/>Are<wbr/>Equal</span></a>
 <a href="#geometrytowkt" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometry<wbr/>To<wbr/>WKT</span></a>
 <a href="#getarea" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Area</span></a>
 <a href="#getbaseurl" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Base<wbr/>Url</span></a>
 <a href="#getdefaultdrawingstyle" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Default<wbr/>Drawing<wbr/>Style</span></a>
-<a href="#getesriservicemetadata" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span></a>
+<a href="#getesriservicemetadata" class="tsd-index-link deprecated"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span></a>
 <a href="#getextentintersection" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Intersection</span></a>
 <a href="#getextentunion" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Union</span></a>
 <a href="#getlayericonimage" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Icon<wbr/>Image</span></a>
@@ -57,13 +55,14 @@
 <a href="#getmetersperpixel" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Meters<wbr/>Per<wbr/>Pixel</span></a>
 <a href="#getogcserverurl" class="tsd-index-link deprecated"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>OGC<wbr/>Server<wbr/>Url</span></a>
 <a href="#getpointerpositionfrommapevent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Pointer<wbr/>Position<wbr/>From<wbr/>Map<wbr/>Event</span></a>
+<a href="#getwfsservicemetadata" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WFS<wbr/>Service<wbr/>Metadata</span></a>
 <a href="#getwmsservicemetadata" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>Metadata</span></a>
-<a href="#getwmsservicestring" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>String</span></a>
-<a href="#getwmsservicestyles" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>Styles</span></a>
 <a href="#getwmtsservicemetadata" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMTS<wbr/>Service<wbr/>Metadata</span></a>
+<a href="#isesriproxy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Esri<wbr/>Proxy</span></a>
 <a href="#isextentlonlat" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Extent<wbr/>Lon<wbr/>Lat</span></a>
 <a href="#isgeojsonobject" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Geo<wbr/>JSON<wbr/>Object</span></a>
 <a href="#ispointinextent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Point<wbr/>In<wbr/>Extent</span></a>
+<a href="#isvalidextent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Valid<wbr/>Extent</span></a>
 <a href="#isvectorlegend" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Vector<wbr/>Legend</span></a>
 <a href="#polygontoextent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>polygon<wbr/>To<wbr/>Extent</span></a>
 <a href="#readepsgofgeojson" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Of<wbr/>Geo<wbr/>JSON</span></a>
@@ -74,6 +73,8 @@
 <a href="#readfeaturesfromwfs" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WFS</span></a>
 <a href="#readfeaturesfromwkb" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WKB</span></a>
 <a href="#replacecrsandbboxparam" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>replace<wbr/>CR<wbr/>Sand<wbr/>BBOX<wbr/>Param</span></a>
+<a href="#validateesriproxyerror" class="tsd-index-link deprecated"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Esri<wbr/>Proxy<wbr/>Error</span></a>
+<a href="#validateesriproxyerrorxml" class="tsd-index-link deprecated"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Esri<wbr/>Proxy<wbr/>Error<wbr/>XML</span></a>
 <a href="#validateextent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent</span></a>
 <a href="#validateextentwhendefined" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent<wbr/>When<wbr/>Defined</span></a>
 <a href="#wfsconvertgeometrytypetoolgeometrytype" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wfs<wbr/>Convert<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a>
@@ -90,16 +91,6 @@
 <div class="tsd-signature tsd-anchor-link" id="constructorgeoutilities"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">GeoUtilities</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">GeoUtilities</a><a href="#constructorgeoutilities" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">GeoUtilities</a></h4></div></li></ul></section></section></details>
-<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
-<h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
-<section>
-<section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="double_encoding_layers_when_behind_proxy"><code class="tsd-tag">Static</code> <code class="tsd-tag">Readonly</code><span>DOUBLE_<wbr/>ENCODING_<wbr/>LAYERS_<wbr/>WHEN_<wbr/>BEHIND_<wbr/>PROXY</span><a href="#double_encoding_layers_when_behind_proxy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">DOUBLE_ENCODING_LAYERS_WHEN_BEHIND_PROXY</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
-<div class="tsd-comment tsd-typography"><p>Whether to double encode the layers when behind a proxy</p>
-</div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L67">packages/geoview-core/src/geo/utils/utilities.ts:67</a></li></ul></aside></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -123,7 +114,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>Buffered extent</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1588">packages/geoview-core/src/geo/utils/utilities.ts:1588</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1912">packages/geoview-core/src/geo/utils/utilities.ts:1912</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="calculatedistance"><code class="tsd-tag">Static</code><span>calculate<wbr/>Distance</span><a href="#calculatedistance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -147,7 +138,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">sections</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">total</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">}</span></h4><p>The total distance in kilometers and distance for each section</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1498">packages/geoview-core/src/geo/utils/utilities.ts:1498</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1822">packages/geoview-core/src/geo/utils/utilities.ts:1822</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="converttypefeaturestyletoopenlayersstyle"><code class="tsd-tag">Static</code><span>convert<wbr/>Type<wbr/>Feature<wbr/>Style<wbr/>To<wbr/>Open<wbr/>Layers<wbr/>Style</span><a href="#converttypefeaturestyletoopenlayersstyle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -165,7 +156,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Style</span></h4><p>An Open Layers styling for drawing on a map</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1283">packages/geoview-core/src/geo/utils/utilities.ts:1283</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1592">packages/geoview-core/src/geo/utils/utilities.ts:1592</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="coordformatdms"><code class="tsd-tag">Static</code><span>coord<wbr/>Format<wbr/>DMS</span><a href="#coordformatdms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -183,7 +174,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The formatted value</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1267">packages/geoview-core/src/geo/utils/utilities.ts:1267</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1576">packages/geoview-core/src/geo/utils/utilities.ts:1576</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="createemptybasemap"><code class="tsd-tag">Static</code><span>create<wbr/>Empty<wbr/>Basemap</span><a href="#createemptybasemap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -196,7 +187,7 @@ so the viewer will not fails if basemap is not avialable.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TileLayer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OSM</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">XYZ</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">VectorTile</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RenderFeature</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>The created empty basemap</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1242">packages/geoview-core/src/geo/utils/utilities.ts:1242</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1551">packages/geoview-core/src/geo/utils/utilities.ts:1551</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturl"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url</span><a href="#ensureservicerequesturl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -227,7 +218,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The normalized and fully qualified service request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L98">packages/geoview-core/src/geo/utils/utilities.ts:98</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L119">packages/geoview-core/src/geo/utils/utilities.ts:119</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturldescribefeaturetype"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Describe<wbr/>Feature<wbr/>Type</span><a href="#ensureservicerequesturldescribefeaturetype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -254,7 +245,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A fully qualified DescribeFeatureType request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L164">packages/geoview-core/src/geo/utils/utilities.ts:164</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L185">packages/geoview-core/src/geo/utils/utilities.ts:185</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturlgetcapabilities"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Capabilities</span><a href="#ensureservicerequesturlgetcapabilities" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -278,7 +269,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A fully qualified GetCapabilities request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L120">packages/geoview-core/src/geo/utils/utilities.ts:120</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L141">packages/geoview-core/src/geo/utils/utilities.ts:141</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturlgetfeature"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Feature</span><a href="#ensureservicerequesturlgetfeature" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -308,7 +299,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A fully qualified GetFeature request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L184">packages/geoview-core/src/geo/utils/utilities.ts:184</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L205">packages/geoview-core/src/geo/utils/utilities.ts:205</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturlgetlegendgraphic"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Legend<wbr/>Graphic</span><a href="#ensureservicerequesturlgetlegendgraphic" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -335,7 +326,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A fully qualified GetLegendGraphic request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L150">packages/geoview-core/src/geo/utils/utilities.ts:150</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L171">packages/geoview-core/src/geo/utils/utilities.ts:171</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureservicerequesturlgetstyles"><code class="tsd-tag">Static</code><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Styles</span><a href="#ensureservicerequesturlgetstyles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -359,7 +350,7 @@ If the <code>VERSION</code> parameter is missing, a default value of 1.3.0 is ad
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A fully qualified GetStyles request URL</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L135">packages/geoview-core/src/geo/utils/utilities.ts:135</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L156">packages/geoview-core/src/geo/utils/utilities.ts:156</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ensureurlforopenlayerssource"><code class="tsd-tag">Static</code><span>ensure<wbr/>URL<wbr/>For<wbr/>Open<wbr/>Layers<wbr/>Source</span><a href="#ensureurlforopenlayerssource" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -384,7 +375,7 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The normalized URL with the specified parameters removed</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L213">packages/geoview-core/src/geo/utils/utilities.ts:213</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L234">packages/geoview-core/src/geo/utils/utilities.ts:234</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="esriconvertesrigeometrytypetoolgeometrytype"><code class="tsd-tag">Static</code><span>esri<wbr/>Convert<wbr/>Esri<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span><a href="#esriconvertesrigeometrytypetoolgeometrytype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -406,7 +397,7 @@ to remove from the URL</p>
 <h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the geometry type is not supported</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1682">packages/geoview-core/src/geo/utils/utilities.ts:1682</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L2006">packages/geoview-core/src/geo/utils/utilities.ts:2006</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="extenttopolygon"><code class="tsd-tag">Static</code><span>extent<wbr/>To<wbr/>Polygon</span><a href="#extenttopolygon" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -424,7 +415,91 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Polygon</span></h4><p>The created polygon</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1360">packages/geoview-core/src/geo/utils/utilities.ts:1360</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1672">packages/geoview-core/src/geo/utils/utilities.ts:1672</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="fetchjsonwithproxyfallback"><code class="tsd-tag">Static</code><span>fetch<wbr/>Json<wbr/>With<wbr/>Proxy<wbr/>Fallback</span><a href="#fetchjsonwithproxyfallback" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="fetchjsonwithproxyfallback-1"><span class="tsd-kind-call-signature">fetchJsonWithProxyFallback</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#fetchjsonwithproxyfallbackt">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#fetchjsonwithproxyfallbackt">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#fetchjsonwithproxyfallback-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Fetches JSON metadata, retrying through a proxy on network errors.</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li><span id="fetchjsonwithproxyfallbackt"><span class="tsd-kind-type-parameter">T</span></span></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>The base URL to fetch the metadata from (e.g., ArcGIS REST endpoint)</p>
+</div></li>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the request</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#fetchjsonwithproxyfallbackt">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise resolving to the fetched data and proxy information</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-1">Throws<a href="#throws-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request exceeds the timeout duration</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-2">Throws<a href="#throws-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request was aborted by the caller's signal</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-3">Throws<a href="#throws-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the response is not OK (non-2xx)</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-4">Throws<a href="#throws-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the JSON response is empty</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-5">Throws<a href="#throws-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened and no proxy is available</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L434">packages/geoview-core/src/geo/utils/utilities.ts:434</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="fetchtextwithproxyfallback"><code class="tsd-tag">Static</code><span>fetch<wbr/>Text<wbr/>With<wbr/>Proxy<wbr/>Fallback</span><a href="#fetchtextwithproxyfallback" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="fetchtextwithproxyfallback-1"><span class="tsd-kind-call-signature">fetchTextWithProxyFallback</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#fetchtextwithproxyfallback-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Fetches the raw text response from a service URL, retrying through a proxy on network errors.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>The service URL to fetch</p>
+</div></li>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the response text and proxy information</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-6">Throws<a href="#throws-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request exceeds the timeout duration</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-7">Throws<a href="#throws-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request was aborted by the caller's signal</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-8">Throws<a href="#throws-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the response is not OK (non-2xx)</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-9">Throws<a href="#throws-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the JSON response is empty</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-10">Throws<a href="#throws-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L486">packages/geoview-core/src/geo/utils/utilities.ts:486</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="geojsontogeometry"><code class="tsd-tag">Static</code><span>geojson<wbr/>To<wbr/>Geometry</span><a href="#geojsontogeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -445,7 +520,7 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Geometry</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The Geometry representation of the geojson, or undefined if no geojson is provided</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L965">packages/geoview-core/src/geo/utils/utilities.ts:965</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1130">packages/geoview-core/src/geo/utils/utilities.ts:1130</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="geometriesareequal"><code class="tsd-tag">Static</code><span>geometries<wbr/>Are<wbr/>Equal</span><a href="#geometriesareequal" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -467,7 +542,7 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>Whether the two geometries are equal or not</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1558">packages/geoview-core/src/geo/utils/utilities.ts:1558</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1882">packages/geoview-core/src/geo/utils/utilities.ts:1882</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="geometrytowkt"><code class="tsd-tag">Static</code><span>geometry<wbr/>To<wbr/>WKT</span><a href="#geometrytowkt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -485,7 +560,7 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The WKT representation of the geometry, or undefined if no geometry is provided</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L933">packages/geoview-core/src/geo/utils/utilities.ts:933</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1098">packages/geoview-core/src/geo/utils/utilities.ts:1098</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getarea"><code class="tsd-tag">Static</code><span>get<wbr/>Area</span><a href="#getarea" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -503,7 +578,7 @@ to remove from the URL</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>The area of the given geometry</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1470">packages/geoview-core/src/geo/utils/utilities.ts:1470</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1794">packages/geoview-core/src/geo/utils/utilities.ts:1794</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getbaseurl"><code class="tsd-tag">Static</code><span>get<wbr/>Base<wbr/>Url</span><a href="#getbaseurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -522,7 +597,7 @@ removing any query parameters, hash fragments, or authentication data.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The normalized base URL consisting of the origin and pathname</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L76">packages/geoview-core/src/geo/utils/utilities.ts:76</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L97">packages/geoview-core/src/geo/utils/utilities.ts:97</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getdefaultdrawingstyle"><code class="tsd-tag">Static</code><span>get<wbr/>Default<wbr/>Drawing<wbr/>Style</span><a href="#getdefaultdrawingstyle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -546,9 +621,9 @@ removing any query parameters, hash fragments, or authentication data.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Style</span></h4><p>An Open Layers styling for drawing on a map</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1212">packages/geoview-core/src/geo/utils/utilities.ts:1212</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1437">packages/geoview-core/src/geo/utils/utilities.ts:1437</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getesriservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span><a href="#getesriservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h3 class="tsd-anchor-link" id="getesriservicemetadata"><code class="tsd-tag">Static</code><span class="deprecated">get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span><a href="#getesriservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
 <div class="tsd-signature tsd-anchor-link" id="getesriservicemetadata-1"><span class="tsd-kind-call-signature">getESRIServiceMetadata</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><a href="#getesriservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
@@ -562,9 +637,15 @@ removing any query parameters, hash fragments, or authentication data.</p>
 <div class="tsd-comment tsd-typography"><p>The url of the ESRI map server</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the JSON metadata from the server</p>
-<aside class="tsd-sources">
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-deprecated">
+<h4 class="tsd-anchor-link" id="deprecated">Deprecated<a href="#deprecated" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<li>Unused in our framework and templates, is it used by external devs? If not, remove it</li>
+</ul>
+</div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L244">packages/geoview-core/src/geo/utils/utilities.ts:244</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L266">packages/geoview-core/src/geo/utils/utilities.ts:266</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getextentintersection"><code class="tsd-tag">Static</code><span>get<wbr/>Extent<wbr/>Intersection</span><a href="#getextentintersection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -585,7 +666,7 @@ removing any query parameters, hash fragments, or authentication data.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The intersection of the extents, or the valid extent when the other one is undefined or contains NaN values</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1334">packages/geoview-core/src/geo/utils/utilities.ts:1334</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1646">packages/geoview-core/src/geo/utils/utilities.ts:1646</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getextentunion"><code class="tsd-tag">Static</code><span>get<wbr/>Extent<wbr/>Union</span><a href="#getextentunion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -606,7 +687,7 @@ removing any query parameters, hash fragments, or authentication data.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The union of the extents, or the valid extent when the other one is undefined or contains NaN values</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1307">packages/geoview-core/src/geo/utils/utilities.ts:1307</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1619">packages/geoview-core/src/geo/utils/utilities.ts:1619</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayericonimage"><code class="tsd-tag">Static</code><span>get<wbr/>Layer<wbr/>Icon<wbr/>Image</span><a href="#getlayericonimage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -657,7 +738,7 @@ Notes:</li>
 or <code>undefined</code> if no legend is provided.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L766">packages/geoview-core/src/geo/utils/utilities.ts:766</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L931">packages/geoview-core/src/geo/utils/utilities.ts:931</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlayeritemsfromicons"><code class="tsd-tag">Static</code><span>get<wbr/>Layer<wbr/>Items<wbr/>From<wbr/>Icons</span><a href="#getlayeritemsfromicons" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -693,7 +774,7 @@ optional <code>iconList</code> collections and optional <code>iconImage</code> v
 provided icons, including any dynamically generated items for special layer types.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L861">packages/geoview-core/src/geo/utils/utilities.ts:861</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1026">packages/geoview-core/src/geo/utils/utilities.ts:1026</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlength"><code class="tsd-tag">Static</code><span>get<wbr/>Length</span><a href="#getlength" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -711,7 +792,7 @@ provided icons, including any dynamically generated items for special layer type
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>The length of the given geometry</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1483">packages/geoview-core/src/geo/utils/utilities.ts:1483</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1807">packages/geoview-core/src/geo/utils/utilities.ts:1807</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmapserverurl"><code class="tsd-tag">Static</code><span class="deprecated">get<wbr/>Map<wbr/>Server<wbr/>Url</span><a href="#getmapserverurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -733,9 +814,10 @@ provided icons, including any dynamically generated items for special layer type
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-deprecated">
-<h4 class="tsd-anchor-link" id="deprecated">Deprecated<a href="#deprecated" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4></div></div><aside class="tsd-sources">
+<h4 class="tsd-anchor-link" id="deprecated-1">Deprecated<a href="#deprecated-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>As it's not being used anymore (or only used by external developers?)</p>
+</div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L682">packages/geoview-core/src/geo/utils/utilities.ts:682</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L533">packages/geoview-core/src/geo/utils/utilities.ts:533</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmetersperpixel"><code class="tsd-tag">Static</code><span>get<wbr/>Meters<wbr/>Per<wbr/>Pixel</span><a href="#getmetersperpixel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -759,7 +841,7 @@ provided icons, including any dynamically generated items for special layer type
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>Number representing meters per pixel</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1518">packages/geoview-core/src/geo/utils/utilities.ts:1518</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1842">packages/geoview-core/src/geo/utils/utilities.ts:1842</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getogcserverurl"><code class="tsd-tag">Static</code><span class="deprecated">get<wbr/>OGC<wbr/>Server<wbr/>Url</span><a href="#getogcserverurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -778,9 +860,10 @@ provided icons, including any dynamically generated items for special layer type
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-deprecated">
-<h4 class="tsd-anchor-link" id="deprecated-1">Deprecated<a href="#deprecated-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4></div></div><aside class="tsd-sources">
+<h4 class="tsd-anchor-link" id="deprecated-2">Deprecated<a href="#deprecated-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>As it's not being used anymore (or only used by external developers?)</p>
+</div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L706">packages/geoview-core/src/geo/utils/utilities.ts:706</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L557">packages/geoview-core/src/geo/utils/utilities.ts:557</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getpointerpositionfrommapevent"><code class="tsd-tag">Static</code><span>get<wbr/>Pointer<wbr/>Position<wbr/>From<wbr/>Map<wbr/>Event</span><a href="#getpointerpositionfrommapevent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -798,120 +881,31 @@ provided icons, including any dynamically generated items for special layer type
 <li><span><span class="tsd-kind-parameter">projCode</span>: <span class="tsd-signature-type">string</span></span>
 <div class="tsd-comment tsd-typography"><p>The map projection code</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TypeMapMouseInfo</span></h4><p>An object representing pointer position information</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TypeMapMouseInfo</span></h4><p>An object representing pointer position information in EPSG:4326</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1539">packages/geoview-core/src/geo/utils/utilities.ts:1539</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1863">packages/geoview-core/src/geo/utils/utilities.ts:1863</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getwmsservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>WMS<wbr/>Service<wbr/>Metadata</span><a href="#getwmsservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h3 class="tsd-anchor-link" id="getwfsservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>WFS<wbr/>Service<wbr/>Metadata</span><a href="#getwfsservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="getwmsservicemetadata-1"><span class="tsd-kind-call-signature">getWMSServiceMetadata</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">layers</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">callbackNewMetadataUrl</span><span class="tsd-signature-symbol">?:</span> <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMS</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmsservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="getwfsservicemetadata-1"><span class="tsd-kind-call-signature">getWFSServiceMetadata</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWFSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwfsservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WMS getCapabilities request.</p>
+<div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WFS getCapabilities request.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The url the url of the WMS server</p>
+<div class="tsd-comment tsd-typography"><p>The url of the WFS server</p>
 </div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">layers</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The layers to query separate by</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">callbackNewMetadataUrl</span>: <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a></span>
-<div class="tsd-comment tsd-typography"><p>Optional callback executed when a proxy had to be used to fetch the metadata.
-The parameter sent in the callback is the proxy prefix with the '?' at the end.</p>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
 </div></li>
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
 <div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMS</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WMS metadata</p>
-
-<div class="tsd-comment tsd-typography">
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-1">Throws<a href="#throws-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request exceeds the timeout duration</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-2">Throws<a href="#throws-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request was aborted by the caller's signal</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-3">Throws<a href="#throws-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the response is not OK (non-2xx)</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-4">Throws<a href="#throws-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the JSON response is empty</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-5">Throws<a href="#throws-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
-</div></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L318">packages/geoview-core/src/geo/utils/utilities.ts:318</a></li></ul></aside></div></li></ul></section>
-<section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getwmsservicestring"><code class="tsd-tag">Static</code><span>get<wbr/>WMS<wbr/>Service<wbr/>String</span><a href="#getwmsservicestring" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="">
-<div class="tsd-signature tsd-anchor-link" id="getwmsservicestring-1"><span class="tsd-kind-call-signature">getWMSServiceString</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">callbackNewMetadataUrl</span><span class="tsd-signature-symbol">?:</span> <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmsservicestring-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
-<div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WMS getCapabilities request.</p>
-</div>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The url the url of the WMS server</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">callbackNewMetadataUrl</span>: <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a></span>
-<div class="tsd-comment tsd-typography"><p>Optional callback executed when a proxy had to be used to fetch the metadata.
-The parameter sent in the callback is the proxy prefix with the '?' at the end.</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
-</div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the capabilities XML as a string</p>
-
-<div class="tsd-comment tsd-typography">
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-6">Throws<a href="#throws-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request exceeds the timeout duration</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-7">Throws<a href="#throws-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request was aborted by the caller's signal</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-8">Throws<a href="#throws-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the response is not OK (non-2xx)</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-9">Throws<a href="#throws-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the JSON response is empty</p>
-</div>
-<div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-10">Throws<a href="#throws-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
-</div></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L263">packages/geoview-core/src/geo/utils/utilities.ts:263</a></li></ul></aside></div></li></ul></section>
-<section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getwmsservicestyles"><code class="tsd-tag">Static</code><span>get<wbr/>WMS<wbr/>Service<wbr/>Styles</span><a href="#getwmsservicestyles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="">
-<div class="tsd-signature tsd-anchor-link" id="getwmsservicestyles-1"><span class="tsd-kind-call-signature">getWMSServiceStyles</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">layers</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">callbackNewMetadataUrl</span><span class="tsd-signature-symbol">?:</span> <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeStylesWMS</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmsservicestyles-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
-<div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WMS getCapabilities request.</p>
-</div>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The url the url of the WMS server</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">layers</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The layers to query separate by</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">callbackNewMetadataUrl</span>: <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a></span>
-<div class="tsd-comment tsd-typography"><p>Optional callback executed when a proxy had to be used to fetch the metadata.
-The parameter sent in the callback is the proxy prefix with the '?' at the end.</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
-</div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeStylesWMS</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WMS styles</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWFSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WFS metadata and proxy information</p>
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
@@ -930,12 +924,12 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-anchor-link" id="throws-15">Throws<a href="#throws-15" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L658">packages/geoview-core/src/geo/utils/utilities.ts:658</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L342">packages/geoview-core/src/geo/utils/utilities.ts:342</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getwmtsservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>WMTS<wbr/>Service<wbr/>Metadata</span><a href="#getwmtsservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h3 class="tsd-anchor-link" id="getwmsservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>WMS<wbr/>Service<wbr/>Metadata</span><a href="#getwmsservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="getwmtsservicemetadata-1"><span class="tsd-kind-call-signature">getWMTSServiceMetadata</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">layers</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">callbackNewMetadataUrl</span><span class="tsd-signature-symbol">?:</span> <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMTS</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmtsservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="getwmsservicemetadata-1"><span class="tsd-kind-call-signature">getWMSServiceMetadata</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">layers</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmsservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WMS getCapabilities request.</p>
 </div>
@@ -943,18 +937,18 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The url the url of the WMS server</p>
+<div class="tsd-comment tsd-typography"><p>The url of the WMS server</p>
+</div></li>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
 </div></li>
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">layers</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The layers to query separate by</p>
-</div></li>
-<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">callbackNewMetadataUrl</span>: <a href="../types/CallbackNewMetadataDelegate.html" class="tsd-signature-type tsd-kind-type-alias">CallbackNewMetadataDelegate</a></span>
-<div class="tsd-comment tsd-typography"><p>Optional callback executed when a proxy had to be used to fetch the metadata.</p>
+<div class="tsd-comment tsd-typography"><p>Optional layers to query, separated by comma</p>
 </div></li>
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional abort signal to handle cancelling of the process</p>
+<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMTS</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WMTS metadata</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WMS metadata and proxy information</p>
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
@@ -973,7 +967,68 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-anchor-link" id="throws-20">Throws<a href="#throws-20" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L383">packages/geoview-core/src/geo/utils/utilities.ts:383</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L285">packages/geoview-core/src/geo/utils/utilities.ts:285</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="getwmtsservicemetadata"><code class="tsd-tag">Static</code><span>get<wbr/>WMTS<wbr/>Service<wbr/>Metadata</span><a href="#getwmtsservicemetadata" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="getwmtsservicemetadata-1"><span class="tsd-kind-call-signature">getWMTSServiceMetadata</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">configProxyUrl</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">layers</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">abortSignal</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">AbortSignal</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMTSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#getwmtsservicemetadata-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Fetch the json response from the XML response of a WMTS getCapabilities request.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>The url of the WMTS server</p>
+</div></li>
+<li><span><span class="tsd-kind-parameter">configProxyUrl</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CONFIG_PROXY_URL</span></span>
+<div class="tsd-comment tsd-typography"><p>Proxy URL to use when necessary (defaults to CONFIG_PROXY_URL)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">layers</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional layers to query, separated by comma</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">abortSignal</span>: <span class="tsd-signature-type">AbortSignal</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional AbortSignal used to cancel the layer creation process</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/FetchWithProxyResult.html" class="tsd-signature-type tsd-kind-type-alias">FetchWithProxyResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TypeMetadataWMTSCapabilities</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed WMTS metadata and proxy information</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-21">Throws<a href="#throws-21" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request exceeds the timeout duration</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-22">Throws<a href="#throws-22" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the request was aborted by the caller's signal</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-23">Throws<a href="#throws-23" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the response is not OK (non-2xx)</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-24">Throws<a href="#throws-24" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the JSON response is empty</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-25">Throws<a href="#throws-25" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When a network issue happened</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L388">packages/geoview-core/src/geo/utils/utilities.ts:388</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="isesriproxy"><code class="tsd-tag">Static</code><span>is<wbr/>Esri<wbr/>Proxy</span><a href="#isesriproxy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="isesriproxy-1"><span class="tsd-kind-call-signature">isEsriProxy</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">proxyUrl</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#isesriproxy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if the provided proxy URL is an Esri proxy.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">proxyUrl</span>: <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
+<div class="tsd-comment tsd-typography"><p>The proxy URL to check</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p><code>true</code> if the proxy URL includes &quot;executeFromProxy&quot;, indicating an Esri proxy; otherwise, <code>false</code>.</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L86">packages/geoview-core/src/geo/utils/utilities.ts:86</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isextentlonlat"><code class="tsd-tag">Static</code><span>is<wbr/>Extent<wbr/>Lon<wbr/>Lat</span><a href="#isextentlonlat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -991,7 +1046,7 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>Whether or not the extent is long/lat</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1446">packages/geoview-core/src/geo/utils/utilities.ts:1446</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1770">packages/geoview-core/src/geo/utils/utilities.ts:1770</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isgeojsonobject"><code class="tsd-tag">Static</code><span>is<wbr/>Geo<wbr/>JSON<wbr/>Object</span><a href="#isgeojsonobject" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1009,7 +1064,7 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True if the value appears to be a GeoJSON FeatureCollection, otherwise false</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L981">packages/geoview-core/src/geo/utils/utilities.ts:981</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1146">packages/geoview-core/src/geo/utils/utilities.ts:1146</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="ispointinextent"><code class="tsd-tag">Static</code><span>is<wbr/>Point<wbr/>In<wbr/>Extent</span><a href="#ispointinextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1030,7 +1085,26 @@ The parameter sent in the callback is the proxy prefix with the '?' at the end.<
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>True if point is within the extent, false otherwise</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1296">packages/geoview-core/src/geo/utils/utilities.ts:1296</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1608">packages/geoview-core/src/geo/utils/utilities.ts:1608</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="isvalidextent"><code class="tsd-tag">Static</code><span>is<wbr/>Valid<wbr/>Extent</span><a href="#isvalidextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="isvalidextent-1"><span class="tsd-kind-call-signature">isValidExtent</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">extent</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Extent</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#isvalidextent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks whether an extent is defined and contains exactly four finite numeric coordinates.</p>
+<p>An extent is invalid when it is undefined, has a length other than four, or contains <code>NaN</code> or infinite coordinates.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">extent</span>: <span class="tsd-signature-type">Extent</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
+<div class="tsd-comment tsd-typography"><p>The extent to validate</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p><code>true</code> when the extent is valid; otherwise, <code>false</code></p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1714">packages/geoview-core/src/geo/utils/utilities.ts:1714</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="isvectorlegend"><code class="tsd-tag">Static</code><span>is<wbr/>Vector<wbr/>Legend</span><a href="#isvectorlegend" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1051,7 +1125,7 @@ if the type attribute of the verifyIfLegend parameter is valid.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-kind-parameter">verifyIfLegend</span> <span class="tsd-signature-keyword">is</span> <a href="../interfaces/TypeVectorLegend.html" class="tsd-signature-type tsd-kind-interface">TypeVectorLegend</a></h4><p>True if the payload is valid</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L919">packages/geoview-core/src/geo/utils/utilities.ts:919</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1084">packages/geoview-core/src/geo/utils/utilities.ts:1084</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="polygontoextent"><code class="tsd-tag">Static</code><span>polygon<wbr/>To<wbr/>Extent</span><a href="#polygontoextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1069,7 +1143,7 @@ if the type attribute of the verifyIfLegend parameter is valid.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The created extent</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1378">packages/geoview-core/src/geo/utils/utilities.ts:1378</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1690">packages/geoview-core/src/geo/utils/utilities.ts:1690</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readepsgofgeojson"><code class="tsd-tag">Static</code><span>read<wbr/>EPSG<wbr/>Of<wbr/>Geo<wbr/>JSON</span><a href="#readepsgofgeojson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1090,7 +1164,7 @@ a <code>crs</code> entry with a <code>properties.name</code> field in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The normalized EPSG code (e.g., <code>&quot;EPSG:3005&quot;</code>), or undefined if the CRS is not defined</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L996">packages/geoview-core/src/geo/utils/utilities.ts:996</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1161">packages/geoview-core/src/geo/utils/utilities.ts:1161</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readepsgofgml"><code class="tsd-tag">Static</code><span>read<wbr/>EPSG<wbr/>Of<wbr/>GML</span><a href="#readepsgofgml" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1111,39 +1185,47 @@ an element with a <code>srsName</code> attribute in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The normalized EPSG code (e.g., <code>&quot;EPSG:3005&quot;</code>), or undefined if the CRS is not defined</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1023">packages/geoview-core/src/geo/utils/utilities.ts:1023</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1188">packages/geoview-core/src/geo/utils/utilities.ts:1188</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readfeaturesfromesrijson"><code class="tsd-tag">Static</code><span>read<wbr/>Features<wbr/>From<wbr/>Esri<wbr/>JSON</span><a href="#readfeaturesfromesrijson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromesrijson-1"><span class="tsd-kind-call-signature">readFeaturesFromEsriJSON</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">features</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EsriJSONReadResult</span><a href="#readfeaturesfromesrijson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromesrijson-1"><span class="tsd-kind-call-signature">readFeaturesFromEsriJSON</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">features</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">inProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">outProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EsriJSONReadResult</span><span class="tsd-signature-symbol">&gt;</span><a href="#readfeaturesfromesrijson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from an Esri features object.</p>
+<p>If <code>inProjection</code> is provided, it is registered via <code>addProjectionIfMissing</code> and used as the data projection.
+Otherwise, the projection is detected from the <code>spatialReference</code> embedded in the Esri JSON response.
+When parsing fails due to invalid geometries, the method attempts to clean them and retries.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">features</span>: <span class="tsd-signature-type">unknown</span></span>
-<div class="tsd-comment tsd-typography"><p>The Features data to read</p>
+<div class="tsd-comment tsd-typography"><p>The Esri JSON features data to read</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional read options such as projection or extent</p>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">inProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional input data projection (falls back to spatialReference embedded in the Esri JSON)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">outProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional output feature projection</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EsriJSONReadResult</span></h4><p>An array of parsed OpenLayers Feature and whether there were any invalid geometries</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EsriJSONReadResult</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed features, the interpreted source data projection, and whether there were any invalid geometries</p>
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-21">Throws<a href="#throws-21" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the EsriJSON data is invalid and cannot be parsed, even after attempting to clean invalid geometries</p>
+<h4 class="tsd-anchor-link" id="throws-26">Throws<a href="#throws-26" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the EsriJSON data is invalid and cannot be parsed, even after attempting to clean invalid geometries</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1070">packages/geoview-core/src/geo/utils/utilities.ts:1070</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1218">packages/geoview-core/src/geo/utils/utilities.ts:1218</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readfeaturesfromgeojson"><code class="tsd-tag">Static</code><span>read<wbr/>Features<wbr/>From<wbr/>Geo<wbr/>JSON</span><a href="#readfeaturesfromgeojson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromgeojson-1"><span class="tsd-kind-call-signature">readFeaturesFromGeoJSON</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">geojson</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#readfeaturesfromgeojson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromgeojson-1"><span class="tsd-kind-call-signature">readFeaturesFromGeoJSON</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">geojson</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">inProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">outProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span><a href="#readfeaturesfromgeojson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from a GeoJSON object.</p>
+<p>The projection is resolved in priority order: CRS embedded in the GeoJSON &gt; <code>inProjection</code> &gt; format default.
+When resolved, the projection is registered via <code>addProjectionIfMissing</code> before reading features.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1151,20 +1233,25 @@ an element with a <code>srsName</code> attribute in the form
 <li><span><span class="tsd-kind-parameter">geojson</span>: <span class="tsd-signature-type">unknown</span></span>
 <div class="tsd-comment tsd-typography"><p>The GeoJSON data to read</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional read options such as projection or extent</p>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">inProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional input data projection (overridden by CRS embedded in the GeoJSON)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">outProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional output feature projection</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><p>An array of parsed OpenLayers Feature instances</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed features and the interpreted source data projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1159">packages/geoview-core/src/geo/utils/utilities.ts:1159</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1274">packages/geoview-core/src/geo/utils/utilities.ts:1274</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readfeaturesfromkml"><code class="tsd-tag">Static</code><span>read<wbr/>Features<wbr/>From<wbr/>KML</span><a href="#readfeaturesfromkml" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromkml-1"><span class="tsd-kind-call-signature">readFeaturesFromKML</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">kmlObject</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#readfeaturesfromkml-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromkml-1"><span class="tsd-kind-call-signature">readFeaturesFromKML</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">kmlObject</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">inProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">outProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span><a href="#readfeaturesfromkml-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from a KML object.</p>
+<p>The projection is resolved in priority order: srsName embedded in the KML &gt; <code>inProjection</code> &gt; format default.
+When resolved, the projection is registered via <code>addProjectionIfMissing</code> before reading features.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1172,58 +1259,71 @@ an element with a <code>srsName</code> attribute in the form
 <li><span><span class="tsd-kind-parameter">kmlObject</span>: <span class="tsd-signature-type">unknown</span></span>
 <div class="tsd-comment tsd-typography"><p>The KML data to read</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional read options such as projection or extent</p>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">inProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional input data projection (overridden by srsName embedded in the KML)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">outProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional output feature projection</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><p>An array of parsed OpenLayers Feature instances</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed features and the interpreted source data projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1200">packages/geoview-core/src/geo/utils/utilities.ts:1200</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1398">packages/geoview-core/src/geo/utils/utilities.ts:1398</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readfeaturesfromwfs"><code class="tsd-tag">Static</code><span>read<wbr/>Features<wbr/>From<wbr/>WFS</span><a href="#readfeaturesfromwfs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromwfs-1"><span class="tsd-kind-call-signature">readFeaturesFromWFS</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">features</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#readfeaturesfromwfs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromwfs-1"><span class="tsd-kind-call-signature">readFeaturesFromWFS</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">wfs</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">inProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">outProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span><a href="#readfeaturesfromwfs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from an WFS features object.</p>
+<div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from a WFS features object.</p>
+<p>The projection is resolved in priority order: srsName embedded in the GML &gt; <code>inProjection</code> &gt; format default.
+When resolved, the projection is registered via <code>addProjectionIfMissing</code> before reading features.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">features</span>: <span class="tsd-signature-type">unknown</span></span>
-<div class="tsd-comment tsd-typography"><p>The Features data to read</p>
+<li><span><span class="tsd-kind-parameter">wfs</span>: <span class="tsd-signature-type">unknown</span></span>
+<div class="tsd-comment tsd-typography"><p>The WFS data to read (XML string or document)</p>
 </div></li>
 <li><span><span class="tsd-kind-parameter">version</span>: <span class="tsd-signature-type">string</span></span>
 <div class="tsd-comment tsd-typography"><p>The WFS version</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional read options such as projection or extent</p>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">inProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional input data projection (overridden by srsName embedded in the GML)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">outProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional output feature projection</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><p>An array of parsed OpenLayers Feature instances</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed features and the interpreted source data projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1172">packages/geoview-core/src/geo/utils/utilities.ts:1172</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1317">packages/geoview-core/src/geo/utils/utilities.ts:1317</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readfeaturesfromwkb"><code class="tsd-tag">Static</code><span>read<wbr/>Features<wbr/>From<wbr/>WKB</span><a href="#readfeaturesfromwkb" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromwkb-1"><span class="tsd-kind-call-signature">readFeaturesFromWKB</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">wkbObject</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBuffer</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBufferLike</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#readfeaturesfromwkb-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readfeaturesfromwkb-1"><span class="tsd-kind-call-signature">readFeaturesFromWKB</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">wkbObject</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBuffer</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBufferLike</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">inProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">outProjection</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span><a href="#readfeaturesfromwkb-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from a WKBObject object.</p>
+<div class="tsd-comment tsd-typography"><p>Reads OpenLayers features from a WKB object.</p>
+<p>WKB does not embed projection metadata, so <code>inProjection</code> defaults to EPSG:4326 when not provided.
+The resolved projection is registered via <code>addProjectionIfMissing</code> before reading features.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li><span><span class="tsd-kind-parameter">wkbObject</span>: <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBuffer</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBufferLike</span><span class="tsd-signature-symbol">&gt;</span></span>
-<div class="tsd-comment tsd-typography"><p>The WKBObject data to read</p>
+<div class="tsd-comment tsd-typography"><p>The WKB data to read (string, ArrayBuffer, or ArrayBufferView)</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">ReadOptions</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
-<div class="tsd-comment tsd-typography"><p>Optional read options such as projection or extent</p>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">inProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional input data projection (defaults to EPSG:4326 if not provided)</p>
+</div></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">outProjection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>Optional output feature projection</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Feature</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Geometry</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-signature-symbol">[</span><span class="tsd-kind-index-signature">x</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]:</span> <span class="tsd-signature-type">any</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><p>An array of parsed OpenLayers Feature instances</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/SourceFeaturesInfo.html" class="tsd-signature-type tsd-kind-type-alias">SourceFeaturesInfo</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the parsed features and the interpreted source data projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1186">packages/geoview-core/src/geo/utils/utilities.ts:1186</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1360">packages/geoview-core/src/geo/utils/utilities.ts:1360</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="replacecrsandbboxparam"><code class="tsd-tag">Static</code><span>replace<wbr/>CR<wbr/>Sand<wbr/>BBOX<wbr/>Param</span><a href="#replacecrsandbboxparam" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1247,7 +1347,57 @@ an element with a <code>srsName</code> attribute in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A new URL string with the updated BBOX parameter</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L722">packages/geoview-core/src/geo/utils/utilities.ts:722</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L573">packages/geoview-core/src/geo/utils/utilities.ts:573</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="validateesriproxyerror"><code class="tsd-tag">Static</code><span class="deprecated">validate<wbr/>Esri<wbr/>Proxy<wbr/>Error</span><a href="#validateesriproxyerror" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="validateesriproxyerror-1"><span class="tsd-kind-call-signature">validateEsriProxyError</span><span class="tsd-signature-symbol">&lt;</span><br/>    <a class="tsd-signature-type tsd-kind-type-parameter" href="#validateesriproxyerrort">T</a> <span class="tsd-signature-keyword">extends</span> <span class="tsd-signature-type">TypeMetadataWMS</span><br/>    <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">TypeMetadataWMTS</span><br/>    <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">TypeMetadataWFS</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">metadataParsed</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#validateesriproxyerrort">T</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#validateesriproxyerror-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Validates the Esri proxy error in the parsed metadata.</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li><span id="validateesriproxyerrort"><span class="tsd-kind-type-parameter">T</span> <span class="tsd-signature-keyword">extends</span> <span class="tsd-signature-type">TypeMetadataWMS</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">TypeMetadataWMTS</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">TypeMetadataWFS</span></span></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">metadataParsed</span>: <a class="tsd-signature-type tsd-kind-type-parameter" href="#validateesriproxyerrort">T</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></span>
+<div class="tsd-comment tsd-typography"><p>The parsed metadata object</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-27">Throws<a href="#throws-27" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the Esri proxy returned an error</p>
+</div>
+<div class="tsd-tag-deprecated">
+<h4 class="tsd-anchor-link" id="deprecated-3">Deprecated<a href="#deprecated-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>The Esri proxy should be eventually completely replaced via the default configuration. Once it's gone, this can be removed for cleanup.</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L595">packages/geoview-core/src/geo/utils/utilities.ts:595</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="validateesriproxyerrorxml"><code class="tsd-tag">Static</code><span class="deprecated">validate<wbr/>Esri<wbr/>Proxy<wbr/>Error<wbr/>XML</span><a href="#validateesriproxyerrorxml" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="validateesriproxyerrorxml-1"><span class="tsd-kind-call-signature">validateEsriProxyErrorXML</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">metadataXML</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#validateesriproxyerrorxml-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Validates the Esri proxy error in the parsed metadata.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">metadataXML</span>: <span class="tsd-signature-type">string</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-28">Throws<a href="#throws-28" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the Esri proxy returned an error</p>
+</div>
+<div class="tsd-tag-deprecated">
+<h4 class="tsd-anchor-link" id="deprecated-4">Deprecated<a href="#deprecated-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>The Esri proxy should be eventually completely replaced via the default configuration. Once it's gone, this can be removed for cleanup.</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L608">packages/geoview-core/src/geo/utils/utilities.ts:608</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="validateextent"><code class="tsd-tag">Static</code><span>validate<wbr/>Extent</span><a href="#validateextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1268,7 +1418,7 @@ an element with a <code>srsName</code> attribute in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The validated extent</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1401">packages/geoview-core/src/geo/utils/utilities.ts:1401</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1725">packages/geoview-core/src/geo/utils/utilities.ts:1725</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="validateextentwhendefined"><code class="tsd-tag">Static</code><span>validate<wbr/>Extent<wbr/>When<wbr/>Defined</span><a href="#validateextentwhendefined" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1289,7 +1439,7 @@ an element with a <code>srsName</code> attribute in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The validated extent if it was defined, or undefined</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1434">packages/geoview-core/src/geo/utils/utilities.ts:1434</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1758">packages/geoview-core/src/geo/utils/utilities.ts:1758</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="wfsconvertgeometrytypetoolgeometrytype"><code class="tsd-tag">Static</code><span>wfs<wbr/>Convert<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span><a href="#wfsconvertgeometrytypetoolgeometrytype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1308,10 +1458,10 @@ an element with a <code>srsName</code> attribute in the form
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-22">Throws<a href="#throws-22" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the geometry type is not supported</p>
+<h4 class="tsd-anchor-link" id="throws-29">Throws<a href="#throws-29" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the geometry type is not supported</p>
 </div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1651">packages/geoview-core/src/geo/utils/utilities.ts:1651</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1975">packages/geoview-core/src/geo/utils/utilities.ts:1975</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="wkttogeometry"><code class="tsd-tag">Static</code><span>wkt<wbr/>To<wbr/>Geometry</span><a href="#wkttogeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1332,7 +1482,7 @@ an element with a <code>srsName</code> attribute in the form
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Geometry</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The Geometry representation of the wkt, or undefined if no wkt is provided</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L949">packages/geoview-core/src/geo/utils/utilities.ts:949</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1114">packages/geoview-core/src/geo/utils/utilities.ts:1114</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="writegeometrytogml"><code class="tsd-tag">Static</code><span>write<wbr/>Geometry<wbr/>To<wbr/>GML</span><a href="#writegeometrytogml" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1363,7 +1513,7 @@ namespace declarations to the supplied <code>gmlNamespace</code> (e.g.
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The serialized GML geometry as a string</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/utilities.ts#L1608">packages/geoview-core/src/geo/utils/utilities.ts:1608</a></li></ul></aside></div></li></ul></section></section></details></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/utilities.ts#L1932">packages/geoview-core/src/geo/utils/utilities.ts:1932</a></li></ul></aside></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -1381,10 +1531,8 @@ namespace declarations to the supplied <code>gmlNamespace</code> (e.g.
 <div class="tsd-accordion-details">
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
 <div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
-<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
-<div><a href="#double_encoding_layers_when_behind_proxy"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>DOUBLE_<wbr/>ENCODING_<wbr/>LAYERS_<wbr/>WHEN_<wbr/>BEHIND_<wbr/>PROXY</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#bufferextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>buffer<wbr/>Extent</span></a><a href="#calculatedistance"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>calculate<wbr/>Distance</span></a><a href="#converttypefeaturestyletoopenlayersstyle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>convert<wbr/>Type<wbr/>Feature<wbr/>Style<wbr/>To<wbr/>Open<wbr/>Layers<wbr/>Style</span></a><a href="#coordformatdms"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>coord<wbr/>Format<wbr/>DMS</span></a><a href="#createemptybasemap"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Empty<wbr/>Basemap</span></a><a href="#ensureservicerequesturl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url</span></a><a href="#ensureservicerequesturldescribefeaturetype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Describe<wbr/>Feature<wbr/>Type</span></a><a href="#ensureservicerequesturlgetcapabilities"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Capabilities</span></a><a href="#ensureservicerequesturlgetfeature"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Feature</span></a><a href="#ensureservicerequesturlgetlegendgraphic"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Legend<wbr/>Graphic</span></a><a href="#ensureservicerequesturlgetstyles"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Styles</span></a><a href="#ensureurlforopenlayerssource"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>URL<wbr/>For<wbr/>Open<wbr/>Layers<wbr/>Source</span></a><a href="#esriconvertesrigeometrytypetoolgeometrytype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>esri<wbr/>Convert<wbr/>Esri<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a><a href="#extenttopolygon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>extent<wbr/>To<wbr/>Polygon</span></a><a href="#geojsontogeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geojson<wbr/>To<wbr/>Geometry</span></a><a href="#geometriesareequal"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometries<wbr/>Are<wbr/>Equal</span></a><a href="#geometrytowkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometry<wbr/>To<wbr/>WKT</span></a><a href="#getarea"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Area</span></a><a href="#getbaseurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Base<wbr/>Url</span></a><a href="#getdefaultdrawingstyle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Default<wbr/>Drawing<wbr/>Style</span></a><a href="#getesriservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span></a><a href="#getextentintersection"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Intersection</span></a><a href="#getextentunion"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Union</span></a><a href="#getlayericonimage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Icon<wbr/>Image</span></a><a href="#getlayeritemsfromicons"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Items<wbr/>From<wbr/>Icons</span></a><a href="#getlength"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Length</span></a><a href="#getmapserverurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Map<wbr/>Server<wbr/>Url</span></a><a href="#getmetersperpixel"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Meters<wbr/>Per<wbr/>Pixel</span></a><a href="#getogcserverurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>OGC<wbr/>Server<wbr/>Url</span></a><a href="#getpointerpositionfrommapevent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Pointer<wbr/>Position<wbr/>From<wbr/>Map<wbr/>Event</span></a><a href="#getwmsservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>Metadata</span></a><a href="#getwmsservicestring"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>String</span></a><a href="#getwmsservicestyles"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>Styles</span></a><a href="#getwmtsservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMTS<wbr/>Service<wbr/>Metadata</span></a><a href="#isextentlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Extent<wbr/>Lon<wbr/>Lat</span></a><a href="#isgeojsonobject"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Geo<wbr/>JSON<wbr/>Object</span></a><a href="#ispointinextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Point<wbr/>In<wbr/>Extent</span></a><a href="#isvectorlegend"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Vector<wbr/>Legend</span></a><a href="#polygontoextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>polygon<wbr/>To<wbr/>Extent</span></a><a href="#readepsgofgeojson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Of<wbr/>Geo<wbr/>JSON</span></a><a href="#readepsgofgml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Of<wbr/>GML</span></a><a href="#readfeaturesfromesrijson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>Esri<wbr/>JSON</span></a><a href="#readfeaturesfromgeojson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>Geo<wbr/>JSON</span></a><a href="#readfeaturesfromkml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>KML</span></a><a href="#readfeaturesfromwfs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WFS</span></a><a href="#readfeaturesfromwkb"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WKB</span></a><a href="#replacecrsandbboxparam"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>replace<wbr/>CR<wbr/>Sand<wbr/>BBOX<wbr/>Param</span></a><a href="#validateextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent</span></a><a href="#validateextentwhendefined"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent<wbr/>When<wbr/>Defined</span></a><a href="#wfsconvertgeometrytypetoolgeometrytype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wfs<wbr/>Convert<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a><a href="#wkttogeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wkt<wbr/>To<wbr/>Geometry</span></a><a href="#writegeometrytogml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>write<wbr/>Geometry<wbr/>To<wbr/>GML</span></a></div></details></div></details></div>
+<div><a href="#bufferextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>buffer<wbr/>Extent</span></a><a href="#calculatedistance"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>calculate<wbr/>Distance</span></a><a href="#converttypefeaturestyletoopenlayersstyle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>convert<wbr/>Type<wbr/>Feature<wbr/>Style<wbr/>To<wbr/>Open<wbr/>Layers<wbr/>Style</span></a><a href="#coordformatdms"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>coord<wbr/>Format<wbr/>DMS</span></a><a href="#createemptybasemap"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Empty<wbr/>Basemap</span></a><a href="#ensureservicerequesturl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url</span></a><a href="#ensureservicerequesturldescribefeaturetype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Describe<wbr/>Feature<wbr/>Type</span></a><a href="#ensureservicerequesturlgetcapabilities"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Capabilities</span></a><a href="#ensureservicerequesturlgetfeature"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Feature</span></a><a href="#ensureservicerequesturlgetlegendgraphic"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Legend<wbr/>Graphic</span></a><a href="#ensureservicerequesturlgetstyles"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>Service<wbr/>Request<wbr/>Url<wbr/>Get<wbr/>Styles</span></a><a href="#ensureurlforopenlayerssource"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>ensure<wbr/>URL<wbr/>For<wbr/>Open<wbr/>Layers<wbr/>Source</span></a><a href="#esriconvertesrigeometrytypetoolgeometrytype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>esri<wbr/>Convert<wbr/>Esri<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a><a href="#extenttopolygon"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>extent<wbr/>To<wbr/>Polygon</span></a><a href="#fetchjsonwithproxyfallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Json<wbr/>With<wbr/>Proxy<wbr/>Fallback</span></a><a href="#fetchtextwithproxyfallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Text<wbr/>With<wbr/>Proxy<wbr/>Fallback</span></a><a href="#geojsontogeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geojson<wbr/>To<wbr/>Geometry</span></a><a href="#geometriesareequal"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometries<wbr/>Are<wbr/>Equal</span></a><a href="#geometrytowkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>geometry<wbr/>To<wbr/>WKT</span></a><a href="#getarea"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Area</span></a><a href="#getbaseurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Base<wbr/>Url</span></a><a href="#getdefaultdrawingstyle"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Default<wbr/>Drawing<wbr/>Style</span></a><a href="#getesriservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>ESRI<wbr/>Service<wbr/>Metadata</span></a><a href="#getextentintersection"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Intersection</span></a><a href="#getextentunion"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Extent<wbr/>Union</span></a><a href="#getlayericonimage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Icon<wbr/>Image</span></a><a href="#getlayeritemsfromicons"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Layer<wbr/>Items<wbr/>From<wbr/>Icons</span></a><a href="#getlength"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Length</span></a><a href="#getmapserverurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Map<wbr/>Server<wbr/>Url</span></a><a href="#getmetersperpixel"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Meters<wbr/>Per<wbr/>Pixel</span></a><a href="#getogcserverurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>OGC<wbr/>Server<wbr/>Url</span></a><a href="#getpointerpositionfrommapevent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Pointer<wbr/>Position<wbr/>From<wbr/>Map<wbr/>Event</span></a><a href="#getwfsservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WFS<wbr/>Service<wbr/>Metadata</span></a><a href="#getwmsservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMS<wbr/>Service<wbr/>Metadata</span></a><a href="#getwmtsservicemetadata"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>WMTS<wbr/>Service<wbr/>Metadata</span></a><a href="#isesriproxy"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Esri<wbr/>Proxy</span></a><a href="#isextentlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Extent<wbr/>Lon<wbr/>Lat</span></a><a href="#isgeojsonobject"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Geo<wbr/>JSON<wbr/>Object</span></a><a href="#ispointinextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Point<wbr/>In<wbr/>Extent</span></a><a href="#isvalidextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Valid<wbr/>Extent</span></a><a href="#isvectorlegend"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Vector<wbr/>Legend</span></a><a href="#polygontoextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>polygon<wbr/>To<wbr/>Extent</span></a><a href="#readepsgofgeojson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Of<wbr/>Geo<wbr/>JSON</span></a><a href="#readepsgofgml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Of<wbr/>GML</span></a><a href="#readfeaturesfromesrijson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>Esri<wbr/>JSON</span></a><a href="#readfeaturesfromgeojson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>Geo<wbr/>JSON</span></a><a href="#readfeaturesfromkml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>KML</span></a><a href="#readfeaturesfromwfs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WFS</span></a><a href="#readfeaturesfromwkb"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Features<wbr/>From<wbr/>WKB</span></a><a href="#replacecrsandbboxparam"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>replace<wbr/>CR<wbr/>Sand<wbr/>BBOX<wbr/>Param</span></a><a href="#validateesriproxyerror"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Esri<wbr/>Proxy<wbr/>Error</span></a><a href="#validateesriproxyerrorxml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Esri<wbr/>Proxy<wbr/>Error<wbr/>XML</span></a><a href="#validateextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent</span></a><a href="#validateextentwhendefined"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>validate<wbr/>Extent<wbr/>When<wbr/>Defined</span></a><a href="#wfsconvertgeometrytypetoolgeometrytype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wfs<wbr/>Convert<wbr/>Geometry<wbr/>Type<wbr/>To<wbr/>OL<wbr/>Geometry<wbr/>Type</span></a><a href="#wkttogeometry"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wkt<wbr/>To<wbr/>Geometry</span></a><a href="#writegeometrytogml"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>write<wbr/>Geometry<wbr/>To<wbr/>GML</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">geoview-core - v2.3.0</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

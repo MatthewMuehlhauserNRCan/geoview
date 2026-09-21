@@ -14,7 +14,7 @@
 <div class="tsd-comment tsd-typography"><p>Class used to handle functions for transforming projections.</p>
 </div></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L24">packages/geoview-core/src/geo/utils/projection.ts:24</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L24">packages/geoview-core/src/geo/utils/projection.ts:24</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -36,13 +36,15 @@
 <div class="tsd-index-list"><a href="#addprojection" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection</span></a>
 <a href="#addprojectioncode" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>Code</span></a>
 <a href="#addprojectionifmissing" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>If<wbr/>Missing</span></a>
+<a href="#getprojectionfromcrs" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>CRS</span></a>
 <a href="#getprojectionfromobj" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>Obj</span></a>
-<a href="#getprojectionfromstring" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>String</span></a>
+<a href="#getprojectionfromstringornumber" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>String<wbr/>Or<wbr/>Number</span></a>
 <a href="#getprojectionfromwkt" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>WKT</span></a>
 <a href="#getprojectionlonlat" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>Lon<wbr/>Lat</span></a>
 <a href="#getresolution" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Resolution</span></a>
 <a href="#readepsgnumber" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Number</span></a>
 <a href="#readextentcarefully" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Extent<wbr/>Carefully</span></a>
+<a href="#readprojectionnamefromwkt" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Projection<wbr/>Name<wbr/>From<wbr/>WKT</span></a>
 <a href="#transform" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform</span></a>
 <a href="#transformanddensifyextent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>And<wbr/>Densify<wbr/>Extent</span></a>
 <a href="#transformcoordinates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Coordinates</span></a>
@@ -74,28 +76,28 @@
 <div class="tsd-comment tsd-typography"><p>Holding all custom generated wkt</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L54">packages/geoview-core/src/geo/utils/projection.ts:54</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L54">packages/geoview-core/src/geo/utils/projection.ts:54</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="custom_wkt_num"><code class="tsd-tag">Static</code><span>CUSTOM_<wbr/>WKT_<wbr/>NUM</span><a href="#custom_wkt_num" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">CUSTOM_WKT_NUM</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1001</span></div>
 <div class="tsd-comment tsd-typography"><p>Incremental number when creating custom WKTs on the fly</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L51">packages/geoview-core/src/geo/utils/projection.ts:51</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L51">packages/geoview-core/src/geo/utils/projection.ts:51</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="projection_names"><code class="tsd-tag">Static</code><span>PROJECTION_<wbr/>NAMES</span><a href="#projection_names" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">PROJECTION_NAMES</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 <div class="tsd-comment tsd-typography"><p>Constant used for the available projection names</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L26">packages/geoview-core/src/geo/utils/projection.ts:26</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L26">packages/geoview-core/src/geo/utils/projection.ts:26</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="projections"><code class="tsd-tag">Static</code><span>PROJECTIONS</span><a href="#projections" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">PROJECTIONS</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">OLProjection</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></div>
 <div class="tsd-comment tsd-typography"><p>List of supported projections and their OpenLayers projection</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L57">packages/geoview-core/src/geo/utils/projection.ts:57</a></li></ul></aside></section></section></details>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L57">packages/geoview-core/src/geo/utils/projection.ts:57</a></li></ul></aside></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -103,7 +105,7 @@
 <h3 class="tsd-anchor-link" id="addprojection"><code class="tsd-tag">Static</code><span>add<wbr/>Projection</span><a href="#addprojection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="addprojection-1"><span class="tsd-kind-call-signature">addProjection</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojection-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="addprojection-1"><span class="tsd-kind-call-signature">addProjection</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojection-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Fetches definitions for unsupported projections and adds them.</p>
 </div>
@@ -113,15 +115,15 @@
 <li><span><span class="tsd-kind-parameter">projection</span>: <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a></span>
 <div class="tsd-comment tsd-typography"><p>Object containing wkid and possibly latestWkid from service metadata</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the projection is added</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the projection is added</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L269">packages/geoview-core/src/geo/utils/projection.ts:269</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L272">packages/geoview-core/src/geo/utils/projection.ts:272</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addprojectioncode"><code class="tsd-tag">Static</code><span>add<wbr/>Projection<wbr/>Code</span><a href="#addprojectioncode" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="addprojectioncode-1"><span class="tsd-kind-call-signature">addProjectionCode</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">code</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojectioncode-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="addprojectioncode-1"><span class="tsd-kind-call-signature">addProjectionCode</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">code</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojectioncode-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Fetches definitions for unsupported projections and adds them.</p>
 </div>
@@ -131,28 +133,59 @@
 <li><span><span class="tsd-kind-parameter">code</span>: <span class="tsd-signature-type">number</span></span>
 <div class="tsd-comment tsd-typography"><p>Projection code number</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the projection is added</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the projection is added</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L283">packages/geoview-core/src/geo/utils/projection.ts:283</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L292">packages/geoview-core/src/geo/utils/projection.ts:292</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="addprojectionifmissing"><code class="tsd-tag">Static</code><span>add<wbr/>Projection<wbr/>If<wbr/>Missing</span><a href="#addprojectionifmissing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="addprojectionifmissing-1"><span class="tsd-kind-call-signature">addProjectionIfMissing</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ProjectionLike</span> <span class="tsd-signature-symbol">|</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojectionifmissing-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="addprojectionifmissing-1"><span class="tsd-kind-call-signature">addProjectionIfMissing</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span> <span class="tsd-signature-symbol">|</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span><a href="#addprojectionifmissing-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Checks if a projection exists for GeoView and if not it adds it on-the-fly using the provided projection string information.</p>
+<div class="tsd-comment tsd-typography"><p>Checks if a projection exists for GeoView and if not it adds it on-the-fly by fetching its definition from <a href="http://epsg.io">epsg.io</a>.</p>
+<p>Accepts:</p>
+<ul>
+<li>A <code>TypeProjection</code> object (with <code>wkid</code> / <code>latestWkid</code> / <code>wkt</code>)</li>
+<li>A <code>ProjectionLike</code> string (e.g., <code>&quot;EPSG:4326&quot;</code>, CRS URI/URN, or an OLProjection instance)</li>
+<li>A numeric EPSG code (e.g., <code>4326</code>)</li>
+</ul>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">ProjectionLike</span> <span class="tsd-signature-symbol">|</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a></span>
-<div class="tsd-comment tsd-typography"><p>The projection string to check if existing and to add when not existing</p>
+<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span> <span class="tsd-signature-symbol">|</span> <a href="../types/TypeProjection.html" class="tsd-signature-type tsd-kind-type-alias">TypeProjection</a></span>
+<div class="tsd-comment tsd-typography"><p>The projection identifier to check and register if missing</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the projection is added if missing</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Projection</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves with the OLProjection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L308">packages/geoview-core/src/geo/utils/projection.ts:308</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L326">packages/geoview-core/src/geo/utils/projection.ts:326</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="getprojectionfromcrs"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>From<wbr/>CRS</span><a href="#getprojectionfromcrs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="getprojectionfromcrs-1"><span class="tsd-kind-call-signature">getProjectionFromCRS</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">crs</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Projection</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><a href="#getprojectionfromcrs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Resolves an OGC CRS URI or standard code string to an OpenLayers projection.</p>
+<p>Supports formats:</p>
+<ul>
+<li><code>http://www.opengis.net/def/crs/EPSG/0/4326</code> → <code>EPSG:4326</code></li>
+<li><code>http://www.opengis.net/def/crs/OGC/1.3/CRS84</code> → <code>CRS:84</code></li>
+<li><code>urn:ogc:def:crs:EPSG::4326</code> → <code>EPSG:4326</code></li>
+<li><code>EPSG:4326</code> (pass-through)</li>
+</ul>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">crs</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>The CRS string (URI, URN, or authority:code)</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The resolved OpenLayers projection, or undefined if unrecognized</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L536">packages/geoview-core/src/geo/utils/projection.ts:536</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getprojectionfromobj"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>From<wbr/>Obj</span><a href="#getprojectionfromobj" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -170,25 +203,38 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>Projection object, or undefined if not in list</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L366">packages/geoview-core/src/geo/utils/projection.ts:366</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L410">packages/geoview-core/src/geo/utils/projection.ts:410</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="getprojectionfromstring"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>From<wbr/>String</span><a href="#getprojectionfromstring" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<h3 class="tsd-anchor-link" id="getprojectionfromstringornumber"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>From<wbr/>String<wbr/>Or<wbr/>Number</span><a href="#getprojectionfromstringornumber" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="getprojectionfromstring-1"><span class="tsd-kind-call-signature">getProjectionFromString</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Projection</span><a href="#getprojectionfromstring-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="getprojectionfromstringornumber-1"><span class="tsd-kind-call-signature">getProjectionFromStringOrNumber</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Projection</span><a href="#getprojectionfromstringornumber-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Wrapper around OpenLayers get function that fetches a Projection object for the code specified.</p>
+<div class="tsd-comment tsd-typography"><p>Resolves a projection from various input formats to an OpenLayers Projection object.</p>
+<p>Supports:</p>
+<ul>
+<li>Authority:code strings (e.g., <code>&quot;EPSG:4326&quot;</code>, <code>&quot;CRS:84&quot;</code>)</li>
+<li>Numeric EPSG codes (e.g., <code>4326</code>, <code>3857</code>)</li>
+<li>Numeric strings (e.g., <code>&quot;4326&quot;</code>, <code>&quot;3857&quot;</code>)</li>
+<li>OGC CRS URIs (e.g., <code>&quot;http://www.opengis.net/def/crs/EPSG/0/4326&quot;</code>)</li>
+<li>OGC URNs (e.g., <code>&quot;urn:ogc:def:crs:EPSG::4326&quot;</code>)</li>
+<li>Existing OLProjection objects (pass-through)</li>
+</ul>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
-<div class="tsd-comment tsd-typography"><p>A code string which is a combination of authority and identifier such as &quot;EPSG:4326&quot;</p>
+<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>A projection identifier (string, number, or OLProjection)</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span></h4><p>Projection object, or undefined if not found</p>
-<aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span></h4><p>The resolved OpenLayers Projection object</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>When the projection cannot be resolved</p>
+</div></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L423">packages/geoview-core/src/geo/utils/projection.ts:423</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L496">packages/geoview-core/src/geo/utils/projection.ts:496</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getprojectionfromwkt"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>From<wbr/>WKT</span><a href="#getprojectionfromwkt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -206,7 +252,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span></h4><p>Projection object, or undefined if not in list</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L394">packages/geoview-core/src/geo/utils/projection.ts:394</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L438">packages/geoview-core/src/geo/utils/projection.ts:438</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getprojectionlonlat"><code class="tsd-tag">Static</code><span>get<wbr/>Projection<wbr/>Lon<wbr/>Lat</span><a href="#getprojectionlonlat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -218,7 +264,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Projection</span></h4><p>Projection object representing LonLat</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L439">packages/geoview-core/src/geo/utils/projection.ts:439</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L564">packages/geoview-core/src/geo/utils/projection.ts:564</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getresolution"><code class="tsd-tag">Static</code><span>get<wbr/>Resolution</span><a href="#getresolution" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -239,34 +285,34 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>The point resolution for map center</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L451">packages/geoview-core/src/geo/utils/projection.ts:451</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L576">packages/geoview-core/src/geo/utils/projection.ts:576</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readepsgnumber"><code class="tsd-tag">Static</code><span>read<wbr/>EPSG<wbr/>Number</span><a href="#readepsgnumber" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="readepsgnumber-1"><span class="tsd-kind-call-signature">readEPSGNumber</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><a href="#readepsgnumber-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="readepsgnumber-1"><span class="tsd-kind-call-signature">readEPSGNumber</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">projection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><a href="#readepsgnumber-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Reads the numeric EPSG code from a projection string.</p>
-<p>Supports case-insensitive formats such as:</p>
+<div class="tsd-comment tsd-typography"><p>Reads the numeric EPSG code from a projection identifier.</p>
+<p>Supports:</p>
 <ul>
-<li><code>&quot;EPSG:4326&quot;</code></li>
-<li><code>&quot;epsg:3857&quot;</code></li>
-<li><code>&quot;EpSg: 1234&quot;</code>
-The function trims whitespace and validates that the string matches a proper
-<code>EPSG:&lt;number&gt;</code> pattern. Returns <code>undefined</code> if the format is invalid or the
-numeric part is not a valid number.</li>
+<li>Numeric input (e.g., <code>4326</code>) — returned immediately</li>
+<li>Case-insensitive <code>&quot;EPSG:4326&quot;</code>, <code>&quot;epsg:3857&quot;</code>, <code>&quot;EpSg: 1234&quot;</code> strings</li>
+<li>OLProjection objects (extracts the code via <code>getCode()</code>)</li>
 </ul>
+<p>The function trims whitespace and validates that the string matches a proper
+<code>EPSG:&lt;number&gt;</code> pattern. Returns <code>undefined</code> if the format is invalid or the
+numeric part is not a valid number.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">ProjectionLike</span></span>
-<div class="tsd-comment tsd-typography"><p>The projection like identifier containing the EPSG code</p>
+<li><span><span class="tsd-kind-parameter">projection</span>: <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">ProjectionLike</span></span>
+<div class="tsd-comment tsd-typography"><p>The projection identifier containing the EPSG code (string, number, or OLProjection)</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The extracted EPSG numeric code, or <code>undefined</code> if invalid</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L470">packages/geoview-core/src/geo/utils/projection.ts:470</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L596">packages/geoview-core/src/geo/utils/projection.ts:596</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="readextentcarefully"><code class="tsd-tag">Static</code><span>read<wbr/>Extent<wbr/>Carefully</span><a href="#readextentcarefully" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -288,7 +334,27 @@ so puts it back in order (xmin,ymin,xmax,ymax).</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The extent in order (xmin,ymin,xmax,ymax)</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L496">packages/geoview-core/src/geo/utils/projection.ts:496</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L625">packages/geoview-core/src/geo/utils/projection.ts:625</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="readprojectionnamefromwkt"><code class="tsd-tag">Static</code><span>read<wbr/>Projection<wbr/>Name<wbr/>From<wbr/>WKT</span><a href="#readprojectionnamefromwkt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="readprojectionnamefromwkt-1"><span class="tsd-kind-call-signature">readProjectionNameFromWKT</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">wkt</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><a href="#readprojectionnamefromwkt-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Extracts the projection name from a WKT string.</p>
+<p>Parses the first quoted string after the opening keyword (e.g., <code>PROJCS[&quot;NAD83 / BC Albers&quot;, ...]</code>
+returns <code>&quot;NAD83 / BC Albers&quot;</code>).</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">wkt</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>The WKT projection definition string</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The extracted projection name, or undefined if not found</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L476">packages/geoview-core/src/geo/utils/projection.ts:476</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transform"><code class="tsd-tag">Static</code><span>transform</span><a href="#transform" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -312,7 +378,7 @@ so puts it back in order (xmin,ymin,xmax,ymax).</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a></h4><p>Coordinate as projected</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L210">packages/geoview-core/src/geo/utils/projection.ts:210</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L213">packages/geoview-core/src/geo/utils/projection.ts:213</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformanddensifyextent"><code class="tsd-tag">Static</code><span>transform<wbr/>And<wbr/>Densify<wbr/>Extent</span><a href="#transformanddensifyextent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -340,7 +406,7 @@ so puts it back in order (xmin,ymin,xmax,ymax).</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span></h4><p>The densified extent transformed in the destination projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L70">packages/geoview-core/src/geo/utils/projection.ts:70</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L73">packages/geoview-core/src/geo/utils/projection.ts:73</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformcoordinates"><code class="tsd-tag">Static</code><span>transform<wbr/>Coordinates</span><a href="#transformcoordinates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -366,7 +432,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></h4><p>The transformed coordinates</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L520">packages/geoview-core/src/geo/utils/projection.ts:520</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L649">packages/geoview-core/src/geo/utils/projection.ts:649</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformextentfromobj"><code class="tsd-tag">Static</code><span>transform<wbr/>Extent<wbr/>From<wbr/>Obj</span><a href="#transformextentfromobj" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -394,7 +460,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The new extent transformed in the destination projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L93">packages/geoview-core/src/geo/utils/projection.ts:93</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L96">packages/geoview-core/src/geo/utils/projection.ts:96</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformextentfromproj"><code class="tsd-tag">Static</code><span>transform<wbr/>Extent<wbr/>From<wbr/>Proj</span><a href="#transformextentfromproj" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -422,7 +488,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The new extent transformed in the destination projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L161">packages/geoview-core/src/geo/utils/projection.ts:161</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L164">packages/geoview-core/src/geo/utils/projection.ts:164</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformextentfromwkid"><code class="tsd-tag">Static</code><span>transform<wbr/>Extent<wbr/>From<wbr/>WKID</span><a href="#transformextentfromwkid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -450,7 +516,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The new extent transformed in the destination projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L123">packages/geoview-core/src/geo/utils/projection.ts:123</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L126">packages/geoview-core/src/geo/utils/projection.ts:126</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformextentfromwkt"><code class="tsd-tag">Static</code><span>transform<wbr/>Extent<wbr/>From<wbr/>WKT</span><a href="#transformextentfromwkt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -478,7 +544,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Extent</span></h4><p>The new extent transformed in the destination projection</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L142">packages/geoview-core/src/geo/utils/projection.ts:142</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L145">packages/geoview-core/src/geo/utils/projection.ts:145</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformfromlonlat"><code class="tsd-tag">Static</code><span>transform<wbr/>From<wbr/>Lon<wbr/>Lat</span><a href="#transformfromlonlat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -499,7 +565,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a></h4><p>Coordinate as projected</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L221">packages/geoview-core/src/geo/utils/projection.ts:221</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L224">packages/geoview-core/src/geo/utils/projection.ts:224</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformpoints"><code class="tsd-tag">Static</code><span>transform<wbr/>Points</span><a href="#transformpoints" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -523,7 +589,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>The converted points array</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L180">packages/geoview-core/src/geo/utils/projection.ts:180</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L183">packages/geoview-core/src/geo/utils/projection.ts:183</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformtolonlat"><code class="tsd-tag">Static</code><span>transform<wbr/>To<wbr/>Lon<wbr/>Lat</span><a href="#transformtolonlat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -544,7 +610,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a></h4><p>Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L232">packages/geoview-core/src/geo/utils/projection.ts:232</a></li></ul></aside></div></li></ul></section>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L235">packages/geoview-core/src/geo/utils/projection.ts:235</a></li></ul></aside></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="transformtoutmnorthingeasting"><code class="tsd-tag">Static</code><span>transform<wbr/>To<wbr/>UTM<wbr/>Northing<wbr/>Easting</span><a href="#transformtoutmnorthingeasting" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -565,7 +631,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <h4 class="tsd-returns-title">Returns <a href="../types/Coordinate.html" class="tsd-signature-type tsd-kind-type-alias">Coordinate</a></h4><p>The returned coordinates in UTM Northing / Easting</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/geo/utils/projection.ts#L243">packages/geoview-core/src/geo/utils/projection.ts:243</a></li></ul></aside></div></li></ul></section></section></details></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/geo/utils/projection.ts#L246">packages/geoview-core/src/geo/utils/projection.ts:246</a></li></ul></aside></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -586,7 +652,7 @@ Note: the value should include 'EPSG:' then the projection  number.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
 <div><a href="#custom_wkt_and_num"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>CUSTOM_<wbr/>WKT_<wbr/>AND_<wbr/>NUM</span></a><a href="#custom_wkt_num"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>CUSTOM_<wbr/>WKT_<wbr/>NUM</span></a><a href="#projection_names"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>PROJECTION_<wbr/>NAMES</span></a><a href="#projections"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>PROJECTIONS</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#addprojection"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection</span></a><a href="#addprojectioncode"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>Code</span></a><a href="#addprojectionifmissing"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>If<wbr/>Missing</span></a><a href="#getprojectionfromobj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>Obj</span></a><a href="#getprojectionfromstring"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>String</span></a><a href="#getprojectionfromwkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>WKT</span></a><a href="#getprojectionlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>Lon<wbr/>Lat</span></a><a href="#getresolution"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Resolution</span></a><a href="#readepsgnumber"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Number</span></a><a href="#readextentcarefully"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Extent<wbr/>Carefully</span></a><a href="#transform"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform</span></a><a href="#transformanddensifyextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>And<wbr/>Densify<wbr/>Extent</span></a><a href="#transformcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Coordinates</span></a><a href="#transformextentfromobj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>Obj</span></a><a href="#transformextentfromproj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>Proj</span></a><a href="#transformextentfromwkid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>WKID</span></a><a href="#transformextentfromwkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>WKT</span></a><a href="#transformfromlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>From<wbr/>Lon<wbr/>Lat</span></a><a href="#transformpoints"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Points</span></a><a href="#transformtolonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>To<wbr/>Lon<wbr/>Lat</span></a><a href="#transformtoutmnorthingeasting"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>To<wbr/>UTM<wbr/>Northing<wbr/>Easting</span></a></div></details></div></details></div>
+<div><a href="#addprojection"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection</span></a><a href="#addprojectioncode"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>Code</span></a><a href="#addprojectionifmissing"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Projection<wbr/>If<wbr/>Missing</span></a><a href="#getprojectionfromcrs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>CRS</span></a><a href="#getprojectionfromobj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>Obj</span></a><a href="#getprojectionfromstringornumber"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>String<wbr/>Or<wbr/>Number</span></a><a href="#getprojectionfromwkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>From<wbr/>WKT</span></a><a href="#getprojectionlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Projection<wbr/>Lon<wbr/>Lat</span></a><a href="#getresolution"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Resolution</span></a><a href="#readepsgnumber"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>EPSG<wbr/>Number</span></a><a href="#readextentcarefully"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Extent<wbr/>Carefully</span></a><a href="#readprojectionnamefromwkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>read<wbr/>Projection<wbr/>Name<wbr/>From<wbr/>WKT</span></a><a href="#transform"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform</span></a><a href="#transformanddensifyextent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>And<wbr/>Densify<wbr/>Extent</span></a><a href="#transformcoordinates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Coordinates</span></a><a href="#transformextentfromobj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>Obj</span></a><a href="#transformextentfromproj"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>Proj</span></a><a href="#transformextentfromwkid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>WKID</span></a><a href="#transformextentfromwkt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Extent<wbr/>From<wbr/>WKT</span></a><a href="#transformfromlonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>From<wbr/>Lon<wbr/>Lat</span></a><a href="#transformpoints"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>Points</span></a><a href="#transformtolonlat"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>To<wbr/>Lon<wbr/>Lat</span></a><a href="#transformtoutmnorthingeasting"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>transform<wbr/>To<wbr/>UTM<wbr/>Northing<wbr/>Easting</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">geoview-core - v2.3.0</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

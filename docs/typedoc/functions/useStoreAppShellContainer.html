@@ -16,12 +16,13 @@
 <div class="tsd-signature tsd-anchor-link" id="usestoreappshellcontainer"><span class="tsd-kind-call-signature">useStoreAppShellContainer</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span><a href="#usestoreappshellcontainer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Hook that returns the shell container HTML element for the current map.</p>
-<p>Queries the DOM for the element whose id starts with <code>shell-{mapId}</code>.</p>
+<p>Delegates to <code>useGVElementById</code> so the shell is resolved through the single reactive-lookup path
+(map-scoped query anchored on the reactively-stored root element), rather than a hand-written query.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLElement</span></h4><p>The shell container element.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/core/stores/states/app-state.ts#L522">packages/geoview-core/src/core/stores/states/app-state.ts:522</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/core/stores/states/app-state.ts#L544">packages/geoview-core/src/core/stores/states/app-state.ts:544</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

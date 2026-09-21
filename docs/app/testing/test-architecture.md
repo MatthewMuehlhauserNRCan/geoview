@@ -19,11 +19,14 @@ packages/geoview-test-suite/src/
     │   ├── suite-core.ts               # Date/utility tests
     │   ├── suite-config.ts             # Layer config validation
     │   ├── suite-layer.ts              # Layer add/remove/legend/query
-    │   ├── suite-map-varia.ts          # Map zoom/projection/basemap
+    │   ├── suite-map.ts                # Map zoom/projection/basemap
     │   ├── suite-map-config.ts         # Map config creation/destruction
     │   ├── suite-geochart.ts           # Geochart plugin tests
     │   ├── suite-details.ts            # Details panel tests
-    │   └── suite-ui.ts                 # DOM-level UI tests
+    │   ├── suite-ui.ts                 # DOM-level UI tests
+    │   ├── suite-utilities.ts          # Utility function tests
+    │   ├── suite-swiper.ts             # Swiper plugin tests
+    │   └── suite-time-slider.ts         # Time Slider plugin tests
     └── testers/                         # GeoView-specific testers
         ├── abstract-gv-tester.ts        # GV base — constants, URLs, helpers
         ├── core-tester.ts
@@ -33,7 +36,8 @@ packages/geoview-test-suite/src/
         ├── map-config-tester.ts
         ├── geochart-tester.ts
         ├── details-tester.ts
-        └── ui-tester.ts
+        ├── ui-tester.ts
+        └── time-slider-tester.ts
 ```
 
 ## Test Lifecycle
@@ -101,12 +105,12 @@ Test instance
 
 ## Execution Patterns
 
-| Pattern                         | When to Use                        | Example                               |
-| ------------------------------- | ---------------------------------- | ------------------------------------- |
-| `Promise.all()` (parallel)      | Independent tests, no shared state | `suite-config`, `suite-ui`            |
-| Mixed parallel + sequential     | Some tests modify map state        | `suite-layer`                         |
-| Sequential `await`              | All tests modify shared state      | `suite-map-varia`, `suite-map-config` |
-| `onCanExecuteTestSuite()` guard | Suite requires specific plugin     | `suite-geochart`, `suite-details`     |
+| Pattern                         | When to Use                        | Example                           |
+| ------------------------------- | ---------------------------------- | --------------------------------- |
+| `Promise.all()` (parallel)      | Independent tests, no shared state | `suite-config`, `suite-ui`        |
+| Mixed parallel + sequential     | Some tests modify map state        | `suite-layer`                     |
+| Sequential `await`              | All tests modify shared state      | `suite-map`, `suite-map-config`   |
+| `onCanExecuteTestSuite()` guard | Suite requires specific plugin     | `suite-geochart`, `suite-details`, `suite-time-slider` |
 
 ## Key Design Decisions
 
@@ -340,6 +344,7 @@ class TestSuitePlugin {
       "suite-map": GVTestSuiteMapVaria,
       "suite-layer": GVTestSuiteLayer,
       "suite-geochart": GVTestSuiteGeochart,
+      "suite-time-slider": GVTestSuiteTimeSlider,
     };
 
     // Instantiate configured suites

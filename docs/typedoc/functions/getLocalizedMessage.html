@@ -16,6 +16,11 @@
 <div class="tsd-signature tsd-anchor-link" id="getlocalizedmessage"><span class="tsd-kind-call-signature">getLocalizedMessage</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">language</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TypeDisplayLanguage</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">messageKey</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><a href="#getlocalizedmessage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns proper language GeoView localized values from map i18n instance.</p>
+<p>A GeoView message key is dot-namespaced with no spaces (e.g. <code>warning.layer.slowRender</code>). When the
+provided value does not match that shape it is treated as already-final raw text (for example a
+plugin-provided message) and returned verbatim, so callers passing literal strings don't trigger a
+misleading missing-key error. Values that do look like a key are still validated, logging an error
+when the key is missing so genuine typos are surfaced.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -24,15 +29,15 @@
 <div class="tsd-comment tsd-typography"><p>The language to get the message in</p>
 </div></li>
 <li><span><span class="tsd-kind-parameter">messageKey</span>: <span class="tsd-signature-type">string</span></span>
-<div class="tsd-comment tsd-typography"><p>The localize key to read the message from</p>
+<div class="tsd-comment tsd-typography"><p>The localize key to read the message from, or already-final raw text</p>
 </div></li>
 <li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> = undefined</span></span>
 <div class="tsd-comment tsd-typography"><p>Optional record of named parameters for i18next interpolation</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The translated message with values replaced</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The translated message with values replaced, or the raw text when not a key</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/70fd13d82394346d4c2247a410d45cd3ab23d3da/packages/geoview-core/src/core/utils/utilities.ts#L328">packages/geoview-core/src/core/utils/utilities.ts:328</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/fc564feddcfac79c8f19af8683f8ad22abd91059/packages/geoview-core/src/core/utils/utilities.ts#L344">packages/geoview-core/src/core/utils/utilities.ts:344</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

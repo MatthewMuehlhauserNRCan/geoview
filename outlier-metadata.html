@@ -56,11 +56,11 @@
             {
               'geoviewLayerId': 'permafrost-by-ecoprovince',
               'geoviewLayerName': 'Permafrost by Ecoprovince',
-              'metadataAccessPath': 'https://agriculture.canada.ca/atlas/rest/services/mapservices/aafc_national_ecological_framework_of_canada/MapServer',
-              'geoviewLayerType': 'esriDynamic',
+              'metadataAccessPath': 'https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/National_ecological_framework_of_Canada_ecozones/FeatureServer',
+              'geoviewLayerType': 'esriFeature',
               'listOfLayerEntryConfig': [
                 {
-                  'layerId': '33'
+                  'layerId': '6'
                 }
               ]
             },
@@ -79,6 +79,17 @@
               'metadataAccessPath': 'https://nonna-geoserver.data.chs-shc.ca/geoserver/wms',
               'geoviewLayerType': 'ogcWms',
               'listOfLayerEntryConfig': []
+            },
+            {
+              'geoviewLayerId':'canimage_dupid',
+              'geoviewLayerName':'Can Image',
+              'metadataAccessPath':'https://maps.geogratis.gc.ca/wms/canimage_en',
+              'geoviewLayerType':'ogcWms',
+              'listOfLayerEntryConfig': [
+                {
+                    'layerId':'canimage'
+                }
+              ]
             },
             {
               'geoviewLayerId': 'nfi-group-with-slash',
@@ -148,7 +159,7 @@
         },
         'corePackages': [],
         'theme': 'geo.ca'
-      }"></div><hr/><div class="demo-section"><h4>Outlier Layers:</h4><ul class="demo-list"><li><strong>Permafrost</strong> - Metadata has no geometry field - Issue #2212</li><li><strong>Major Project</strong> - esri feature layer does not load because of null field value - Issue #2208</li><li><strong>Floods in Canada</strong> - layers are missing time extent - Issue #2251</li><li><strong>Boundaries</strong> - layers projection and extent projection from metadata are different for three layers (Block Land Transfer, Municipal Boundary, and Watershed Boundaries)</li><li><strong>Nfi Plot Test Slash</strong> - WMS layer with slashes in layerId path, testing group entries with slash-separated IDs</li></ul></div><hr/><div class="map-title-holder"></div><h4 id="Hmap2">2. ESRI Service Issue Layers</h4><a class="ref-link" href="#top">Top</a><button class="collapsible">Layers Status</button><pre id="Hmap2-state" class="panel map-title-holder"></pre><hr/><div id="map2" class="geoview-map" data-lang="en" data-config="{
+      }"></div><hr/><div class="demo-section"><h4>Outlier Layers:</h4><ul class="demo-list"><li><strong>Permafrost</strong> - Metadata has no geometry field - Issue #2212</li><li><strong>Major Project</strong> - esri feature layer does not load because of null field value - Issue #2208</li><li><strong>Floods in Canada</strong> - layers are missing time extent - Issue #2251</li><li><strong>Boundaries</strong> - layers projection and extent projection from metadata are different for three layers (Block Land Transfer, Municipal Boundary, and Watershed Boundaries)</li><li><strong>Nfi Plot Test Slash</strong> - WMS layer with slashes in layerId path, testing group entries with slash-separated IDs</li><li><strong>Can Image</strong> - WMS layer with potential duplicate `<name>` at different nesting levels - Issue #3521</name></li></ul></div><hr/><div class="map-title-holder"></div><h4 id="Hmap2">2. ESRI Service Issue Layers</h4><a class="ref-link" href="#top">Top</a><button class="collapsible">Layers Status</button><pre id="Hmap2-state" class="panel map-title-holder"></pre><hr/><div id="map2" class="geoview-map" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
           'viewSettings': {

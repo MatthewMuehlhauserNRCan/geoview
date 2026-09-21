@@ -3,7 +3,6 @@
     "description": "Filter Panel package configuration with two layers and multiple attributes for filtering for each of the filter types (select, multiselect, range, date). The filter panel is open by default in this demo."
   },
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "initialView": {
         "layerIds": []
@@ -72,7 +71,8 @@
                 "fieldName": "province_en",
                 "displayLabel": "Province / Territory",
                 "filterType": "multiselect",
-                "enabled": true
+                "enabled": true,
+                "searchable": true
               },
               {
                 "fieldName": "commodity_group_en",

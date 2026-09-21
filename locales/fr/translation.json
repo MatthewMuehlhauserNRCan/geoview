@@ -45,7 +45,8 @@
       "loadingMap": "Chargement de la carte",
       "mapLoaded": "Carte chargée",
       "processing": "Traitement en cours",
-      "processingComplete": "Traitement terminé"
+      "processingComplete": "Traitement terminé",
+      "loadingLayers": "Chargement des couches..."
     }
   },
   "mapnav": {
@@ -56,7 +57,7 @@
     "zoomIn": "Zoom avant",
     "zoomOut": "Zoom arrière",
     "scale": "Basculer entre l'échelle et la résolution",
-    "cycleHint": "Cliquez, appuyez sur Entrée/Espace ou utilisez les touches fléchées pour faire défiler le mode d'affichage de l'échelle",
+    "cycleHint": "Cliquez, appuyez sur Entrée/Espace pour faire défiler le mode d'affichage de l'échelle",
     "selectFormat": "Sélectionner le format d'échelle",
     "graphicScale": "échelle graphique",
     "location": "Zoom sur ma position",
@@ -67,6 +68,10 @@
       "degrees": "Degrés",
       "reset": "Réinitialiser"
     },
+    "toggleMenu": "Basculer le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "expandGroup": "Développer le groupe {{groupName}}",
+    "collapseGroup": "Réduire le groupe {{groupName}}",
     "groups": {
       "generic": "Groupe vertical de boutons pour la navigation sur la carte",
       "zoom": "Contrôles de zoom et de rotation",
@@ -144,7 +149,9 @@
     "removeAllNotifications": "Effacer toutes les notifications",
     "repeatedNotificationTimes": "répété {{count}} fois",
     "closeNotificationsDialog": "Fermer la boîte de dialogue des notifications",
-    "navLabel": "Contrôles principaux de la carte"
+    "navLabel": "Contrôles principaux de la carte",
+    "scrollUp": "Faire défiler vers le haut",
+    "scrollDown": "Faire défiler vers le bas"
   },
   "legend": {
     "title": "Légende",
@@ -165,7 +172,8 @@
     "selectLayerAndScroll": "Gérer la couche",
     "hideText": "Masquer les étiquettes de texte des éléments",
     "showText": "Afficher les étiquettes de texte des éléments",
-    "layerOutOfRangeScreenReader": "(visibilité limitée par l'échelle)"
+    "layerOutOfRangeScreenReader": "(visibilité limitée par l'échelle)",
+    "layerControls": "Contrôles de couche"
   },
   "layers": {
     "title": "Couches",
@@ -182,6 +190,10 @@
     "layer": "Couche",
     "hidden": "La couche est cachée",
     "parentHidden": "La couche parent est cachée",
+    "hiddenLayersSection": "Couches cachées",
+    "availableLayersSection": "Couches disponibles",
+    "layerMovedToHidden": "{{name}} déplacée vers les couches cachées",
+    "layerMovedToAvailable": "{{name}} déplacée vers les couches disponibles",
     "stepOne": "Télécharger des données",
     "stepOneLoading": "Téléchargement des données...",
     "stepTwo": "Sélectionner le format",
@@ -228,6 +240,8 @@
     "errorImageLoadSizeLimitExceededWidth": "L'image demandée pour la couche '{{layerName}}' dépasse la taille maximale en largeur autorisée par le serveur ({{requestedWidth}}px > {{maxWidth}}px).",
     "errorImageLoadSizeLimitExceededHeight": "L'image demandée pour la couche '{{layerName}}' dépasse la taille maximale en hauteur autorisée par le serveur ({{requestedHeight}}px > {{maxHeight}}px).",
     "errorImageLoadNoImageReturned": "Aucune image n'a été renvoyée par le serveur pour la couche '{{layerName}}'.",
+    "errorImageLoadProjectionNotValid": "La couche '{{layerName}}' n'a pas pu être affichée : sa projection définie '{{definedCRS}}' n'est pas une projection valide (code EPSG introuvable).",
+    "errorTileLoad": "Une erreur est survenue avec une tuile pour la couche '{{layerName}}'.",
     "errorNoLastQueryToPerform": "Aucune dernière requête à effectuer.",
     "errorProj": "Projection {{projectionCode}} invalide.",
     "errorResponseNoFeaturesProperty": "La réponse du service ne contient pas de propriété 'features'.",
@@ -237,12 +251,13 @@
     "errorInvalidExtent": "Étendue invalide '{{extent}}'.",
     "errorNonreloadableLayer": "Cette couche ne peut être rechargée. Assurez-vous qu'elle a déjà été chargée au moins une fois.",
     "layerReloaded": "La couche '{{layerName}}' a été rechargée avec succès.",
-    "fetchProgress": "Téléchargement des données... Téléchargé {{processed}} de {{total}} enregistrements.",
-    "fetchDone": "Données téléchargées - {{total}} enregistrements.",
-    "fetchStart": "Téléchargement des données...",
+    "fetchProgress": "Téléchargement des données pour « {{layerName}} »... Téléchargé {{processed}} de {{total}} enregistrements.",
+    "fetchDone": "Données téléchargées pour « {{layerName}} » - {{total}} enregistrements.",
+    "fetchStart": "Téléchargement des données pour « {{layerName}} »...",
     "only": "seulement",
     "opacity": "Opacité (%)",
     "opacityMax": "Maximum du parent",
+    "outOfVisibleRange": "hors de la plage visible",
     "reloadLayer": "Recharger la couche",
     "reloadSublayers": "Recharger toutes les couches en erreur",
     "visibilityIsAlways": "La visibilité est toujours activée",
@@ -251,7 +266,7 @@
     "toggleSublayersVisibility": "Basculer la visibilité des sous-couches",
     "toggleCollapse": "Basculer la fermeture",
     "zoomVisibleScale": "Zoom à l'échelle visible",
-    "querying": "Requête en cours",
+    "querying": "Requête en cours...",
     "layerAdded": "Couche {{layerName}} ajoutée",
     "layerAddedAndLoading": "Couche {{layerName}} ajoutée et en chargement",
     "layerAddedWithError": "Couche {{layerName}} en erreur",
@@ -286,8 +301,9 @@
     "layerDateTemporalMode": "Mode temporel: ",
     "layerDisplayDateTimezone": "Fuseau horaire: ",
     "layerTimeDimension": "Dimension temporelle (curseur temporel): ",
-    "layerTimeDimensionField": "Champ: ",
-    "layerServiceProjection": "Projection du service : ",
+    "layerTimeDimensionField": "Champ",
+    "layerServiceProjection": "Projection du service",
+    "layerServiceProjectionAndMore": "et plus",
     "layerHoverable": "Information au survol de la souris",
     "layerQueryable": "Interrogeable au clic de la souris",
     "layerQueryableSource": "Source est interrogeable",
@@ -301,6 +317,8 @@
     "layerControls": "Commandes des couches",
     "selectLayerAndScrollTimeSlider": "Accéder au panneau Curseur Temporel",
     "selectLayer": "Sélectionner {{layerName}}",
+    "selectLayerWithDescription": "Sélectionner {{layerName}} ({{description}})",
+    "layerTooltipWithStatus": "{{title}} ({{status}})",
     "layerActions": "Actions sur les couches",
     "settings": {
       "title": "Paramètres de couche",
@@ -371,7 +389,8 @@
     "featureInfoTable": "Informations sur les éléments",
     "featureInfoTableField": "Champ",
     "featureInfoTableValue": "Valeur",
-    "featureActions": "Actions sur les éléments"
+    "featureActions": "Actions sur les éléments",
+    "featureNavigation": "Navigation des éléments"
   },
   "lightbox": {
     "next": "Prochaine",
@@ -383,6 +402,7 @@
     "start": "Aller après l'élément carte",
     "end": "Aller avant l'élément carte",
     "map": "Aller au contenu principal - Carte",
+    "skipToFooter": "Aller au bouton Supprimer tout",
     "focusdialog": {
       "title": "Navigation clavier",
       "main": "Si activé, le focus sera verrouillé sur le visualiseur. \nPour sortir, appuyez sur <strong>CTRL + Q</strong>.",
@@ -411,11 +431,12 @@
       "missingSourceProjection": "Le paramètre source.projection est obligatoire.",
       "unableToFetch": "Impossible de récupérer et de lire les métadonnées pour la couche '{{layerNameOrId}}'.",
       "wmtsMetadataError": "Erreur avec les métadonnées WMTS pour la couche '{{layerNameOrId}}' : {{missingElement}} manquant dans les métadonnées.",
-      "serviceMetadataEmpty": "Les métadonnées du service sont vides pour la couche '{{layerNameOrId}}'.",
+      "serviceMetadataEmpty": "Les métadonnées du service sont vides ou insuffisantes pour la couche '{{layerNameOrId}}'.",
       "invalidLayerFilter": "La couche '{{layerNameOrPath}}' contient un filtre invalide.\nfiltre = '{{layerFilter}}'\nfiltre interne = '{{filter}}'.",
       "failedToCreateLayer": "Échec de la création de la couche '{{layerNameOrId}}'.",
       "noCapabilitiesOrEmpty": "Aucune capacité trouvée (ou vide) pour la couche '{{layerNameOrId}}'.",
-      "wmsServiceFormatParameter": "Le(s) paramètre(s) format '{{infoFormat}}' de GetFeatureInfo ne sont pas supportés pour les services WMS, '{{layerNameOrPath}}'.",
+      "wmsServiceFormatParameter": "Le(s) paramètre(s) format '{{infoFormat}}' de GetFeatureInfo ne sont pas supportés pour la couche WMS '{{layerNameOrPath}}'.",
+      "wfsServiceFormatParameter": "Le(s) paramètre(s) format '{{infoFormat}}' de GetFeature ne sont pas supportés pour la couche WFS '{{layerNameOrPath}}'.",
       "wmsSubLayerNotfound": "La sous-couche '{{layerId}}' de la couche '{{geoviewLayerId}}' n'existe pas sur le serveur.",
       "csvNoGeographicData": "Aucune donnée géographique trouvée dans le fichier CSV '{{layerNameOrPath}}'.",
       "invalidMetadata": "Métadonnées invalides (listOfLayerEntryConfig) empêchant le chargement de la couche '{{layerName}}'.",
@@ -485,6 +506,8 @@
     "details": "DÉTAILS",
     "exportBtn": "Télécharger",
     "downloadAsGeoJSONMessage": "Télécharger GeoJSON {{message}}",
+    "downloadAsGeoJSONProgress": "Téléchargement du GeoJSON pour « {{layerName}} »...",
+    "downloadAsGeoJSONProcessing": "Téléchargement du GeoJSON pour « {{layerName}} »... {{count}} sur {{total}} élément(s)",
     "downloadAsGeoJSON": "Télécharger GeoJSON",
     "downloadAsCSV": "Télécharger CSV",
     "filterMap": "Filtrer la carte",
@@ -521,7 +544,8 @@
   "filterPanel": {
     "errorRegistrationTimeout": "Erreur de délai d'attente du panneau de filtres : La couche '{{layerName}}' a mis trop de temps à s'enregistrer",
     "errorFilterPanelQuery": "Erreur de requête du panneau de filtres : La couche '{{layerName}}' n'a pas pu être interrogée",
-    "errorFilterPanelClear": "Erreur de nettoyage du panneau de filtres : La couche '{{layerName}}' n'a pas pu effacer les filtres"
+    "errorFilterPanelClear": "Erreur de nettoyage du panneau de filtres : La couche '{{layerName}}' n'a pas pu effacer les filtres",
+    "warningNoFilteredExtent": "Aucun élément ne correspond actuellement aux filtres actifs pour la couche '{{layerPath}}' - rien à zoomer"
   },
   "guide": {
     "title": "Guide",
@@ -563,10 +587,16 @@
       "metadatasTakingLongTime": "Le téléchargement des métadonnées de certaines couches prend plus de temps que...",
       "vectorTileUnsupportedProjection": "La tuile vectorielle '{{layerName}}' ne supporte pas la projection de la carte, envisagez de désactiver sa visibilité.",
       "basemapLayerCreationError": "Erreur lors de la création de la couche de base {{basemapType}}.",
-      "kmlLayerWarning": "Les couches KML n'afficheront pas les symboles appropriés dans les panneaux et ne comporteront pas d'entrées dans le tableau de données.",
+      "kmlLayerWarning": "La couche KML '{{layerName}}' n'affichera pas les symboles appropriés dans les panneaux ni d'entrées dans le tableau de données.",
       "layerCRSNotSupported": "La référence spatiale de la carte '{{mapProj}}' n'est pas officiellement supportée par la couche '{{layerName}}'. GeoView va tout de même tenté d'afficher la couche, mais celle-ci risque d'être désalignée..",
+      "projectionNotValid": "La couche '{{layerName}}' déclare une projection '{{definedCRS}}' qui n'a pas pu être résolue (code EPSG introuvable). La couche pourrait tout de même s'afficher si la projection de la carte est supportée.",
       "invalidGeometry": "La couche '{{layerName}}' contient des entités dont la géométrie est invalide et qui ne s'afficheront pas sur la carte.",
-      "slowCoordinateInfo": "Les informations de coordonnées pour le point cliqué prennent plus de temps que prévu à être récupérées..."
+      "geometryTooComplexToHighlight": "L'entité sélectionnée comporte trop de sommets pour être mise en évidence sur la carte.",
+      "slowCoordinateInfo": "Les informations de coordonnées pour le point cliqué prennent plus de temps que prévu à être récupérées...",
+      "styleUrlNotApplied": "Le style de la couche '{{layerName}}' n'a pas pu être chargé. La couche est affichée avec le style par défaut."
+    },
+    "map": {
+      "invalidZoomExtent": "Impossible de zoomer, l'étendue fournie est invalide."
     },
     "schema": {
       "validationIssues": "Une erreur de configuration a été trouvée, vérifiez la console pour voir ce qui ne va pas."
@@ -578,9 +608,10 @@
       "overviewMapCreationError": "Erreur lors de la création de la couche de base de la carte d'aperçu."
     },
     "layer": {
-      "differingFieldLengths": "La longueur des champs fournis ne correspond pas pour la couche '{{layerPath}}'.",
+      "differingFieldLengths": "La longueur des champs fournis ne correspond pas pour la couche '{{layerNameOrPath}}'.",
       "layerConfigNotFound": "La configuration de la couche à l'emplacement '{{layerPath}}' est introuvable.",
       "layerNotFound": "La couche à l'emplacement '{{layerPath}}' est introuvable.",
+      "sourceNotLoaded": "Impossible de charger la source de données de la couche '{{layerName}}'.",
       "wfsConfigMissing": "La configuration de la couche vectorielle est manquante pour la couche à l'emplacement '{{layerPath}}'.",
       "wrongType": "La couche '{{layerNameOrPath}}' n'est pas du type attendu.",
       "statusWasError": "Le statut de la couche '{{layerNameOrId}}' était en 'erreur'.",
@@ -590,7 +621,7 @@
       "notAFeatureLayer": "L'identifiant de couche n'est pas une couche d'entités pour la couche '{{layerNameOrPath}}'.",
       "notQueryableLayer": "La couche '{{layerNameOrPath}}' n'est pas interrogeable.",
       "notAbleToQuery": "Impossible de téléchager les données pour '{{layerName}}'.",
-      "noWMSLegend": "Erreur lors de la récupération de la légende pour '{{layerName}}': '{{errorName}}'",
+      "noWMSLegend": "Erreur lors de la récupération de la légende pour '{{layerName}}': '{{errorName}}'.",
       "featureParsingError": "Impossible de lire les données d'entités pour la couche '{{layerNameOrId}}'.",
       "styleGeometryNotFound": "Le style pour la couche '{{layerName}}' et le type de géométrie '{{geomType}}' introuvable."
     },
@@ -603,9 +634,7 @@
       "mapWrongCall": "Div avec identifiant {{mapId}} a une classe 'geoview-map' et devrait être initialisé via un appel à 'cgpv.init()'.",
       "pluginError": "Une erreur majeure sur le Plugin '{{pluginId}}' sur la carte '{{mapId}}' est survenue.",
       "pluginConfigNotFound": "La configuration pour le Plugin '{{pluginId}}' sur la carte '{{mapId}}' au chemin d'accès '{{path}}' est introuvable.",
-      "pluginStateUninitialized": "L'état du Plugin '{{pluginId}}' sur la carte '{{mapId}}' n'est pas initialisé.",
-      "invalidZoomExtent": "Impossible de zoomer, l'étendue fournie est invalide.",
-      "loadingLayers": "Chargement des couches..."
+      "pluginStateUninitialized": "L'état du Plugin '{{pluginId}}' sur la carte '{{mapId}}' n'est pas initialisé."
     },
     "geocore": {
       "serviceFail": "Le service Geocore ne répond pas pour UUID '{{uuid}}'.",

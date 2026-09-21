@@ -1,6 +1,5 @@
 {
   "map": {
-    "interaction": "dynamic",
     "viewSettings": {
       "initialView": {
         "zoomAndCenter": [
@@ -80,7 +79,8 @@
     "fullscreen",
     "home",
     "location",
-    "basemap-select"
+    "basemap-select",
+    "measure"
   ],
   "appBar": {
     "tabs": {
@@ -103,6 +103,9 @@
   "corePackages": [
     "swiper"
   ],
+  "globalSettings": {
+    "canRemoveSublayers": false
+  },
   "theme": "geo.ca",
   "corePackagesConfig": [
     {

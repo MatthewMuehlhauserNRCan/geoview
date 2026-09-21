@@ -17,17 +17,18 @@ Before writing a test, classify it into one of these groups:
 
 ### Group 2 — Layers (layer lifecycle, rendering, queries)
 
-| Category            | Tester Class         | Suite Class          | Execution Pattern               |
-| ------------------- | -------------------- | -------------------- | ------------------------------- |
-| **Layer Lifecycle** | `LayerTester`        | `suite-layer`        | Mixed parallel + sequential     |
-| **Layer Query**     | `LayerTester`        | `suite-layer`        | Sequential (changes zoom)       |
-| **Legend**          | `LegendTester` (new) | `suite-legend` (new) | Guarded (`legend` tab required) |
+| Category            | Tester Class         | Suite Class             | Execution Pattern               |
+| ------------------- | -------------------- | ----------------------- | ------------------------------- |
+| **Layer Lifecycle** | `LayerTester`        | `suite-layer`           | Mixed parallel + sequential     |
+| **Layer Functions** | `LayerTester`        | `suite-layer-functions` | Mixed parallel + sequential     |
+| **Layer Query**     | `LayerTester`        | `suite-layer-functions` | Sequential (changes zoom)       |
+| **Legend**          | `LegendTester` (new) | `suite-legend` (new)    | Guarded (`legend` tab required) |
 
 ### Group 3 — Map (state, projection, interaction)
 
 | Category            | Tester Class      | Suite Class        | Execution Pattern  |
 | ------------------- | ----------------- | ------------------ | ------------------ |
-| **Map Interaction** | `MapTester`       | `suite-map-varia`  | Sequential `await` |
+| **Map Interaction** | `MapTester`       | `suite-map`        | Sequential `await` |
 | **Map Config**      | `MapConfigTester` | `suite-map-config` | Sequential `await` |
 
 ### Group 4 — Component Panels (footer bar tabs, app bar features)
@@ -442,7 +443,7 @@ testMyPanelBehavior(): Promise<Test<ResultType>> {
 - Use `this.getControllersRegistry().uiController.setActiveFooterBarTab()` to activate tabs
 - Use `delay()` after tab switches to allow UI to update (minimum 500ms, some panels need 2000ms)
 - Access store state via `getStore*` getters for assertions (e.g., `getStoreUIActiveFooterBarTab`, `getStoreDetailsFeatures`)
-- Access DOM via `getStoreAppGeoviewHTMLElement(mapId).querySelector()` for DOM assertions
+- Access DOM in a **map-scoped** way: for the map root use `getStoreAppGeoviewHTMLElement(mapId)`; for a specific descendant prefer the wrappers `getGVElementById(mapId, suffix)` / `queryGVSelector(mapId, selector)` from `geoview-core/core/utils/dom-helper`. Never use `document.getElementById` / `document.querySelector` directly (see [Best Practices §18 — Map-scoped DOM access](../../programming/best-practices.md#dom-access))
 
 ### Suite Guard Pattern
 
