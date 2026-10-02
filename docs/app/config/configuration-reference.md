@@ -2,7 +2,7 @@
 
 Complete reference for GeoView configuration objects. This guide covers all configuration options for creating and managing maps, layers, and packages.
 
-> **Quick Start:** See [Creating Maps](app/config/create-map.md) for basic usage examples  
+> **Quick Start:** See [Creating Maps](app/config/create-map.md) for basic usage examples
 > **For Core Developers:** See [Adding Layer Types](programming/adding-layer-types.md) for implementation details
 
 > **⚠️ Schema Validation:** Always check the browser console for schema validation errors and discrepancies. The console will display detailed error messages including the schema path, affected property, and allowed values. Invalid configurations will be rejected with specific error messages indicating what needs to be corrected.
@@ -826,7 +826,10 @@ See package-specific sections ([Swiper](#swiper-package), [GeoChart](#geochart-p
   {
     "swiper": {
       "orientation": "vertical",
-      "layers": ["layer1", "layer2"],
+      "layers": [
+        { "layerPath": "layer1", "side": "left" },
+        { "layerPath": "layer2", "side": "left" }
+      ],
       "keyboardOffset": 20
     }
   }
@@ -854,7 +857,7 @@ See package-specific sections ([Swiper](#swiper-package), [GeoChart](#geochart-p
   {
     "swiper": {
       "orientation": "horizontal",
-      "layers": ["layer1/0"]
+      "layers": [{ "layerPath": "layer1/0", "side": "up" }]
     }
   },
   {
@@ -989,7 +992,7 @@ URL or path to the service/data.
 metadataAccessPath?: string;
 ```
 
-**Required for:** WMS, WFS, OGC Feature, ESRI services  
+**Required for:** WMS, WFS, OGC Feature, ESRI services
 **Optional for:** GeoJSON, CSV, KML (can use relative paths)
 
 **Examples:**
@@ -1765,6 +1768,8 @@ ESRI Image source:
 }
 ```
 
+For WMS, a configured `wmsStyle` takes precedence over service defaults. If it is omitted, GeoView uses the advertised default style when available and otherwise the first advertised style. For ESRI Image layers, a configured `rasterFunction` takes precedence; otherwise GeoView selects the first advertised function other than `None`.
+
 Static Image source:
 
 ```json
@@ -2386,9 +2391,13 @@ Layer comparison package using a swipe control.
 interface SwiperConfig {
   // Required
   orientation: "vertical" | "horizontal";
-  layers: Array<string>;
+  layers: Array<{
+    layerPath: string;
+    side: "left" | "right" | "up" | "down";
+  }>;
 
   // Optional
+  interactive?: boolean;
   keyboardOffset?: number;
   version?: string;
 }
@@ -2399,9 +2408,12 @@ interface SwiperConfig {
 - **orientation** (Required): Swiper bar orientation
   - `"vertical"` - Vertical swipe bar
   - `"horizontal"` - Horizontal swipe bar
-- **layers** (Required): Array of layer IDs to include in swiper
+- **layers** (Required): Array of layer entries participating in the swiper. Each entry is an object:
+  - `layerPath` - The layer path to include in the swiper
+  - `side` - The **visible** side of the bar for this layer. Use `"left"`/`"right"` with a vertical bar and `"up"`/`"down"` with a horizontal bar. `"left"` means the layer stays visible on the left of the divider, and so on (default: `"left"`)
+- **interactive**: When `true`, users can add/remove layers from the swiper and choose each layer's side directly from the layer settings panel (right panel → settings gear). When `false` (default), the swiper is static and author-defined
 - **keyboardOffset**: Pixel offset when using keyboard (default: 10, range: 10-100)
-- **version**: Schema version (default: "1.0")
+- **version**: Schema version (default: "1.1")
 
 #### Example
 
@@ -2410,8 +2422,12 @@ interface SwiperConfig {
   {
     "swiper": {
       "orientation": "vertical",
-      "layers": ["satellite-imagery", "street-map"],
-      "keyboardOffset": 20
+      "interactive": true,
+      "keyboardOffset": 20,
+      "layers": [
+        { "layerPath": "satellite-imagery", "side": "left" },
+        { "layerPath": "street-map", "side": "right" }
+      ]
     }
   }
 ]
@@ -2501,6 +2517,7 @@ interface SliderConfig {
     rangeItems?: {
       type?: string;
       range: Array<string>;
+      durationInterval?: string;
     };
   };
 }
@@ -2525,8 +2542,9 @@ interface SliderConfig {
   - **singleHandle**: Use single handle (true) or range handles (false). GeoView auto-detects this from WMS metadata: if the `<Dimension>` has a `default` attribute or `multipleValues="0"`, it defaults to single handle; otherwise dual handle. Use this config property to override the auto-detected value.
   - **displayPattern**: Date/time display format configuration
   - **rangeItems**: Temporal range definition
-    - **type**: Range type ('discrete', 'continuous')
+    - **type**: Normalized source shape (`'discrete'`, `'relative'`, or `'none'`)
     - **range**: Array of date strings defining available time points
+    - **durationInterval**: Optional ISO 8601 duration retained from an interval such as `start/end/P1Y`
 
 #### Temporal Modes
 
@@ -3350,7 +3368,10 @@ Domain mapping displays user-friendly labels instead of raw codes. When `filterM
     {
       "swiper": {
         "orientation": "vertical",
-        "layers": ["weather-data", "satellite-layer"],
+        "layers": [
+          { "layerPath": "weather-data", "side": "left" },
+          { "layerPath": "satellite-layer", "side": "right" }
+        ],
         "keyboardOffset": 20
       }
     }

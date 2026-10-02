@@ -416,7 +416,7 @@ The **Layers** tab has the following display state:
 
 _**Note: Click on a layer to display its Layer information in the right section.**_
 
-**Important Information**  
+**Important Information**
 If a layer's visibility (eye) icon is disabled (greyed out) <img src="{{assetsURL}}/img/guide/footer/eye_disabled.svg" alt="An icon representing the Eye disabled function" /> and the Zoom to Visible Scale icon <img src="{{assetsURL}}/img/guide/layers/scaleVisible.svg" alt="Zoom to visible scale icon" /> is visible, this means the layer is not visible at the current map zoom level.
 
 - Clicking the Zoom to Visible Scale button will adjust the map to the appropriate zoom level, making the layer visible.
@@ -532,14 +532,19 @@ If no filters are active, "None" is displayed.
 
 If the layer has time-based data, this section shows:
 
-- Display date format
+- Display date format and short display format
 - Temporal mode
 - Timezone
-- Time dimension field name and min/max date range
+- Time dimension field name
+- Normalized range type
+- Explicit range values for discrete dimensions, or minimum and maximum bounds for interval dimensions
+- ISO 8601 duration interval, when supplied by the service, with a link to the format specification
+- Whether the layer participates in a grouped time dimension
 
 **Temporal Dimension (Time Slider)**
 
-If the layer has a Time Slider configuration, additional temporal details specific to the slider are shown.
+If the layer has a Time Slider configuration, additional temporal details specific to the slider are shown, including its
+field, display settings, range values or bounds, and duration interval when available.
 
 #### Layer Settings Panel
 
@@ -571,6 +576,15 @@ Toggle switches to control layer interaction behavior:
 
 - **Hoverable**: When enabled, hovering over a feature on the map displays a tooltip with feature information.
 - **Queryable**: When enabled, clicking on the map queries features from this layer.
+
+**Swiper** _(when the Swiper package is loaded with interactive customization enabled)_
+
+If the map configuration enables the Swiper package, the settings panel includes a **Swiper** section. Use **Use with swiper bar** to add or remove the selected layer from the swipe comparison. When the layer is included, use **Visible side** to choose which side of the divider reveals it:
+
+- **Vertical** swiper: **Left** or **Right**
+- **Horizontal** swiper: **Up** or **Down**
+
+If interactive customization is disabled or the Swiper package is not loaded, this section is not displayed and the Swiper remains author-configured.
 
 =3!add=
 

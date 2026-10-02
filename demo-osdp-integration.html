@@ -15,7 +15,7 @@
           'listOfGeoviewLayerConfig': []
         },
         'components': ['overview-map'],
-        'navBar': ['zoom', 'fullscreen', 'home', 'location', 'basemap-select'],
+        'navBar': ['zoom', 'fullscreen', 'home', 'location', 'measurement', 'basemap-select'],
         'appBar': {
           'tabs': {
             'core': ['legend', 'details', 'geolocator', 'export']
@@ -26,14 +26,24 @@
             'core': ['layers', 'data-table', 'time-slider', 'geochart']
           }
         },
-        'corePackages': [],
+        'corePackages': ['swiper'],
         'serviceUrls': {
           'metadataUrl': 'https://osdp-psdo.canada.ca/dp/en/search/metadata/NRCAN-FGP-1-'
         },
         'globalSettings': {
           'canRemoveSublayers': false
         },
-        'theme': 'geo.ca'
+        'theme': 'geo.ca',
+        'corePackagesConfig': [
+          {
+            'swiper': {
+              'orientation': 'vertical',
+              'interactive': true,
+              'keyboardOffset': 10,
+              'layers': []
+            }
+          }
+        ]
       }"></div></div><div class="demo-section"><h4>Changes to map div</h4><div style="display: flex; gap: 20px; align-items: flex-start"><div><button class="btn btn-primary" id="deleteMap" title="Deletes map div if it exists (deleting and unmounting the MapViewer in the process).">Delete map div</button><details><summary>Code</summary><pre>document.getElementById('Map1').remove();</pre></details></div><div><button class="btn btn-primary" id="createMap" title="Creates a new div for the map, if the original div has been deleted">Create map div</button><details><summary>Code</summary><pre>
 if (!document.getElementById('Map1')) {
   const newDiv = document.createElement('div');
