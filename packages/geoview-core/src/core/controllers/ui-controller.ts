@@ -28,6 +28,7 @@ import {
 import {
   addStoreAppNotification,
   getStoreAppGeoviewAssetsURL,
+  getStoreAppGeoviewHTMLElement,
   getStoreAppHeight,
   removeStoreAppAllNotifications,
   removeStoreAppNotification,
@@ -39,6 +40,7 @@ import {
   setStoreAppDisplayTheme,
   setStoreAppFullScreenActive,
   setStoreAppGuide,
+  setStoreAppHeight,
 } from '@/core/stores/states/app-state';
 import { getGVRootDataAttribute } from '@/core/utils/dom-helper';
 import { getStoreMapConfigNavBar, getStoreMapGeolocatorSearchArea } from '@/core/stores/states/map-state';
@@ -605,6 +607,20 @@ export class UIController extends AbstractMapViewerController {
    */
   getFooterHeight(): string {
     return getGVRootDataAttribute(this.getMapId(), 'data-footer-height') ?? `${getStoreAppHeight(this.getMapId())}px`;
+  }
+
+  /**
+   * Resizes the map viewer height without destroying and recreating the MapViewer.
+   *
+   * Updates the stored viewer height so the footer bar split and the OpenLayers canvas recalculate to match,
+   * through their existing effects. Useful when a host application resizes the container after mount.
+   *
+   * @param height - Optional new height in pixels; defaults to the root element's current `clientHeight`
+   */
+  resizeMap(height?: number): void {
+    const mapId = this.getMapId();
+    const newHeight = height ?? getStoreAppGeoviewHTMLElement(mapId).clientHeight;
+    setStoreAppHeight(mapId, newHeight);
   }
 
   // #endregion PUBLIC METHODS
