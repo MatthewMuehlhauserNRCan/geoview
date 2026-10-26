@@ -284,6 +284,8 @@
     "layerPath": "Chemin de la couche",
     "layerType": "Type : ",
     "layerOgcVersion": "Version OGC",
+    "layerVectorStructureFullUrl": "Url structure vectorielle: ",
+    "layerWmsGetStylesFullUrl": "Url GetStyles : ",
     "layerBounds": "Étendu ({{mapProjectionEPSG}})",
     "layerBounds4326": "Étendu (EPSG:4326)",
     "layerMaxScale": "Échelle maximale",
@@ -464,7 +466,11 @@
     "changeDisplayLanguage": "Seulement 'en' et 'fr' sont supporées",
     "changeDisplayTheme": "Theme non supporté",
     "changeDisplayProjection": "Projection non supportée",
-    "invalidConfig": "Configuration JSON non valide, configuration par défaut appliquée."
+    "invalidConfig": "Configuration JSON non valide, configuration par défaut appliquée.",
+    "wfsRenderer": {
+      "getStylesInvalidResponse": "Descripteur de couche stylée (SLD) invalide. Vérifiez la réponse 'GetStyles'.",
+      "getStylesNotSupported": "Styles non supportés : {{cause}}"
+    }
   },
   "exportModal": {
     "title": "Aperçu de la carte",
@@ -522,6 +528,7 @@
     "filterMap": "Filtrer la carte",
     "stopFilterMap": "Arrêter le filtrage de la carte",
     "clearFilters": "Effacer les filtres",
+    "invalidNumericFilter": "Saisissez un nombre valide. Les nombres entiers doivent respecter la précision prise en charge.",
     "zoomToFilteredExtent": "Zoomer sur l'étendue filtrée",
     "rowsSelected": "{rowsSelected} sur {totalRows} ligne(s) sélectionnée(s)",
     "rowsFiltered": "{rowsFiltered} sur {totalRows} ligne(s) filtrée(s)",
@@ -545,7 +552,7 @@
     "showAll": "Tout afficher",
     "hideAll": "Tout masquer"
   },
-  "geochart": {
+  "geoChart": {
     "noChartAvailable": "Cliquer sur une couche de la carte qui contient un graphique"
   },
   "testSuite": {
@@ -644,6 +651,8 @@
     },
     "map": {
       "mapIdNotFound": "La carte avec l'identifiant '{{mapId}}' est introuvable.",
+      "invalidViewportMidpoints": "Impossible d'ajuster la zone de la carte. Fournissez quatre milieux de bord avec des coordonnées de longitude et latitude finies, dans l'ordre ouest, sud, est, nord, avec des points opposés distincts et des directions cohérentes.",
+      "viewportUnavailable": "Impossible de lire la zone visible de la carte '{{mapId}}'. Assurez-vous que la carte est visible et que son affichage est terminé, puis réessayez.",
       "mapIdAlreadyExists": "La carte avec l'identifiant '{{mapId}}' existe déjà.",
       "geoviewStoreNotFound": "Le 'React Store' sur la carte '{{mapId}}' est introuvable.",
       "errorGeometryGroupId": "Identifiant de groupe de géométrie '{{geometryGroupId}}' est introuvable.",

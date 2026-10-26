@@ -284,6 +284,8 @@
     "layerPath": "Layer Path",
     "layerType": "Type: ",
     "layerOgcVersion": "OGC Version",
+    "layerVectorStructureFullUrl": "Vector Structure: ",
+    "layerWmsGetStylesFullUrl": "WMS GetStyles: ",
     "layerBounds": "Bounds ({{mapProjectionEPSG}})",
     "layerBounds4326": "Bounds (EPSG:4326)",
     "layerMaxScale": "Max Scale",
@@ -464,7 +466,11 @@
     "changeDisplayLanguage": "Only 'en' and 'fr' are supported",
     "changeDisplayTheme": "Theme unsupported",
     "changeDisplayProjection": "Projection unsupported",
-    "invalidConfig": "Invalid JSON config, default configuration applied."
+    "invalidConfig": "Invalid JSON config, default configuration applied.",
+    "wfsRenderer": {
+      "getStylesInvalidResponse": "Invalid StyledLayerDescriptor (SLD). Check the 'GetStyles' response.",
+      "getStylesNotSupported": "Not Supported Styles: {{cause}}"
+    }
   },
   "exportModal": {
     "title": "Map preview",
@@ -522,6 +528,7 @@
     "filterMap": "Filter map",
     "stopFilterMap": "Stop filtering map",
     "clearFilters": "Clear filters",
+    "invalidNumericFilter": "Enter a valid number. Whole numbers must stay within the supported precision.",
     "zoomToFilteredExtent": "Zoom to filtered extent",
     "rowsSelected": "{rowsSelected} of {totalRows} row(s) selected",
     "rowsFiltered": "{rowsFiltered} of {totalRows} row(s) filtered",
@@ -644,6 +651,8 @@
     },
     "map": {
       "mapIdNotFound": "Map with ID '{{mapId}}' not found.",
+      "invalidViewportMidpoints": "Unable to adjust the map area. Provide four finite longitude/latitude edge midpoints in west, south, east, north order, with distinct opposing points and consistent directions.",
+      "viewportUnavailable": "Unable to read the visible area of map '{{mapId}}'. Make sure the map is visible and has finished rendering, then try again.",
       "mapIdAlreadyExists": "Map with ID '{{mapId}}' already exists.",
       "errorGeometryGroupId": "Invalid geometry group id '{{geometryGroupId}}' not found",
       "geoviewStoreNotFound": "GeoView Store on Map '{{mapId}}' not found.",
@@ -661,9 +670,5 @@
     "geolocator": {
       "noService": "Geolocator service not available"
     }
-  },
-  "templates": {
-    "firstSnackbar": "This is my first snackbar!",
-    "canApplyFunction": "I can even apply a function"
   }
 }

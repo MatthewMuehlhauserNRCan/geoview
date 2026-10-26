@@ -48,6 +48,7 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 - [3. Map](#3-map)
   - [3.1 Map Functions](#31-map-functions)
   - [3.2 Map Config](#32-map-config)
+    - [Viewport Boundary and Fitting](#viewport-boundary-and-fitting)
     - [3.2.1 Footer Bar / App Bar / Nav Bar](#321-footer-bar--app-bar--nav-bar)
     - [3.2.2 Initial View](#322-initial-view)
     - [3.2.3 Overlay Objects](#323-overlay-objects)
@@ -73,20 +74,20 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 
 | Group             | Suite                   | Tester(s)                                                                                       | Test Count | Execution                   |
 | ----------------- | ----------------------- | ----------------------------------------------------------------------------------------------- | ---------- | --------------------------- |
-| 1. Core / Utility | `suite-core`            | `CoreTester`                                                                                    | 15         | Parallel                    |
+| 1. Core / Utility | `suite-core`            | `CoreTester`                                                                                    | 16         | Parallel                    |
 | 1. Core / Utility | `suite-config`          | `ConfigTester`                                                                                  | 39         | Parallel                    |
 | 1. Core / Utility | `suite-utilities`       | `UtilitiesCoreTester`, `UtilitiesDateTester`, `UtilitiesGeoTester`, `UtilitiesProjectionTester` | 53         | Parallel                    |
-| 2. Layers         | `suite-layer`           | `LayerTester`                                                                                   | 46         | Mixed parallel + sequential |
+| 2. Layers         | `suite-layer`           | `LayerTester`                                                                                   | 49         | Mixed parallel + sequential |
 | 2. Layers         | `suite-layer-functions` | `LayerTester`                                                                                   | 9          | Mixed parallel + sequential |
 | 3. Map            | `suite-map`             | `MapTester`                                                                                     | 16         | Complex mixed               |
-| 3. Map            | `suite-map-config`      | `MapConfigTester`                                                                               | 41         | Fully sequential            |
+| 3. Map            | `suite-map-config`      | `MapConfigTester`, `MapTester`                                                                  | 57         | Fully sequential            |
 | 4. Components     | `suite-ui`              | `UITester`                                                                                      | 2          | Parallel                    |
 | 4. Components     | `suite-details`         | `DetailsTester`                                                                                 | 6          | Guarded sequential          |
 | 4. Components     | `suite-data-table`      | `DataTableTester`                                                                               | 13         | Guarded sequential          |
 | 5. Packages       | `suite-geochart`        | `GeochartTester`                                                                                | 2          | Guarded sequential          |
 | 5. Packages       | `suite-swiper`          | `SwiperTester`                                                                                  | 7          | Guarded sequential          |
-| 5. Packages       | `suite-time-slider`     | `TimeSliderTester`                                                                              | 2          | Guarded sequential          |
-| **Total**         |                         |                                                                                                 | **250**    |                             |
+| 5. Packages       | `suite-time-slider`     | `TimeSliderTester`                                                                              | 3          | Guarded sequential          |
+| **Total**         |                         |                                                                                                 | **271**    |                             |
 
 ---
 
@@ -111,13 +112,14 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 | 6   | `testValidateAndPingUrlWmsService`      | test      | Test validateAndPingUrl with a WMS service URL...                                     |
 | 7   | `testGeometryCollectionLegendStyles`    | test      | Test GeometryCollection legend style generation...                                    |
 | 8   | `testEsriPictureFillLegendStyles`       | test      | Test ESRI picture fill legend style generation...                                     |
-| 9   | `testProxyGetWMSServiceMetadata`        | test      | Test GeoUtilities.getWMSServiceMetadata with Forest Burn (proxy fallback)...          |
-| 10  | `testProxyGetWMSServiceMetadataBadUrl`  | testError | Test GeoUtilities.getWMSServiceMetadata with bad URL...                               |
-| 11  | `testProxyGetWFSServiceMetadata`        | test      | Test GeoUtilities.getWFSServiceMetadata with Belgium WFS (proxy fallback)...          |
-| 12  | `testProxyGetWFSServiceMetadataBadUrl`  | testError | Test GeoUtilities.getWFSServiceMetadata with bad URL...                               |
-| 13  | `testProxyGetWMTSServiceMetadata`       | test      | Test GeoUtilities.getWMTSServiceMetadata with Taiwan WMTS service (proxy fallback)... |
-| 14  | `testProxyGetWMTSServiceMetadataBadUrl` | testError | Test GeoUtilities.getWMTSServiceMetadata with bad URL...                              |
-| 15  | `testFetchJsonWithProxyFallbackBadUrl`  | testError | Test GeoUtilities.fetchJsonWithProxyFallback with bad URL...                          |
+| 9   | `testWfsStyleWithTextOnlyRule`          | test      | Test WFS SLD conversion with a text-only rule...                                     |
+| 10  | `testProxyGetWMSServiceMetadata`        | test      | Test GeoUtilities.getWMSServiceMetadata with Forest Burn (proxy fallback)...          |
+| 11  | `testProxyGetWMSServiceMetadataBadUrl`  | testError | Test GeoUtilities.getWMSServiceMetadata with bad URL...                               |
+| 12  | `testProxyGetWFSServiceMetadata`        | test      | Test GeoUtilities.getWFSServiceMetadata with Belgium WFS (proxy fallback)...          |
+| 13  | `testProxyGetWFSServiceMetadataBadUrl`  | testError | Test GeoUtilities.getWFSServiceMetadata with bad URL...                               |
+| 14  | `testProxyGetWMTSServiceMetadata`       | test      | Test GeoUtilities.getWMTSServiceMetadata with Taiwan WMTS service (proxy fallback)... |
+| 15  | `testProxyGetWMTSServiceMetadataBadUrl` | testError | Test GeoUtilities.getWMTSServiceMetadata with bad URL...                              |
+| 16  | `testFetchJsonWithProxyFallbackBadUrl`  | testError | Test GeoUtilities.fetchJsonWithProxyFallback with bad URL...                          |
 
 ---
 
@@ -515,6 +517,16 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 | --- | ---------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------ |
 | 36  | `testEsriDynamicJunctionGeometryPairing` | test | Test ESRI Dynamic junction: each returned feature's geometry pairs to its own OBJECTID, not a neighbour (#3636)... |
 
+#### 2.1.17 WMS Group Layer Name Resolution
+
+[↑ Back to top](#table-of-contents)
+
+| #   | Method                                          | Type | Description                                                                    |
+| --- | ----------------------------------------------- | ---- | ------------------------------------------------------------------------------ |
+| 37  | `testAddWMSZpegtGroupWithSiblingLayer`          | test | Test WMS ZPEGT metadata names with a sibling layer...                           |
+| 38  | `testAddWMSZpegtGroupWithGeoviewLayerName`      | test | Test WMS ZPEGT group name with a configured GeoView layer name...               |
+| 39  | `testAddWMSZpegtGroupWithoutGeoviewLayerName`   | test | Test WMS ZPEGT group name without a configured GeoView layer name...            |
+
 ---
 
 ### 2.2 Layer Functions (EPSG: 3857)
@@ -573,7 +585,7 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 
 [↑ Back to top](#table-of-contents)
 
-**Suite:** `suite-map` · **File:** `tests/suites/suite-map.ts` · **Tester:** `MapTester` (`tests/testers/map-tester.ts`)
+**Suite:** `suite-map` · **File:** `tests/suites/suite-map-functions.ts` · **Tester:** `MapTester` (`tests/testers/map-tester.ts`)
 **Execution:** Complex mixed — sequential `await` for state-modifying tests · **Guard:** None
 
 | #   | Method                                 | Type | Description                                                            |
@@ -601,8 +613,33 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 
 [↑ Back to top](#table-of-contents)
 
-**Suite:** `suite-map-config` · **File:** `tests/suites/suite-map-config.ts` · **Tester:** `MapConfigTester` (`tests/testers/map-config-tester.ts`)
-**Execution:** Fully sequential (`await` each test) — each test creates/destroys a fresh map · **Guard:** None
+**Suite:** `suite-map-config` · **File:** `tests/suites/suite-map-config.ts` · **Testers:** `MapConfigTester` (`tests/testers/map-config-tester.ts`), `MapTester` (`tests/testers/map-tester.ts`)
+**Execution:** Fully sequential (`await` each test) — each test replaces the map in the suite's existing container using `replaceMap()`, without appending maps to the runner page · **Guard:** None
+
+#### Viewport Boundary and Fitting
+
+These 16 executions use `MapTester` with the map-config lifecycle. Each validation group shares
+one fixture across five conditions; unexpected errors propagate, and every condition must produce
+its expected error. Finalizers restore the host width, map target, and usable viewport.
+
+| #   | Method                                                           | Type      | Description                                                                                                        |
+| --- | ---------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| 1   | `testFitViewportToMidpointsLonLat` (LCC, rotation disabled)      | test      | Preserves rotation while tightly fitting without animation                                                         |
+| 2   | `testFitViewportToMidpointsLonLat` (Mercator, rotation disabled) | test      | Preserves rotation during animated fitting                                                                         |
+| 3   | `testFitViewportToMidpointsLonLat(3978, PI/4)`                   | test      | Restores rotated LCC center, resolution, orientation, and input                                                    |
+| 4   | `testFitViewportToMidpointsLonLat` (resize)                      | test      | Fits after an aspect-ratio change with asymmetric padding                                                          |
+| 5   | `testFitViewportToMidpointsLonLat` (projection)                  | test      | Fits LCC samples in Web Mercator with balanced WSEN alignment                                                      |
+| 6   | `testFitViewportToMidpointsLonLat` (animated antimeridian)       | test      | Restores Mercator samples while preserving unwrapped longitudes                                                    |
+| 7   | `testInvalidViewportMidpoints`                                   | test      | Rejects count, non-finite, latitude, coincident, and orientation errors without changing the view                  |
+| 8   | `testErrorFitViewportMidpointsCancelled`                         | testError | Rejects interrupted animated rotation                                                                              |
+| 9   | `testErrorFitViewportUnavailable`                                | testError | Rejects fitting a zero-sized viewport                                                                              |
+| 10  | `testViewportBoundaryLonLat(3978)`                               | test      | Checks default Canada LCC geometry, dynamic padding, and fresh snapshots                                           |
+| 11  | `testViewportBoundaryLonLat(3978, PI/4)`                         | test      | Checks rotated LCC against independent geometry and CSS pixels                                                     |
+| 12  | `testViewportBoundaryLonLat(3857)`                               | test      | Checks midpoint sides against corner sides in Web Mercator                                                         |
+| 13  | `testViewportBoundaryLonLat(3978, 0, 'static')`                  | test      | Uses the full canvas bottom in static mode                                                                         |
+| 14  | `testViewportBoundaryLonLat` (antimeridian)                      | test      | Preserves longitude beyond 180 degrees                                                                             |
+| 15  | `testViewportBoundaryPaddingAndResize`                           | test      | Checks map-info height changes, four-sided padding, and resizing                                                   |
+| 16  | `testViewportBoundaryUnavailable`                                | test      | Rejects zero/non-finite size, excessive/negative padding, and detached viewport; restores state between conditions |
 
 #### 3.2.1 Footer Bar / App Bar / Nav Bar
 
@@ -844,8 +881,8 @@ This catalog lists every test in the GeoView test suite, organized by group, sui
 | 3   | `testSwiperPerLayerSides`           | test | Test Swiper per-layer side semantics...                                                  |
 | 4   | `testSwiperProgressiveRegistration` | test | Test Swiper progressive layer registration...                                            |
 | 5   | `testSwiperConfigPersistence`       | test | Test Swiper interactive configuration persistence...                                     |
-| 6   | `testSwiperSettingsGating`          | test | Test Swiper settings-panel gating...                                                     |
-| 7   | `testSwiperHoverSuppression`        | test | Test Swiper hover-query suppression over the bar and handle...                           |
+| 6   | `testSwiperHoverSuppression`        | test | Test Swiper hover-query suppression over the bar and handle...                           |
+| 7   | `testSwiperSettingsGating`          | test | Test Swiper settings-panel gating...                                                     |
 
 ---
 

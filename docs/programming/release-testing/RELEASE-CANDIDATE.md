@@ -4,10 +4,10 @@
 >
 > - Append entries as you work — each AI session, branch review, or test run should add its findings here.
 > - Use the sections below to categorize entries.
-> - At release time, use this file to generate the final release notes, then clear it for the next cycle.
+> - Use verified entries to prepare PR notes and final release notes. At release time, archive the completed file before creating a fresh tracker for the next version; never discard the completed cycle.
 > - This file is the source of truth for "what changed since the last release" — the git log is too noisy.
-> - **BranchReview agent** appends commit-based entries (bug fix, feature, breaking change) in Phase 6.
-> - **TestCreator agent** appends test plan changes (tests added/moved/removed, HTML maps) in Phase 6.
+> - Use `/update-release-candidate` after branch/PR reviews or completed testing changes.
+> - Follow the [canonical maintenance and archive procedure](./README.md#release-candidate-maintenance).
 
 ---
 
@@ -79,6 +79,7 @@ _(Config properties, public API methods, event names — affects external consum
 | `GeoUtilities.fetchWMSMetadata` / `fetchWFSMetadata` / `fetchWMTSMetadata` | Now return `FetchWithProxyResult<T>` instead of raw data + callback                                         | #3562 |
 | `OVERVIEW_MAP_MIN_CONTAINER_WIDTH`                                         | Changed from `900` to `700` px                                                                              | #3562 |
 | `GeoViewMUIShape`                                                          | Export removed; use `GeoViewShapeTokens` for the named MUI shape tokens                                     | #3681 |
+| WMS layer config `fetchVectorsOnWFS`                                       | Renamed to `fetchVectorsExternally` to cover WFS and OGC API Features. Update existing configs; `false` still disables external vector retrieval and the default remains `true` | — |
 
 ### Swiper Package — Schema
 
@@ -121,6 +122,7 @@ _(User-facing features added or enabled)_
 - New `waitForLayerConfigRegistered` in layer-domain and enhanced `waitForLayerRegistered` with optional timeout (#3562)
 - New `waitForLoadedOnce` lifecycle wait on GV layers; group layers wait for all descendant leaf layers before resolving
 - New `getRendererContainer` function on `AbstractBaseGVLayer` (#3562)
+- Added `MapViewer.getViewportBoundaryLonLat()` to sample the rendered viewport corners and edge midpoints, and `MapViewer.fitViewportToMidpointsLonLat()` to rotate and fit a captured set of west/south/east/north midpoint coordinates
 - New `waitForDomElement`, `waitForDomContent`, and `waitForDomChange` test utilities for explicit React UI tracking (#3562)
 - Map view now uses `viewOptions.padding` to account for the map-info bar height (#3562)
 - New `MapViewer.updateViewPadding()` and `mapController.updateViewPadding()` for dynamic map-info bar padding (#3562)
@@ -133,7 +135,11 @@ _(User-facing features added or enabled)_
 - Added temporal metadata to Layer Info, including normalized range values, ISO 8601 duration intervals, and grouped-dimension status.
 - Added support to the special QGIS group dimension configuration allowing time-dimension WMS rasters to function with the time-slider.
 - Added calendar-aware time-slider stepping for hour, day, week, month, and year intervals, including leap-year-safe year navigation.
-- **Interactive Swiper customization**: a new `interactive` boolean on the swiper package config (default `false`) lets end users add/remove layers from the swiper and choose the revealed side of each layer directly from the layer's right-panel **settings** section — no longer limited to the author-defined config. Each swiper layer now carries a per-layer `side` (`left`/`right` for a vertical bar, `up`/`down` for a horizontal bar), and layers can be clipped to different sides of the divider simultaneously. When `interactive` is `false` (or the swiper package is absent), the swiper stays static and behaves exactly as before. User changes persist into the exported/reloaded map config. New `SwiperController` methods `setLayers(entries)`, `setLayerSide(layerPath, side)`, `setInteractive(interactive)`, and an optional `side` parameter on `addLayerPath(layerPath, side?)`; new store selectors `useStoreSwiperLayerSides`/`useStoreSwiperInteractive` (plus a plugin-safe `useStoreSwiperInteractiveIfExists`) (#3625)
+- **Interactive Swiper customization**: a new `interactive` boolean on the swiper package config (default `false`) lets end users add/remove layers from the swiper and choose the revealed side of each layer directly from the layer's right-panel **settings** section — no longer limited to the author-defined config. Each swiper layer now carries a per-layer `side` (`left`/`right` for a vertical bar, `up`/`down` for a horizontal bar), and layers can be clipped to different sides of the divider simultaneously. When `interactive` is `false` (or the swiper package is absent), the swiper stays static and behaves exactly as before. User changes persist into the exported/reloaded map config. New `SwiperController` methods `setLayers(entries)`, `setLayerSide(layerPath, side)`, `setInteractive(interactive)`, and an optional `side` parameter on `addLayerPath(layerPath, side?)`; new store selectors `useStoreSwiperLayerSides`/`useStoreSwiperInteractive` (the latter is plugin-safe and returns `false` when the swiper package is absent) (#3625)
+- **Expanded WFS SLD rendering**: WFS-backed styles now support multiple overlaid line symbolizers, line-endpoint graphics, external SVG and font markers, graphic displacement, generic-geometry rules, and `OR` filters. The same renderer is used for map features and style previews.
+- WMS layers can retrieve feature information and queryable vector data through an associated WFS or OGC API Features service, while retaining WMS rendering and styling.
+- Improved WFS GML field-type parsing so feature attributes retain the types declared by the service.
+- Time-slider filters now use a shared SQL-like predicate for instants and ranges across raster, vector, and data-table filtering, with conversion to WMS `TIME` and service-specific ESRI syntax at request time.
 
 ## Bug Fixes
 
@@ -142,8 +148,9 @@ _(Fixes discovered or applied during this cycle)_
 - Fixed Layers-panel reloads failing for layers that errored on first load and groups whose GV layers were never created. Reload now rebuilds the owning GeoView layer from its saved config, re-fetches and validates metadata, and preserves its ordered position while loading; added an automated regression test for reload order and a manual oversized-WMS recovery test (#3666)
 - Fixed large ESRI Feature layers (~30k+ features) failing to load on the first attempt: `EsriFeature.#fetchEsriFeaturesByChunk` fired every paged chunk request at once with no concurrency cap or retry, so a single load-induced `500 | Error performing query operation` on one chunk dropped the entire layer (it only worked on reload once the ArcGIS server had cached the queries). The loader now throttles concurrent chunk requests (`Math.min(10, hardwareConcurrency * 2)`, mirroring the ESRI worker) and retries transient failures (HTTP 5xx / ESRI embedded query error / network / timeout) with exponential backoff, so the layer loads reliably on the first try (#3613)
 - Fixed missing loading indicator when opening the data table for a vector layer: on the first click there was no visual feedback (no layer-box progress bar, no skeleton) while the table built, because vector layers have no real query (features are already downloaded) and the heavy synchronous table build blocked the first paint. Clicking a layer now sets a loading state that shows the left-panel progress bar and the right-panel skeleton, the table mount is deferred a frame so the skeleton paints first, and a table-rendered callback clears the indicator once the table is ready
-- Fixed viewer crash when opening the data table for a layer that exposes an empty/blank field name (e.g. a GeoPackage/GDAL unnamed column): Material React Table threw `Columns require an id when using an accessorFn`. Inferred vector layers (GeoJSON/CSV) now skip empty field names at outfield creation (`AbstractGeoViewVector.processFeatureInfoConfig`); the data-table column builders guard against blank keys (which is what protects GeoPackage, whose outfields are built by `GeoPackageReader` and bypass that inference); and the details panel drops label-less fields (#3621)
+- Fixed viewer crash when opening the data table for a layer that exposes an empty/blank field name (e.g. a GeoPackage/GDAL unnamed column): Material React Table threw `Columns require an id when using an accessorFn`. Inferred vector layers (GeoJSON/CSV) now skip empty field names at outfield creation (`AbstractGeoViewVector.processFeatureInfoConfig`); the data-table column builders guard against blank keys (which is what protects GeoPackage, whose outfields are built by `GeoPackageReader` and bypass that inference); and the details panel drops label-less fields
 - Fixed WMS layer querying through WFS to also consider filtering when layer has style but feature is not symbolized (Cities query) without breaking behavior when no symbologies could be read for WFS (Major Projects query) (#3555)
+- Improved WMS time-slider filtering when the layer uses an associated WFS or OGC API Features service.
 - Improved projection information reading from metadata for all layer types — now stored in store for layer-info panel (#3555)
 - Greatly improved `Projection` class flexibility in function parameters and stability (#3555)
 - Fixed layer min/max scale inherited from parent: layer still turns visible/invisible at those scales, so zoomToVisibleScale button is now shown (#3555)
@@ -181,8 +188,10 @@ _(Fixes discovered or applied during this cycle)_
 - Fixed abort controller in add-new-layer component when clicking 'back' then completing steps to add a layer (#3562)
 - Fixed WMS CRS override when layers are behind a proxy — was re-encoding the entire string instead of only adjusting CRS and BBOX properties (#3562)
 - Fixed zoom-to-feature-geometry working even when the geometry field is not included in the outFields configuration (#3562)
+- Fixed feature-info styling for line layers with endpoint graphic strokes by using the base line style for thumbnails while preserving the full style array for map rendering.
 - Fixed initial extent being slightly off vertically vs the home view extent, causing the home view button to shift the map (#3562)
 - Fixed configured `geoview-map` height being exceeded when the collapsed footer bar is rendered (#3601)
+- Fixed maps retaining their initial height when the host or parent container is resized: the shell now observes host, parent, and viewport size changes, updates the stored viewer height, and recalculates the OpenLayers size. The authored host height is measured while the footer layout temporarily uses `fit-content`, while content-sized hosts and fullscreen maps are excluded to prevent resize feedback loops (#3621)
 - Fixed CESI layer in outlier-style.html template to point to a valid layer id (#3562)
 - Fixed Permafrost by Ecoprovince in outlier-metadata template to point to a valid layer URL (#3562)
 - Fixed broken layer in performance.json template demo (#3562)
@@ -222,6 +231,7 @@ _(Dependency updates, build config changes)_
 - **MUI v7 → v9 upgrade**: @mui/material 7.3.2→9.1.2, @mui/icons-material 7.3.2→9.1.1, @mui/lab 7.0.0-beta.17→9.0.0-beta.5, @mui/system→9.1.2, @mui/x-date-pickers 7.20.0→9.7.0, @mui/x-tree-view 7.17.0→9.7.0, mui-color-input 7.0.0→9.0.0 (#3545)
 - Removed 4 duplicate MUI packages from devDependencies (#3545)
 - Webpack: Added `fullySpecified: false` for .mjs ESM resolution (#3545)
+- Upgraded `@mui/material`, `@mui/system` and `@mui/icons-material` from 9.1.x to 9.4.0 in `geoview-core` (and `@mui/material` in `geoview-drawer`) to adopt the theme-level `focusVisible` option (#3641)
 
 ## Architecture & Performance
 
@@ -291,6 +301,11 @@ _(WCAG fixes and improvements)_
 - Updated raster function, mosaic rule, and WMS style settings to use native button controls for expandable sections and selectable cards, with associated labels and decorative previews (issue #3656; #3678).
 - Updated Select controls across export, geolocator, layer settings, filter panel, and mobile tabs to use a single accessible naming source and automatically associated visible labels (#3678).
 - Localized the export preview loading message in English and French (#3678).
+- Adopted MUI 9.4 theme-level `focusVisible` for Material focus indicators (3px outline, 2px offset, 6px halo) and removed the broad `MuiButtonBase` focus override; `getFocusIndicatorStyles()` is retained for non-MUI/composite controls and external-theme fallbacks, and only the dense `MenuItem` keeps a fully inset outline without halo (#3642)
+- Replaced non-interactive elements used as buttons (cards, rows, tiles, undo/delete controls) with native `ButtonBase`/`IconButton`/`ListItemButton` in the layer delete/undo button, AOI panel, and checkbox list; removed hand-rolled `role="button"` + `tabIndex` + `onKeyDown` handlers (keyboard activation is detected via `event.detail === 0`). Delegated click containers (app bar, map info, footer tabs header) and focusable non-control regions (map, guide, rotation indicator) now carry justified `eslint-disable` comments (#3679)
+- Added `jsx-a11y` lint enforcement in `packages/eslint.config.js` (MUI component → DOM element mapping, interaction-handler scoping, `click-events-have-key-events`, `interactive-supports-focus`) plus a `no-restricted-syntax` warning against hand-rolled `role="button"` (#3679)
+- Swiper bar is now exposed as an accessible `slider` (`aria-valuenow`/`aria-valuetext`, orientation-aware label and keyboard instructions, decorative handle hidden), with the announced position updated live while dragging and debounced render cancelled on stop/unmount (new `positionLabel`, `positionFromLeft`, `positionFromTop`, `instructionsHorizontal`, `instructionsVertical` translations in EN/FR) (#3691)
+- Focus ring styling and accessibility documentation updates following the MUI 9.4 focus-indicator migration (tabs, slider and switch styles, guide/app-bar/data-table style clean-up, `docs/app/accessibility.md` and WCAG release-test page).
 
 ## Documentation & Cleanup
 
@@ -338,7 +353,8 @@ _(Tests added, moved, removed, or reorganized)_
 - Added a swiper rendering-isolation regression test covering descendant path resolution, per-target OL render handlers, CSS clip-path removal, and listener cleanup
 - Added `suite-time-slider` with reset-to-default and dual-handle overlap constraint regression tests, plus a dedicated temporal-layer test map
 - Added fixed-height map layout tests for maps with and without a footer bar (#3601)
-- Audited suite totals against active full-suite tester calls: corrected `suite-map-config` to 39; debug-only and commented-out calls remain excluded
+- Added a manual resizable-host-container test and demo covering width/height resizing, footer-panel sizing, and fullscreen transitions (`20-edge-cases.md`; manual test total 684 → 685)
+- Added 16 automated viewport boundary and midpoint-fitting executions to `suite-map-config`, covering projections, rotation enabled/disabled, padding, resizing, antimeridian continuity, invalid inputs, and interrupted animations. Validation groups share fixtures across five conditions each. The suite now has 57 tests; the test catalog has 267 declared tests and the automated release checklist has 313 executions.
 - Fixed sequential execution in `suite-core` so the XYZ tile URL test is awaited before the following test
 - Added 3 manual layers tests for WMS services with duplicate group `<Name>` values at different nesting levels (#3521): Add Layer UI selection of the `canimage` group (no `RangeError`) plus a new config-based Map 10 (`rt-08-layers.html`) verifying the `canimage`/`canimage` duplicate group loads and renders without hanging
 - Added automated `suite-layer` test `testAddWMSDuplicateGroupNames` (LayerTester) guarding issue #3521 — loads the `canimage_en` WMS by its duplicate top group id, asserts the nested `canimage/canimage` path is built and a deep leaf loads without infinite-looping (`suite-layer` total 41 → 43: +1 for the new test and +1 for correctly counting the heavy-conditional test that was previously excluded)
@@ -367,10 +383,10 @@ _(Properties added, renamed, or with changed defaults)_
 
 | Metric        | Before | After |
 | ------------- | ------ | ----- |
-| Total tests   | 901    | 916   |
+| Total tests   | 901    | 917   |
 | Automated (A) | 60     | 62    |
 | Candidate (C) | 169    | 169   |
-| Manual (M)    | 672    | 685   |
+| Manual (M)    | 672    | 686   |
 
 ## Notes for Release Notes Author
 

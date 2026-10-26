@@ -59,6 +59,13 @@ class LayerState {
 
 Use `property: Type | undefined` only when that distinction is intentional and required by behavior (for example: serialization differences, merge semantics, or APIs that depend on checking whether a key exists).
 
+Do not annotate inferrable literals (`const count = 0`, not `const count: number = 0`).
+Prefer `undefined` for internal absent values; convert external OpenLayers `null` returns at the API boundary.
+Keep `null` for React node returns, React-managed DOM refs, external APIs that require it, or explicit JSON clearing.
+React 19 refs require an initial value: `useRef<T>(null)` for DOM refs and
+`useRef<T | undefined>(undefined)` for mutable data. Props accepting DOM refs must accept `React.RefObject<T | null>`.
+Use named component exports and template literals rather than `+` for string concatenation.
+
 ## 2- Avoid using variable names that are too short.
 
 It is difficult to know what a variable with the name `e` refers to. Is it an `element`, an `event` or anything else whose name starts
@@ -78,6 +85,77 @@ at the same time by associating the `layer` variable with the `Layer` type and `
 is thus cleared up.
 
 ## 4- Use inheritance whenever possible.
+
+### Shared helpers and error boundaries
+
+Before adding a helper or importing another library, check the existing utilities below. This is a
+curated discovery index, not an exhaustive API reference; follow the source links for current
+signatures and behavior. Share constants from one source and extract repeated logic to the nearest
+shared plugin service or core utility.
+
+| Utility/module                                                                           | Use it for                                                                            | Important constraint                                                            |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [DOM helpers](../../packages/geoview-core/src/core/utils/dom-helper.ts)                  | Map-scoped IDs, element lookup, selectors, and tabbable elements                      | Keep lookups within the owning map; see the DOM-access section below            |
+| [debounce](../../packages/geoview-core/src/core/utils/debounce.ts)                       | Coalescing repeated calls, with leading/trailing options                              | Call `cancel()` during owner cleanup; `flush()` immediately runs a pending call |
+| [General utilities](../../packages/geoview-core/src/core/utils/utilities.ts)             | Timing, IDs, validation, deep clone/merge/equality, formatting, and shared operations | Check each helper's supported inputs; prefer events over polling                |
+| [Fetch](../../packages/geoview-core/src/core/utils/fetch-helper.ts)                      | HTTP requests with timeouts, aborts, and typed errors                                 | Use the worker helper inside workers; see request guidance below                |
+| [Worker fetch helper](../../packages/geoview-core/src/core/utils/fetch-worker-helper.ts) | Worker-safe requests with timeout handling                                            | Do not import the main `Fetch` class into workers                               |
+| [DateMgt](../../packages/geoview-core/src/core/utils/date-mgt.ts)                        | Date parsing/formatting, time zones, durations, and OGC/ESRI time dimensions          | Preserve the intended calendar/instant mode and time-zone semantics             |
+| [Constants](../../packages/geoview-core/src/core/utils/constant.ts)                      | Shared extensions, regex patterns, timeouts, and other constants                      | Reuse exported values rather than maintaining local copies                      |
+| [logger](../../packages/geoview-core/src/core/utils/logger.ts)                           | Application, error, and render/hook tracing                                           | Business-flow logging belongs outside store state files                         |
+| [AsyncSemaphore](../../packages/geoview-core/src/core/utils/async-semaphore.ts)          | Bounded asynchronous concurrency                                                      | Use `withLock()` when the caller needs results or propagated errors             |
+| [OGC URL helpers](../../packages/geoview-core/src/core/utils/ogc-url-helper.ts)          | Service request parameters and OGC layer-name encoding                                | Reuse protocol-specific encoding rather than hand-building query strings        |
+| [LocalStorage](../../packages/geoview-core/src/core/utils/localStorage.ts)               | Shared local-storage access                                                           | Follow the existing key and serialization conventions                           |
+| [GeoUtilities](../../packages/geoview-core/src/geo/utils/utilities.ts)                   | Geographic geometry, extent, format, measurement, and service operations              | Check existing geo helpers before implementing another algorithm                |
+| [Projection](../../packages/geoview-core/src/geo/utils/projection.ts)                    | Projection lookup/registration and coordinate/extent transforms                       | Confirm input/output projection and coordinate order                            |
+
+Existing libraries also provide reusable primitives. Prefer the repository wrapper when it adds
+GeoView-specific behavior; do not introduce a new dependency merely to duplicate an existing helper.
+
+| Library           | Existing reuse path                                                                                                    | Important constraint                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| OpenLayers (`ol`) | Geometry, extent, format, projection, and rendering primitives; GeoUtilities/Projection wrap shared GeoView operations | Map manipulation stays in controllers/runtime code, not React components        |
+| Day.js (`dayjs`)  | DateMgt centralizes configured date plugins and date/time semantics                                                    | Prefer DateMgt for application dates rather than separately configuring plugins |
+| proj4             | Projection integrates projection definitions with OpenLayers                                                           | Prefer Projection for shared GeoView transforms and registration                |
+
+Core imports use `@/core/utils/...` or `@/geo/utils/...`; plugins use `geoview-core/...` instead of
+core's `@/` alias. Not every utility is a class: some export functions, types, or hooks.
+
+Use `Fetch` from `@/core/utils/fetch-helper`, never raw `fetch()`. It handles timeouts, aborts,
+signal merging and typed errors. Choose `fetchJson`, `fetchEsriJson` (embedded ESRI errors),
+`fetchText`, `fetchTextPermissive` (non-2xx probing), `fetchBlobImage`, `fetchBlob`,
+`fetchArrayBuffer`, `fetchXMLToJson`, `fetchHeadWithTimeout`, or `fetchProbeUrl` as appropriate.
+`fetchWithTimeout` is a legacy JSON alias. Workers instead use `fetchWithTimeout` from
+`@/core/utils/fetch-worker-helper`; importing `Fetch` into a worker breaks the build.
+
+Use `delay(ms)`, cancellable `doTimeout(ms)` and event-driven `waitFor*` methods instead of raw `setTimeout`
+or polling. React timer refs cleaned up with `clearTimeout` are the callback-style exception.
+Use `whenThisThen` only when no suitable event exists.
+
+Catch only the intended recoverable error: check `instanceof`, handle that type, and rethrow all others.
+Broad suppression is reserved for documented best-effort boundaries such as optional legend enrichment.
+`GeoViewError.throwIfAborted(error)` rethrows aborts during format fallback. Update `@throws` for errors
+that now propagate; do not silently replace real failures with warnings.
+
+### Shared HTML rendering and error boundaries
+
+For external HTML, `UseHtmlToReact` is the shared converter. A JSX call-site try/catch cannot
+catch child render errors; malformed-HTML resilience needs a converter change or a real caller boundary,
+not a superficial catch around JSX.
+
+### Hidden-layer panel presentation
+
+List panels (data table, details, geochart, time slider) keep visibility-hidden entries in a separate
+"Hidden layers" list; the eye toggle shows them again. Out-of-scale entries remain excluded.
+Hiding a selected layer returns its panel to the guide; scale changes alone do not clear selection.
+The UI owns grouping and focus, while [LayerController](controller-architecture.md#layercontroller)
+owns visibility actions. Legend/Layers remain the visibility controls, not consumers of this grouping.
+
+Maintainers can consult the repository's
+[hidden-layer implementation reference](https://github.com/Canadian-Geospatial-Platform/geoview/blob/develop/.github/ai/ui-style-a11y-i18n.md#hidden-layer-panel-implementation)
+for internal state, selection, and focus details (#3635).
+
+### Inheritance and narrowing
 
 Inheritance eliminates the repetitive code needed to create disjoint classes that have basically the same characteristics. A base
 class, whether abstract or not, can be used as a parent at the root of the inheritance tree to provide a starting template for child
@@ -148,6 +226,17 @@ import { Plugin } from "@/api/plugin/plugin";
 import { logger } from "geoview-core/core/utils/logger";
 ```
 
+**Note:** Alias an import when its name is identical or too similar to a function, method or variable declared in the same file, so it is clear which one is called.
+
+```ts
+// Good: GeoviewRenderer.loadImage wraps the shared helper, which keeps a distinct name
+import { loadImage as loadImageFromUtils } from '@/core/utils/utilities';
+
+static loadImage(src: string): Promise<HTMLImageElement | null> {
+  return loadImageFromUtils(src).catch(() => null);
+}
+```
+
 ## 8- How we order code at the beginning of a component
 
 We should follow a standard order when we create a component so it is easy to find the needed piece of code
@@ -179,6 +268,31 @@ const [scaleMode, setScaleMode] = useState<number>(0);
 
 ## 9- How we format JSDOC
 
+### Documentation conventions
+
+Summaries use third-person singular ("Creates", "Handles", "Checks") and end with a period.
+Always leave a blank line before tags. Do not repeat TypeScript types in `@param` or `@returns`;
+only `@throws` keeps `{ErrorType}`. Tag descriptions have no trailing period.
+Optional parameters say "Optional"; promise returns start with "A promise that resolves...";
+omit `@returns` for void methods and mention absent values when applicable.
+Document all override parameters. Prefer interface references for wrapper props rather than expanding library interfaces.
+Do not use redundant visibility/lifecycle tags (`@private`, `@public`, `@protected`, `@readonly`,
+`@override`, `@static`, `@exports`, `@class`, `@abstract`, `@async`, `@description`, `@fires`, `@extends`);
+use `@returns`, not `@return`.
+
+- Class properties, interface/type members, module constants and simple type/interface declarations use specific
+  single-line `/** ... */` comments, not `//` or unnecessarily expanded blocks.
+- Components document `@param props - Properties defined in XProps interface` and a semantic `@returns`;
+  mention `null` when it can be returned.
+- Handlers have one-sentence JSDoc without tags and are grouped in `// #region Handlers` / `// #endregion`.
+  Non-handler `useCallback` functions have full parameter/return documentation.
+- `useEffect` and `useMemo` have one-sentence JSDoc. The standardized `memoSxClasses` style memo is exempt.
+- When `memo()` is used, its JSDoc explains the concrete re-render saving.
+- Preserve existing `TODO`, `NOTE`, `FIXME`, `WCAG`, `TO.DOCONT` and eslint-disable comments.
+  Remove issue notes only when the issue is resolved; never convert `// GV` implementation notes to JSDoc.
+
+See [logger trace conventions](logging.md#characteristics-to-know-when-using-logger).
+
 Golden Rule of JSDoc in TypeScript Projects
 
 - Explain why
@@ -196,9 +310,9 @@ It should NOT:
 /**
  * Fetches layer metadata from GeoCore.
  *
- * @param geoviewLayerId - UUID of the GeoView layer.
- * @param signal - Optional abort signal for request cancellation.
- * @returns Parsed layer metadata object.
+ * @param geoviewLayerId - UUID of the GeoView layer
+ * @param signal - Optional abort signal for request cancellation
+ * @returns A promise that resolves with the parsed layer metadata object
  * @throws {LayerNotGeoJsonError} When an error to ...
  */
 async function fetchMetadata(
@@ -241,9 +355,9 @@ Advanced Best Practice
  * Given the layerPath, this function retrieves a
  * layer from the domain and set its visibility.
  *
- * @param layerPath - Target layer path.
- * @param visible - New visibility state.
- * @throws {LayerNotFoundError} When a layer with the provided layer path cannot be found.
+ * @param layerPath - Target layer path
+ * @param visible - New visibility state
+ * @throws {LayerNotFoundError} When a layer with the provided layer path cannot be found
  */
 ```
 
@@ -443,6 +557,14 @@ export type LayerApiLayerVisibleChangedEvent = { ... };
 
 ## 14- React Performance Patterns
 
+Use `useCallback` for stable event handlers; derive parameters from `event.currentTarget` IDs/data attributes
+rather than inline arrow closures. Keep module constants outside components.
+Remove unused dependencies, state setters and ref objects from hook dependency arrays.
+A value used only as a re-execution trigger is allowed with an explicit "trigger token" comment.
+
+Use `memo()` only for a measurable benefit, commonly list items in `.map()` where only one item's selection changes.
+Inline `children` and props that change on every interaction defeat shallow comparison; do not wrap those components by habit.
+
 ### useMemo Naming Convention
 
 When using `useMemo`, prefix the variable name with `memo` followed by camelCase to clearly indicate the variable is memoized:
@@ -552,29 +674,13 @@ onceLayerQueried(filter?: (event: LayerQueriedEvent) => boolean): Promise<LayerQ
 
 ## <a id="accessibility"></a>17- Accessibility (WCAG 2.1 Level AA)
 
-**For detailed patterns with code examples, see [accessibility.md Section 008](app/accessibility.md#code-review-checklist).**
+The [accessibility guide](../app/accessibility.md) owns the shared guidance:
 
-**Note:** `IconButton` `aria-label` is TypeScript-enforced — the compiler prevents missing labels, no manual check needed.
+- [Best practices and examples](../app/accessibility.md#003-best-practices) explain semantic controls, focus management, Escape dismissal, tooltips, and image alternatives
+- [ARIA guidance](../app/accessibility.md#004-aria-best-practices) covers names, states, and live announcements
+- The [code-review checklist](../app/accessibility.md#code-review-checklist) provides a concise review aid
 
-**Quick reference — Common issues to check during code review:**
-
-- `onClick` on `<div>`, `<span>`, `<Box>` without `role="button"` + `tabIndex={0}` + keyboard handler for Enter/Space
-- Ternary operator in `aria-label` on toggle buttons (use stable label + `aria-pressed` instead)
-- `disabled={state}` on buttons that toggle between enabled/disabled (use `aria-disabled` to prevent focus loss)
-- Modal/Dialog/Drawer without `onKeyDown` handler calling `handleEscapeKey(event.key, onClose)` from `@/core/utils/utilities`
-- Images without `alt` attribute (use `alt=""` for decorative, descriptive text for informative)
-- `<Tooltip>` wrapping non-interactive elements like `ListItem`, `Box`, `Typography` (use `ListItemButton` or other interactive wrapper)
-- Duplicate IDs in loops (add unique suffixes like `${mapId}-layer-${id}` or use `generateId(8)`)
-
-**See [accessibility.md Section 008](app/accessibility.md#code-review-checklist) for:**
-
-- Complete ❌ VIOLATION / ✅ CORRECT code examples
-- Search patterns for each check
-- "Why this matters" explanations
-- TypeScript enforcement details
-- Priority levels (HIGH/MEDIUM/ENHANCEMENT)
-
-**For comprehensive WCAG 2.1 Level AA guidance, see [accessibility.md](app/accessibility.md).**
+`IconButton` requires an `aria-label` prop at compile time; reviewers still need to check that its value is meaningful.
 
 ## <a id="dom-access"></a>18- Map-scoped DOM access (no direct `document.*`)
 

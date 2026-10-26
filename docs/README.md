@@ -26,6 +26,7 @@ Complete API reference for interacting with GeoView:
 Layer types, configuration, and management:
 
 - **[Layers Overview](app/layers/layers.md)** - Layer types, configuration, and concepts
+- **[OGC Raster and Vector Interoperability](app/layers/ogc-raster-vector-interoperability.md)** - Associate WMS layers with WFS or OGC API Features records and styles
 - **[Layer Sets](app/layers/layersets.md)** - Layer set architecture and management
 
 ### Events
@@ -99,6 +100,7 @@ Best practices and patterns for contributing to GeoView core:
 - **[Adding Layer Types](programming/adding-layer-types.md)** - Implementing new layer types
 - **[Logging](programming/logging.md)** - Logging standards and practices
 - **[Object-Oriented Patterns](programming/object-oriented.md)** - OOP patterns in GeoView
+- **[Using AI Assistants](programming/using-ai.md)** - Copilot agents, skills, instructions and CLI for this repo
 
 ## 🔌 For Packages & Extension Developers
 

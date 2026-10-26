@@ -29,6 +29,29 @@ Each entry has four parts: **Problem** → **Root Cause** → **Fix** → **Take
 
 ---
 
+## GeoPackage
+
+### SQL.js WebAssembly Import Mismatch
+
+**Problem:** Loading a GeoPackage aborts with `WebAssembly.instantiate(): Import #38 "a" "M": function import requires a callable`.
+
+**Root Cause:** The bundled SQL.js JavaScript loader fetched an unversioned WASM binary from
+`https://sql.js.org/dist/sql-wasm.wasm`. That binary can differ from the installed package's
+version, making its generated imports incompatible with the loader.
+
+**Fix:** `GeoPackageReader` resolves `sql.js/dist/sql-wasm.wasm` through webpack using
+`new URL(..., import.meta.url)`. Webpack emits the installed package's matching binary as an
+asset alongside the viewer build. Deploy that emitted WASM asset with the JavaScript bundles.
+
+**Takeaways:**
+
+- Keep generated JavaScript loaders and their WASM binaries from the same package version.
+- Do not use an unversioned remote binary with a dependency-versioned loader.
+- The `-sASSERTIONS` message comes from the third-party Emscripten build; enabling assertions
+  in GeoView is not the fix.
+
+---
+
 ## GeoTIFF
 
 ### Embedded Color Map / Palette Rendering
@@ -64,6 +87,19 @@ Files: `geotiff.ts` (`createGeoTIFFSource`, `onProcessLayerMetadata`), `gv-geoti
 ---
 
 ## WMS
+
+### Duplicate names in nested groups
+
+> Issue #3521
+
+WMS allows a parent and child to share `<Name>` (`canimage → canimage → canimage-030`).
+Bare-ID first-match lookup can re-resolve the outer group and expand indefinitely.
+Walk full paths segment-by-segment (`UtilAddLayer.findLayerByPath`), use the same lookup for
+name/config builders, and guard recursive UI walkers with `visited: Set<string>` keyed by full path.
+`generateOrderedLayerPaths` must append every segment, not collapse `endsWith('/' + layerId)`.
+In WMS validation use `#findLayerMetadataForConfig` → `#buildLayerIdPath` →
+`#findLayerMetadataInCapabilityByPath` **only when an ancestor name is duplicated**.
+Keep lenient whole-tree lookup for ordinary services.
 
 ### Inherited TIME Dimension Breaks GetFeatureInfo
 
