@@ -18,12 +18,13 @@
 <div class="tsd-comment tsd-typography"><p>Exits fullscreen mode if the document is currently in fullscreen.</p>
 <p>This function uses the standard <code>exitFullscreen()</code> API when available,
 and falls back to vendor-prefixed exit methods for Safari, IE11, and Firefox.
+Does nothing when the document is not in fullscreen (avoids a rejected <code>exitFullscreen()</code> promise).
 Any errors from the standard promise-based exit request are caught
 and logged using <code>logger.logPromiseFailed</code>.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/e340e6176289207735aa02d3702763e8530f1131/packages/geoview-core/src/core/utils/utilities.ts#L1166">packages/geoview-core/src/core/utils/utilities.ts:1166</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/233236e0f3d6386a7578cc87e9619eb69cd112dd/packages/geoview-core/src/core/utils/utilities.ts#L1200">packages/geoview-core/src/core/utils/utilities.ts:1200</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

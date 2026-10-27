@@ -13,14 +13,14 @@
 <section class="tsd-panel">
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="requestfullscreen"><span class="tsd-kind-call-signature">requestFullscreen</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">element</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/TypeHTMLElement.html" class="tsd-signature-type tsd-kind-interface">TypeHTMLElement</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#requestfullscreen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="requestfullscreen"><span class="tsd-kind-call-signature">requestFullscreen</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">element</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/TypeHTMLElement.html" class="tsd-signature-type tsd-kind-interface">TypeHTMLElement</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#requestfullscreen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Attempts to place the given HTML element into fullscreen mode.</p>
 <p>This function handles browser compatibility by trying the standard
 <code>requestFullscreen()</code> API first, then falling back to vendor-prefixed
 versions for Safari, IE11, and Firefox.
 Any errors from the standard promise-based fullscreen request are caught
-and logged using <code>logger.logPromiseFailed</code>.</p>
+and logged using <code>logger.logPromiseFailed</code>, then propagated to the caller.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -28,9 +28,10 @@ and logged using <code>logger.logPromiseFailed</code>.</p>
 <li><span><span class="tsd-kind-parameter">element</span>: <a href="../interfaces/TypeHTMLElement.html" class="tsd-signature-type tsd-kind-interface">TypeHTMLElement</a></span>
 <div class="tsd-comment tsd-typography"><p>The element to display in fullscreen mode</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A promise that resolves when the fullscreen request succeeds</p>
+<aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/e340e6176289207735aa02d3702763e8530f1131/packages/geoview-core/src/core/utils/utilities.ts#L1140">packages/geoview-core/src/core/utils/utilities.ts:1140</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/233236e0f3d6386a7578cc87e9619eb69cd112dd/packages/geoview-core/src/core/utils/utilities.ts#L1147">packages/geoview-core/src/core/utils/utilities.ts:1147</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

@@ -1732,7 +1732,6 @@ interface TypeFeatureInfoLayerConfig {
   queryable: boolean;
   nameField?: string;
   outfields?: TypeOutfields[];
-  hitTolerance?: number; // Pixel radius for click/hover hit-testing; overrides the layer type's default
 }
 
 type TypeVectorSourceFormats = 'GeoJSON' | 'EsriJSON' | 'KML' | 'WFS' | 'featureAPI' | 'CSV' | 'MVT' | 'WKB';
