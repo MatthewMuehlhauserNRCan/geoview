@@ -39,7 +39,7 @@
         "listOfLayerEntryConfig": [
           {
             "layerId": "1",
-            "offsetHitTolerance": [0, 7]
+            "hitToleranceOffset": [0, 7]
           }
         ]
       },
