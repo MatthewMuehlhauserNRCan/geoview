@@ -16,6 +16,13 @@
 <div class="tsd-signature tsd-anchor-link" id="gettheme"><span class="tsd-kind-call-signature">getTheme</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">mode</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TypeDisplayTheme</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Theme</span><a href="#gettheme" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Creates a Material-UI theme for the given display mode.</p>
+<p><code>baseTheme</code> exists only so we can read its calibrated <code>pxToRem</code>, used to convert our font
+sizes to rem. The real theme is then created in a single <code>createTheme</code> call from the
+generated options (plus <code>htmlFontSize</code>) - we never pass <code>baseTheme</code> itself into that call.
+Doing so would merge our options onto an already-built theme, and MUI only overrides the
+specific properties we set. Anything we don't explicitly set (e.g. font family on body/button
+text, divider/disabled colours in dark mode, or the 640/960px breakpoints) would silently
+fall back to <code>baseTheme</code>'s defaults instead of ours.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -26,7 +33,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Theme</span></h4><p>Fully configured MUI Theme object</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/d92386151c94e7c200a3698d73a9f9ce0ead9621/packages/geoview-core/src/ui/style/theme.tsx#L36">packages/geoview-core/src/ui/style/theme.tsx:36</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MatthewMuehlhauserNRCan/geoview/blob/8de37be230d389a027312f2501c3275f82ab3ded/packages/geoview-core/src/ui/style/theme.tsx#L47">packages/geoview-core/src/ui/style/theme.tsx:47</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
