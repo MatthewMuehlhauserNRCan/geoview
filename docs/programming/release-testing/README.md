@@ -140,7 +140,7 @@ Each release gets its own issue. Previous release test results are preserved as 
 
 | #   | File                                                           | Area                                                                  | Est. Time    | Tests (A/C/M)        |
 | --- | -------------------------------------------------------------- | --------------------------------------------------------------------- | ------------ | -------------------- |
-| 0   | [00-automated-suite.md](00-automated-suite.md)                 | Automated test suite execution                                        | 5 min        | 315 executions       |
+| 0   | [00-automated-suite.md](00-automated-suite.md)                 | Automated test suite pass status                                      | 5 min        | See checklist        |
 | 1   | [01-global.md](01-global.md)                                   | Full screen, shortcuts, search, share, notifications                  | 25 min       | 60 (1/15/44)         |
 | 2   | [02-map.md](02-map.md)                                         | Projections, north pole, north arrow, rotation                        | 15 min       | 20 (2/7/11)          |
 | 3   | [03-config.md](03-config.md)                                   | Config validation, duplicate UUIDs, error layers                      | 15 min       | 23 (6/16/1)          |
@@ -150,8 +150,8 @@ Each release gets its own issue. Previous release test results are preserved as 
 | 7   | [07-legend.md](07-legend.md)                                   | Legend panel, show/hide all, full screen                              | 15 min       | 31 (0/12/19)         |
 | 8   | [08-layers.md](08-layers.md)                                   | Layer panel, add, settings, Available/Hidden lists                    | 55 min       | 133 (1/23/109)       |
 | 9   | [09-styles.md](09-styles.md)                                   | Style rendering, visual variables, feature labels                     | 10 min       | 15 (0/0/15)          |
-| 10  | [10-details.md](10-details.md)                                 | Details panel, highlighting, navigation, summary                      | 15 min       | 26 (7/0/19)          |
-| 11  | [11-data-table.md](11-data-table.md)                           | Data table, filtering, columns, density, export                       | 20 min       | 41 (2/8/31)          |
+| 10  | [10-details.md](10-details.md)                                 | Details panel, highlighting, navigation, summary                      | 15 min       | 27 (7/0/20)          |
+| 11  | [11-data-table.md](11-data-table.md)                           | Data table, filtering, columns, density, export                       | 20 min       | 42 (2/8/32)          |
 | 12  | [12-view-settings.md](12-view-settings.md)                     | Zoom constraints, extent override, rotation disabled                  | 10 min       | 16 (4/2/10)          |
 | 13  | [13-projection.md](13-projection.md)                           | Geometry, table, north pole on projection switch                      | 10 min       | 10 (1/0/9)           |
 | 14  | [14-map-info.md](14-map-info.md)                               | Map info bar, attribution, tooltips                                   | 5 min        | 9 (0/0/9)            |
@@ -198,7 +198,7 @@ Before testing, ensure the following setup:
 
 Before starting manual testing, run the automated test suite.
 
-The automated suite declares **229 tests** across 12 registered suites. The release checklist executes the layer suite for both EPSG:3978 and EPSG:3857, for **272 test executions** when all listed suites run. See [00-automated-suite.md](00-automated-suite.md) for the full checklist.
+See the [automated checklist](00-automated-suite.md) for the registered suite executions and their pass status.
 
 ## Config Files Reference
 

@@ -26,10 +26,10 @@ Before writing a test, classify it into one of these groups:
 
 ### Group 3 — Map (state, projection, interaction)
 
-| Category            | Tester Class      | Suite Class        | Execution Pattern  |
-| ------------------- | ----------------- | ------------------ | ------------------ |
-| **Map Interaction** | `MapTester`       | `suite-map`        | Sequential `await` |
-| **Map Config**      | `MapConfigTester` | `suite-map-config` | Sequential `await` |
+| Category                     | Tester Class      | Suite Class        | Execution Pattern                     |
+| ---------------------------- | ----------------- | ------------------ | ------------------------------------- |
+| **Map Interaction / UI**     | `MapTester`       | `suite-map`        | Complex mixed; UI checks last         |
+| **Map Config**               | `MapConfigTester` | `suite-map-config` | Sequential `await`                   |
 
 ### Group 4 — Component Panels (footer bar tabs, app bar features)
 
@@ -37,7 +37,6 @@ Before writing a test, classify it into one of these groups:
 | ----------------- | ----------------------- | ------------------------ | ----------------------------------- |
 | **Details Panel** | `DetailsTester`         | `suite-details`          | Guarded (`details` tab required)    |
 | **Data Table**    | `DataTableTester` (new) | `suite-data-table` (new) | Guarded (`data-table` tab required) |
-| **UI / DOM**      | `UITester`              | `suite-ui`               | `Promise.all()`                     |
 
 ### Group 5 — Plugins (external packages)
 
@@ -48,7 +47,7 @@ Before writing a test, classify it into one of these groups:
 | **Time Slider** | `TimeSliderTester` (new) | `suite-time-slider` (new) | Guarded (`time-slider` plugin required) |
 | **Drawer**      | `DrawerTester` (new)     | `suite-drawer` (new)      | Guarded (`drawer` plugin required)      |
 
-> **Choosing the right group:** Pure function with no side effects → Group 1. Adds/removes/queries a layer → Group 2. Changes map zoom/projection/basemap → Group 3. Interacts with a footer bar tab or app bar panel → Group 4. Tests a plugin package → Group 5.
+> **Choosing the right group:** Pure function with no side effects → Group 1. Adds/removes/queries a layer → Group 2. Changes map state or tests map-scoped UI → Group 3. Tests a dedicated Details or Data Table panel suite → Group 4. Tests a plugin package → Group 5.
 
 ---
 
@@ -521,6 +520,14 @@ Controllers are the preferred path for map operations. MapViewer provides low-le
 
 Use `setMapZoomLevel()` only for an immediate non-awaited change.
 When the next step depends on zoom completion, await `mapController.zoomMap`.
+
+An instant fit (`duration: 0` or no animation) completes synchronously, so it cannot be interrupted. To test an interrupted zoom, start it with a long explicit `duration`, wait for `view.getAnimating()` with `whenThisThen`, then call `view.cancelAnimations()`. Do not cancel from `movestart`: map rendering needs `requestAnimationFrame`, which hidden tabs pause. Omit `duration` to keep the default animation; an explicit `duration: undefined` overrides the default and makes the fit instant.
+
+### Waiting for Attribute Changes
+
+`DomHelper.waitForDomElement` only re-checks when nodes are added or removed, so a selector that depends on an attribute changing on an existing element (e.g. `button[aria-disabled="true"]`) never resolves and, without a timeout, freezes the suite. Poll with `whenThisThen(() => root.querySelector(selector), GVAbstractTester.UI_STATE_TIMEOUT_MS, 50)` instead (it rejects once the timeout is exceeded), or use `waitForClass` for `class` changes.
+
+Vector queries are pixel-based, so their results depend on the current view: the result count varies with zoom (pixel hit tolerance), and a coordinate outside the view returns no result. Reset the view (e.g. `mapController.zoomToInitialExtent`) before a query that depends on it when earlier tests moved the map.
 
 ### `queryLayerFeatures()` Visibility Guards
 

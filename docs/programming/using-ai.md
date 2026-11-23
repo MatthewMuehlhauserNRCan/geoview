@@ -163,7 +163,7 @@ Custom agents live in `.github/agents/` and appear in the Copilot Chat **agent p
 | `TestCreator`           | Workflow   | Create test-suite tests, find missing coverage, maintain release-testing docs                                           |
 | `DocUpdate`             | Workflow   | Audit named or branch-affected docs; say "guide" for EN/FR viewer guides or "full" for every doc                        |
 | `DepUpdate`             | Workflow   | Audit dependencies and Node.js/Rush/pnpm compatibility, plan upgrades, review vulnerabilities                           |
-| `IssueCreator`          | Workflow   | Draft a ready-to-paste GitHub issue                                                                                     |
+| `IssueCreator`          | Workflow   | Draft a ready-to-paste GitHub issue; fetches public service responses and checks duplicates through the web tool       |
 | `IssueReview`           | Workflow   | Compare a PR branch with its linked issue and capture lessons                                                           |
 | `LayerExpert`           | Specialist | Layer classes, config validation, GeoCore, WMS/ESRI/OGC metadata                                                        |
 | `MapGeoExpert`          | Specialist | MapViewer, projections, zoom/rotation, OpenLayers interactions, swiper                                                  |
@@ -201,7 +201,7 @@ Skills are reusable recipes in `.github/skills/<name>/SKILL.md`. Copilot picks o
 | `/add-translation`          | Adds or changes UI text in both `en` and `fr`                                               |
 | `/new-layer`                | Adds a new layer type or layer test end to end                                              |
 | `/add-geoview-test`         | Adds a test to `geoview-test-suite` (three-callback pattern, count syncing)                 |
-| `/sync-test-counts`         | Audits all suites so `getTestsTotalFinal`, the test catalog and the checklist agree         |
+| `/sync-test-counts`         | Audits each suite's full test calls against its `getTestsTotalFinal()` value                |
 | `/update-defaults`          | Updates config defaults in all three default-value sources                                  |
 | `/add-display-theme`        | Adds or renames a display theme across every surface                                        |
 | `/capture-lesson`           | Records a verified lesson in the right AI doc or memory                                     |
