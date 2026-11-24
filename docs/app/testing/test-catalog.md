@@ -290,6 +290,7 @@ This catalog lists every test by group, suite, and tester. Each entry gives the 
 | `testFindPropertyByRegexPath`     | test | Test findPropertyByRegexPath() finds nested properties...      |
 | `testFormatMeasurements`          | test | Test formatMeasurementValue(), formatLength(), formatArea()... |
 | `testNormalizeDatacubeAccessPath` | test | Test normalizeDatacubeAccessPath() transforms URLs...          |
+| `testEnsureHttpsOnSecurePage`     | test | Test metadata HTTP URLs upgrade only on HTTPS pages without changing paths, queries, or other URL schemes... |
 | `testSanitizeHtmlContent`         | test | Test sanitizeHtmlContent() strips dangerous HTML...            |
 | `testEnhanceLinksAccessibility`   | test | Test enhanceLinksAccessibility() adds screen reader text...    |
 | `testGetLocalizedMessage`         | test | Test getLocalizedMessage() returns translated strings...       |
@@ -633,6 +634,8 @@ This catalog lists every test by group, suite, and tester. Each entry gives the 
 | `testGuideDetailsPanelTopAnchor`       | test | Test selecting the Details panel and verifying the guide’s Top anchor behavior               |
 | `testControllerGetFooterHeight`        | test | Test `UIController.getFooterHeight()` from a non-React consumer                              |
 | `testCrosshairCoordinates`             | test | Test SVG artwork center alignment, stale pointer reset, and Enter/Space drawing with padding, panning, and rotation |
+
+> **TODO:** Add back `testPageScrollLock` (two cases, release newest/oldest first) in `MapTester` and register it in this suite (then update `getTestsTotalFinal()`). It checks that overlapping `DomHelper.lockPageScroll` locks keep the page locked until the last release, that repeated releases are harmless, and that the original overflow styles are restored. It was removed to avoid conflicts with the ongoing testing refactor; the implementation is in commit `a65be1b9ea` (#3742).
 
 ---
 
